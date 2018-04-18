@@ -91,6 +91,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DOC\DS-2ZMN2007（C）快速指南.PDF" />
+    <None Include="DOC\DS-2ZMN2007（C）操作手册%281%29.PDF" />
+    <None Include="DOC\EMI16.rar" />
+    <None Include="DOC\EMI16项目使用说明书%2820170522%29-中文%282%29.pdf" />
+    <None Include="DOC\EM_I16H_接口说明%281%29.docx" />
+    <None Include="DOC\附件2：显控软件技术协议20180410.docx" />
+    <None Include="DOC\附件3界面与注释.pdf" />
+    <None Include="DOC\附件3界面与注释.vsd" />
+    <None Include="DOC\附件6：wifi传图模块.pdf" />
+    <None Include="DOC\附件7：系统简图.vsd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +127,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DOC\图片素材\1.png" />
+    <Content Include="DOC\图片素材\parametersConfigButton.png" />
+    <Content Include="DOC\图片素材\仪表盘指针.png" />
+    <Content Include="DOC\图片素材\仪表盘表盘.png" />
+    <Content Include="DOC\图片素材\保险关.png" />
+    <Content Include="DOC\图片素材\保险开.png" />
+    <Content Include="DOC\图片素材\俯仰角度标尺.png" />
+    <Content Include="DOC\图片素材\俯仰角度标尺指针.png" />
+    <Content Include="DOC\图片素材\已装.png" />
+    <Content Include="DOC\图片素材\开.png" />
+    <Content Include="DOC\图片素材\未装.png" />
+    <Content Include="DOC\图片素材\监控背景画面.jpg" />
+    <Content Include="DOC\图片素材\瞄准划分.png" />
+    <Content Include="DOC\图片素材\绘图1.png" />
     <Content Include="Resources\btncheckoff1.png" />
     <Content Include="Resources\btncheckoff2.png" />
     <Content Include="Resources\btncheckoff3.png" />
