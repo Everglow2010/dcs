@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     <Compile Include="OnOffSwitchButton.Designer.cs">
       <DependentUpon>OnOffSwitchButton.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OnOffSwitchButton.resx">
       <DependentUpon>OnOffSwitchButton.cs</DependentUpon>
@@ -153,7 +153,24 @@
     <Content Include="Resources\btncheckon4.png" />
     <Content Include="Resources\btncheckon5.png" />
     <Content Include="Resources\btncheckon6.png" />
+    <Content Include="Resources\仪表盘指针.png" />
+    <None Include="Resources\仪表盘指针1.png" />
+    <Content Include="Resources\仪表盘表盘.png" />
+    <None Include="Resources\仪表盘表盘1.png" />
+    <Content Include="Resources\保险关.png" />
+    <None Include="Resources\瞄准划分1.png" />
+    <None Include="Resources\保险关1.png" />
+    <Content Include="Resources\保险开.png" />
+    <None Include="Resources\保险开1.png" />
+    <Content Include="Resources\俯仰角度标尺.png" />
+    <None Include="Resources\俯仰角度标尺1.png" />
+    <Content Include="Resources\俯仰角度标尺指针.png" />
+    <None Include="Resources\俯仰角度标尺指针1.png" />
+    <Content Include="Resources\已装.png" />
+    <Content Include="Resources\开.png" />
+    <Content Include="Resources\未装.png" />
     <Content Include="Resources\监控背景画面.jpg" />
+    <Content Include="Resources\瞄准划分.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

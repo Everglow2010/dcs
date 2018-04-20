@@ -118,43 +118,73 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btncheckoff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btncheckoff5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckoff5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btncheckoff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncheckoff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btncheckoff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btncheckon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncheckon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btncheckon6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncheckon6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btncheckoff6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckoff6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckoff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckoff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckoff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckoff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="监控背景画面" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\监控背景画面.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="开" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\开.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="未装" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\未装.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckoff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckoff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="已装" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\已装.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btncheckon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncheckon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="保险关" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\保险关1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="保险开" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\保险开1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="俯仰角度标尺" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\俯仰角度标尺1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="俯仰角度标尺指针" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\俯仰角度标尺指针1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="瞄准划分" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\瞄准划分1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="仪表盘表盘" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\仪表盘表盘1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="仪表盘指针" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\仪表盘指针1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -67,6 +67,8 @@ namespace DCS
             Bitmap bitMapOn = null;
             Bitmap bitMapOff = null;
 
+            //base.OnPaint(e);
+
             if (checkStyle == SwitchButtonStyle.style1)
             {
                 bitMapOn = global::DCS.Properties.Resources.btncheckon1;
