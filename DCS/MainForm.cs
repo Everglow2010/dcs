@@ -15,6 +15,8 @@ namespace DCS
         public MainForm()
         {
             InitializeComponent();
+            this.dialPlatePictureBox.Parent = this.cameraViewPicturebox;
+            this.dialPlatePictureBox.BackColor = Color.Transparent;
         }
 
         private void Form1_Load(object sender, EventArgs e)

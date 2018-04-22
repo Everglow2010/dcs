@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.topBar = new System.Windows.Forms.Panel();
+            this.servoControlSwitchButton = new DCS.OnOffSwitchButton();
             this.label1 = new System.Windows.Forms.Label();
             this.batteryBar = new System.Windows.Forms.ProgressBar();
             this.safeStatePitureBox = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@
             this.laserControlSwitchButton = new DCS.OnOffSwitchButton();
             this.laserControlLabel = new System.Windows.Forms.Label();
             this.servoControlLabel = new System.Windows.Forms.Label();
-            this.servoControlSwitchButton = new DCS.OnOffSwitchButton();
             this.cameraViewPicturebox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,6 +74,18 @@
             this.topBar.Size = new System.Drawing.Size(1280, 80);
             this.topBar.TabIndex = 0;
             // 
+            // servoControlSwitchButton
+            // 
+            this.servoControlSwitchButton.BackColor = System.Drawing.Color.Transparent;
+            this.servoControlSwitchButton.Checked = false;
+            this.servoControlSwitchButton.CheckStyleX = DCS.SwitchButtonStyle.style1;
+            this.servoControlSwitchButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.servoControlSwitchButton.Location = new System.Drawing.Point(88, 38);
+            this.servoControlSwitchButton.Name = "servoControlSwitchButton";
+            this.servoControlSwitchButton.Size = new System.Drawing.Size(51, 16);
+            this.servoControlSwitchButton.TabIndex = 0;
+            this.servoControlSwitchButton.Load += new System.EventHandler(this.onOffSwitchButton1_Load);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -97,7 +109,7 @@
             // 
             // safeStatePitureBox
             // 
-            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.保险关;
+            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.safetyOff;
             this.safeStatePitureBox.Location = new System.Drawing.Point(808, 38);
             this.safeStatePitureBox.Name = "safeStatePitureBox";
             this.safeStatePitureBox.Size = new System.Drawing.Size(119, 21);
@@ -107,7 +119,7 @@
             // 
             // ammoLoadPictureBox
             // 
-            this.ammoLoadPictureBox.Image = global::DCS.Properties.Resources.未装;
+            this.ammoLoadPictureBox.Image = global::DCS.Properties.Resources.ammoNotLoaded;
             this.ammoLoadPictureBox.Location = new System.Drawing.Point(630, 38);
             this.ammoLoadPictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.ammoLoadPictureBox.Name = "ammoLoadPictureBox";
@@ -210,24 +222,11 @@
             this.servoControlLabel.TabIndex = 1;
             this.servoControlLabel.Text = "伺服控制";
             // 
-            // servoControlSwitchButton
-            // 
-            this.servoControlSwitchButton.BackColor = System.Drawing.Color.Transparent;
-            this.servoControlSwitchButton.Checked = false;
-            this.servoControlSwitchButton.CheckStyleX = DCS.SwitchButtonStyle.style1;
-            this.servoControlSwitchButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.servoControlSwitchButton.Location = new System.Drawing.Point(88, 38);
-            this.servoControlSwitchButton.Name = "servoControlSwitchButton";
-            this.servoControlSwitchButton.Size = new System.Drawing.Size(51, 16);
-            this.servoControlSwitchButton.TabIndex = 0;
-            this.servoControlSwitchButton.Load += new System.EventHandler(this.onOffSwitchButton1_Load);
-            // 
             // cameraViewPicturebox
             // 
             this.cameraViewPicturebox.BackColor = System.Drawing.Color.Transparent;
-            this.cameraViewPicturebox.BackgroundImage = global::DCS.Properties.Resources.监控背景画面;
             this.cameraViewPicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cameraViewPicturebox.Image = global::DCS.Properties.Resources.监控背景画面;
+            this.cameraViewPicturebox.Image = global::DCS.Properties.Resources.cameraView;
             this.cameraViewPicturebox.Location = new System.Drawing.Point(0, 80);
             this.cameraViewPicturebox.Name = "cameraViewPicturebox";
             this.cameraViewPicturebox.Size = new System.Drawing.Size(1280, 720);
@@ -238,8 +237,8 @@
             // dialPlatePictureBox
             // 
             this.dialPlatePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.dialPlatePictureBox.Image = global::DCS.Properties.Resources.仪表盘表盘;
-            this.dialPlatePictureBox.Location = new System.Drawing.Point(88, 583);
+            this.dialPlatePictureBox.Image = global::DCS.Properties.Resources.dialPlate;
+            this.dialPlatePictureBox.Location = new System.Drawing.Point(88, 503);
             this.dialPlatePictureBox.Name = "dialPlatePictureBox";
             this.dialPlatePictureBox.Size = new System.Drawing.Size(160, 160);
             this.dialPlatePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +247,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DCS.Properties.Resources.俯仰角度标尺;
+            this.pictureBox1.Image = global::DCS.Properties.Resources.pitchAngleRuler;
             this.pictureBox1.Location = new System.Drawing.Point(24, 583);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 160);

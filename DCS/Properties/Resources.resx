@@ -145,19 +145,19 @@
   <data name="btncheckoff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncheckoff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="监控背景画面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="cameraView" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\监控背景画面.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="开" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ammoOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\开.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="未装" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ammoNotLoaded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\未装.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btncheckoff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncheckoff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="已装" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ammoLoaded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\已装.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btncheckon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -166,25 +166,25 @@
   <data name="btncheckon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncheckon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="保险关" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="safetyOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\保险关1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="保险开" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="safetyOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\保险开1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="俯仰角度标尺" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="pitchAngleRuler" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\俯仰角度标尺1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="俯仰角度标尺指针" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="pitchAnglePointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\俯仰角度标尺指针1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="瞄准划分" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="aimingDivision" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\瞄准划分1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="仪表盘表盘" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="dialPlate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\仪表盘表盘1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="仪表盘指针" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="dialPointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\仪表盘指针1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
