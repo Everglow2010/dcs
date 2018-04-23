@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace DCS
 {
@@ -15,23 +10,53 @@ namespace DCS
         public MainForm()
         {
             InitializeComponent();
-            this.dialPlatePictureBox.Parent = this.cameraViewPicturebox;
-            this.dialPlatePictureBox.BackColor = Color.Transparent;
+            //this.dialPlatePictureBox.Parent = this.cameraViewPicturebox;
+            //this.dialPlatePictureBox.BackColor = Color.Transparent;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-
+            String[] portsNames = SerialPort.GetPortNames();
+            if (portsNames == null)
+            {
+                MessageBox.Show("本机没有串口！", "error");
+                return;
+            }
+            else
+            {
+                //打开串口
+                serialPort.Open();
+                Console.WriteLine(portsNames[1]);
+                Console.WriteLine("serialPort is opened.");
+            }
         }
 
-        private void onOffSwitchButton1_Load(object sender, EventArgs e)
+        private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
+            if (!serialPort.IsOpen)
+            {
+                MessageBox.Show("串口未打开！", "error");
 
-        }
+            }
+            else //端口打开
+            {
+                try
+                {
+                    Byte[] receivedData = new Byte[serialPort.BytesToRead];
+                    serialPort.Read(receivedData, 0, receivedData.Length);//读取字节数据
+                    serialPort.DiscardInBuffer();
+                    //Console.WriteLine(Convert.ToString(receivedData));
+                    string strReceived = "";
+                    strReceived += System.Text.Encoding.ASCII.GetString(receivedData);
+                    Console.WriteLine(strReceived);
+                }
+                catch (Exception)
+                {
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+                    throw;
+                }
 
+            }
         }
     }
 }
