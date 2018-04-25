@@ -2,6 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Runtime.InteropServices;
+using System.IO;
+using Emgu.CV;
 
 namespace DCS
 {
@@ -10,12 +13,14 @@ namespace DCS
         public MainForm()
         {
             InitializeComponent();
-            //this.dialPlatePictureBox.Parent = this.cameraViewPicturebox;
-            //this.dialPlatePictureBox.BackColor = Color.Transparent;
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            PlayVideo();
             String[] portsNames = SerialPort.GetPortNames();
             if (portsNames == null)
             {
@@ -29,6 +34,37 @@ namespace DCS
                 Console.WriteLine(portsNames[1]);
                 Console.WriteLine("serialPort is opened.");
             }
+        }
+
+        VideoCapture camCapter = null;
+        Mat frame;
+        System.Windows.Forms.Timer PlayerTimer = new Timer();
+        string videoPath = "F:\\bgVideo.mp4";
+
+        private void PlayVideo()
+        {
+            camCapter = new VideoCapture(videoPath);
+            camCapter.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.PosFrames, 2241);
+            var tmp = (camCapter.GetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps) > 0) ? (camCapter.GetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps)) : 24;//获取视频帧率，如无法获取就默认24帧
+            int delay = (int)(1000 / tmp);
+            PlayerTimer.Interval = delay;
+            PlayerTimer.Tick += VideoController;
+            PlayerTimer.Start();
+        }
+
+        private void VideoController(object sender, EventArgs e)
+        {
+            if (camCapter == null) { return; }
+            if (frame != null) { frame.Dispose(); }
+            frame = camCapter.QueryFrame();
+            if (frame == null)
+            {
+                Console.WriteLine("Video End");
+                camCapter = new VideoCapture(videoPath);
+                //PlayerTimer.Stop();
+                return;
+            }
+            this.cameraImageBox.Image = frame;
         }
 
         private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
@@ -57,6 +93,15 @@ namespace DCS
                 }
 
             }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.PlayerTimer.Stop();
+        }
+
+        private void parameterConfigButton_Click(object sender, EventArgs e)
+        {
         }
     }
 }
