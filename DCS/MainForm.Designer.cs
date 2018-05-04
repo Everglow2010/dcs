@@ -44,19 +44,16 @@
             this.laserControlLabel = new System.Windows.Forms.Label();
             this.servoControlLabel = new System.Windows.Forms.Label();
             this.cameraViewPicturebox = new System.Windows.Forms.PictureBox();
-            this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
-            this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
-            this.cameraImageBox = new Emgu.CV.UI.ImageBox();
+            this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
+            this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewPicturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cameraImageBox)).BeginInit();
-            this.cameraImageBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,7 +226,10 @@
             this.servoControlLabel.Text = "伺服控制";
             // 
             // cameraViewPicturebox
-            // 
+            //
+            this.cameraViewPicturebox.Controls.Add(this.dialPlatePictureBox);
+            this.cameraViewPicturebox.Controls.Add(this.pitchAngleRulerPictureBox);
+            this.cameraViewPicturebox.Controls.Add(this.aimingReticlePictureBox);
             this.cameraViewPicturebox.BackColor = System.Drawing.SystemColors.Control;
             this.cameraViewPicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cameraViewPicturebox.Location = new System.Drawing.Point(0, 80);
@@ -238,16 +238,12 @@
             this.cameraViewPicturebox.TabIndex = 1;
             this.cameraViewPicturebox.TabStop = false;
             // 
-            // dialPlatePictureBox
+            // serialPort
             // 
-            this.dialPlatePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.dialPlatePictureBox.Image = global::DCS.Properties.Resources.dialPlate;
-            this.dialPlatePictureBox.Location = new System.Drawing.Point(88, 503);
-            this.dialPlatePictureBox.Name = "dialPlatePictureBox";
-            this.dialPlatePictureBox.Size = new System.Drawing.Size(160, 160);
-            this.dialPlatePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.dialPlatePictureBox.TabIndex = 0;
-            this.dialPlatePictureBox.TabStop = false;
+            this.serialPort.BaudRate = 115200;
+            this.serialPort.Parity = System.IO.Ports.Parity.Even;
+            this.serialPort.ReceivedBytesThreshold = 3;
+            this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // pitchAngleRulerPictureBox
             // 
@@ -260,25 +256,16 @@
             this.pitchAngleRulerPictureBox.TabIndex = 2;
             this.pitchAngleRulerPictureBox.TabStop = false;
             // 
-            // serialPort
+            // dialPlatePictureBox
             // 
-            this.serialPort.BaudRate = 115200;
-            this.serialPort.Parity = System.IO.Ports.Parity.Even;
-            this.serialPort.ReceivedBytesThreshold = 3;
-            this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
-            // 
-            // cameraImageBox
-            // 
-            this.cameraImageBox.Controls.Add(this.aimingReticlePictureBox);
-            this.cameraImageBox.Controls.Add(this.dialPlatePictureBox);
-            this.cameraImageBox.Controls.Add(this.pitchAngleRulerPictureBox);
-            this.cameraImageBox.Location = new System.Drawing.Point(0, 80);
-            this.cameraImageBox.Margin = new System.Windows.Forms.Padding(0);
-            this.cameraImageBox.Name = "cameraImageBox";
-            this.cameraImageBox.Size = new System.Drawing.Size(1280, 720);
-            this.cameraImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cameraImageBox.TabIndex = 2;
-            this.cameraImageBox.TabStop = false;
+            this.dialPlatePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.dialPlatePictureBox.Image = global::DCS.Properties.Resources.dialPlate;
+            this.dialPlatePictureBox.Location = new System.Drawing.Point(88, 503);
+            this.dialPlatePictureBox.Name = "dialPlatePictureBox";
+            this.dialPlatePictureBox.Size = new System.Drawing.Size(160, 160);
+            this.dialPlatePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dialPlatePictureBox.TabIndex = 0;
+            this.dialPlatePictureBox.TabStop = false;
             // 
             // aimingReticlePictureBox
             // 
@@ -296,22 +283,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 800);
-            this.Controls.Add(this.cameraImageBox);
             this.Controls.Add(this.topBar);
             this.Controls.Add(this.cameraViewPicturebox);
             this.Name = "MainForm";
             this.Text = "DCS";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topBar.ResumeLayout(false);
             this.topBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewPicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cameraImageBox)).EndInit();
-            this.cameraImageBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -332,12 +315,11 @@
         private System.Windows.Forms.TextBox ammoLeftTextBox;
         private System.Windows.Forms.PictureBox ammoLoadPictureBox;
         private System.Windows.Forms.PictureBox safeStatePitureBox;
-        private System.Windows.Forms.PictureBox dialPlatePictureBox;
-        private System.Windows.Forms.PictureBox pitchAngleRulerPictureBox;
         private System.Windows.Forms.ProgressBar batteryBar;
         private System.Windows.Forms.Label batteryLabel;
         private System.IO.Ports.SerialPort serialPort;
-        private Emgu.CV.UI.ImageBox cameraImageBox;
+        private System.Windows.Forms.PictureBox pitchAngleRulerPictureBox;
+        private System.Windows.Forms.PictureBox dialPlatePictureBox;
         private System.Windows.Forms.PictureBox aimingReticlePictureBox;
     }
 }
