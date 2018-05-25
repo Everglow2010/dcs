@@ -45,9 +45,12 @@
             this.servoControlLabel = new System.Windows.Forms.Label();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
+            this.dialPlateValueLabel = new System.Windows.Forms.Label();
             this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
+            this.pitchAngleValueLabel = new System.Windows.Forms.Label();
+            this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).BeginInit();
@@ -89,6 +92,7 @@
             this.servoControlSwitchButton.Name = "servoControlSwitchButton";
             this.servoControlSwitchButton.Size = new System.Drawing.Size(51, 16);
             this.servoControlSwitchButton.TabIndex = 0;
+            this.servoControlSwitchButton.Click += new System.EventHandler(this.ServoControlSwitchButton_Click);
             // 
             // batteryLabel
             // 
@@ -153,7 +157,7 @@
             this.ammoLeftTextBox.ReadOnly = true;
             this.ammoLeftTextBox.Size = new System.Drawing.Size(32, 23);
             this.ammoLeftTextBox.TabIndex = 7;
-            this.ammoLeftTextBox.Text = "60";
+            this.ammoLeftTextBox.Text = "0";
             this.ammoLeftTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ammoLeftLabel
@@ -202,6 +206,7 @@
             this.laserControlSwitchButton.Name = "laserControlSwitchButton";
             this.laserControlSwitchButton.Size = new System.Drawing.Size(51, 16);
             this.laserControlSwitchButton.TabIndex = 3;
+            this.laserControlSwitchButton.Click += new System.EventHandler(this.LaserControlSwitchButton_Click);
             // 
             // laserControlLabel
             // 
@@ -249,6 +254,19 @@
             this.dialPlatePictureBox.TabIndex = 0;
             this.dialPlatePictureBox.TabStop = false;
             // 
+            // dialPlateValueLabel
+            // 
+            this.dialPlateValueLabel.AutoSize = true;
+            this.dialPlateValueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dialPlateValueLabel.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dialPlateValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.dialPlateValueLabel.Location = new System.Drawing.Point(158, 746);
+            this.dialPlateValueLabel.Name = "dialPlateValueLabel";
+            this.dialPlateValueLabel.Size = new System.Drawing.Size(15, 14);
+            this.dialPlateValueLabel.TabIndex = 4;
+            this.dialPlateValueLabel.Text = "0";
+            this.dialPlateValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pitchAngleRulerPictureBox
             // 
             this.pitchAngleRulerPictureBox.BackColor = System.Drawing.Color.Transparent;
@@ -271,6 +289,7 @@
             this.cameraViewImageBox.Controls.Add(this.aimingReticlePictureBox);
             this.cameraViewImageBox.Controls.Add(this.dialPlatePictureBox);
             this.cameraViewImageBox.Controls.Add(this.pitchAngleRulerPictureBox);
+            this.cameraViewImageBox.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
             this.cameraViewImageBox.Location = new System.Drawing.Point(0, 80);
             this.cameraViewImageBox.MaximumSize = new System.Drawing.Size(1280, 720);
             this.cameraViewImageBox.MinimumSize = new System.Drawing.Size(1280, 720);
@@ -279,11 +298,31 @@
             this.cameraViewImageBox.TabIndex = 2;
             this.cameraViewImageBox.TabStop = false;
             // 
+            // pitchAngleValueLabel
+            // 
+            this.pitchAngleValueLabel.AutoSize = true;
+            this.pitchAngleValueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pitchAngleValueLabel.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pitchAngleValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.pitchAngleValueLabel.Location = new System.Drawing.Point(48, 746);
+            this.pitchAngleValueLabel.Name = "pitchAngleValueLabel";
+            this.pitchAngleValueLabel.Size = new System.Drawing.Size(15, 14);
+            this.pitchAngleValueLabel.TabIndex = 3;
+            this.pitchAngleValueLabel.Text = "0";
+            this.pitchAngleValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataSendTimer
+            // 
+            this.dataSendTimer.Interval = 1000;
+            this.dataSendTimer.Tick += new System.EventHandler(this.DataSendTimer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.pitchAngleValueLabel);
+            this.Controls.Add(this.dialPlateValueLabel);
             this.Controls.Add(this.cameraViewImageBox);
             this.Controls.Add(this.topBar);
             this.Name = "MainForm";
@@ -299,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).EndInit();
             this.cameraViewImageBox.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -323,6 +363,9 @@
         private System.Windows.Forms.PictureBox dialPlatePictureBox;
         private System.Windows.Forms.PictureBox aimingReticlePictureBox;
         private Emgu.CV.UI.ImageBox cameraViewImageBox;
+        private System.Windows.Forms.Label pitchAngleValueLabel;
+        private System.Windows.Forms.Label dialPlateValueLabel;
+        private System.Windows.Forms.Timer dataSendTimer;
     }
 }
 

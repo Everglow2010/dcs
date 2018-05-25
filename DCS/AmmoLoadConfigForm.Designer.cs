@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ammoLoadNumTextbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.projectileCountClearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,14 +55,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "装弹量设置";
             // 
-            // textBox1
+            // ammoLoadNumTextbox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(95, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 26);
-            this.textBox1.TabIndex = 1;
+            this.ammoLoadNumTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ammoLoadNumTextbox.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ammoLoadNumTextbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.ammoLoadNumTextbox.Location = new System.Drawing.Point(95, 38);
+            this.ammoLoadNumTextbox.Name = "ammoLoadNumTextbox";
+            this.ammoLoadNumTextbox.ReadOnly = true;
+            this.ammoLoadNumTextbox.Size = new System.Drawing.Size(90, 26);
+            this.ammoLoadNumTextbox.TabIndex = 1;
+            this.ammoLoadNumTextbox.TabStop = false;
+            this.ammoLoadNumTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
@@ -73,6 +77,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -83,6 +88,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -93,6 +99,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -103,6 +110,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 
@@ -113,6 +121,7 @@
             this.button5.TabIndex = 6;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button6
             // 
@@ -123,6 +132,7 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // button7
             // 
@@ -133,6 +143,7 @@
             this.button7.TabIndex = 8;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button8
             // 
@@ -143,6 +154,7 @@
             this.button8.TabIndex = 9;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // button9
             // 
@@ -153,6 +165,7 @@
             this.button9.TabIndex = 10;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // buttonOK
             // 
@@ -163,6 +176,7 @@
             this.buttonOK.TabIndex = 11;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.ButtonOK_Click);
             // 
             // button0
             // 
@@ -173,6 +187,7 @@
             this.button0.TabIndex = 12;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.Button0_Click);
             // 
             // buttonCE
             // 
@@ -183,17 +198,18 @@
             this.buttonCE.TabIndex = 13;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = true;
+            this.buttonCE.Click += new System.EventHandler(this.ButtonCE_Click);
             // 
-            // button13
+            // projectileCountClearButton
             // 
-            this.button13.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button13.ForeColor = System.Drawing.Color.Red;
-            this.button13.Location = new System.Drawing.Point(95, 288);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(103, 29);
-            this.button13.TabIndex = 14;
-            this.button13.Text = "射弹数清零";
-            this.button13.UseVisualStyleBackColor = true;
+            this.projectileCountClearButton.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.projectileCountClearButton.ForeColor = System.Drawing.Color.Red;
+            this.projectileCountClearButton.Location = new System.Drawing.Point(95, 288);
+            this.projectileCountClearButton.Name = "projectileCountClearButton";
+            this.projectileCountClearButton.Size = new System.Drawing.Size(103, 29);
+            this.projectileCountClearButton.TabIndex = 14;
+            this.projectileCountClearButton.Text = "射弹数清零";
+            this.projectileCountClearButton.UseVisualStyleBackColor = true;
             // 
             // AmmoLoadConfigForm
             // 
@@ -201,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(278, 329);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.projectileCountClearButton);
             this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.button0);
             this.Controls.Add(this.buttonOK);
@@ -214,7 +230,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ammoLoadNumTextbox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AmmoLoadConfigForm";
@@ -230,7 +246,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ammoLoadNumTextbox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -243,6 +259,6 @@
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button buttonCE;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button projectileCountClearButton;
     }
 }

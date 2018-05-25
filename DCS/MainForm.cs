@@ -28,6 +28,7 @@ namespace DCS
 
             GlobalVars.ammoLoadNum = 200;
             GlobalVars.ammoLeftNum = 200;
+            GlobalVars.projectileCount = 0;
             GlobalVars.projectileCountClear = false;
 
             GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
@@ -39,12 +40,17 @@ namespace DCS
             GlobalVars.dialPlateAngle = 0;
             GlobalVars.dialPlateAngleClear = false;
 
+            this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngle);
+            this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngle);
+            this.ammoLeftTextBox.Text = Convert.ToString(GlobalVars.ammoLeftNum);
             //初始化20个焦距档位对应的瞄准分划大小和位置
             for (int i = 0; i < 20; i++)
             {
 
             }
-    }
+            //实例化委托
+            flushUI = new FreshUIDisplay(DisplayToUI);
+        }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -75,6 +81,40 @@ namespace DCS
                 Console.WriteLine(portsNames[0]);
                 Console.WriteLine("serialPort is opened.");
             }
+            //启动数据发送定时器
+            dataSendTimer.Start();
+        }
+
+        public delegate void FreshUIDisplay();
+        public void DisplayToUI()
+        {
+            //更新UI状态
+            //更新保险开关状态
+            this.safeStatePitureBox.Image = GlobalVars.safeState ? Properties.Resources.safetyOn : Properties.Resources.safetyOff;
+            //更新装填指示状态
+            switch (GlobalVars.ammoLoadState)
+            {
+                case GlobalVars.AMMOLOAD_LOADED:
+                    this.ammoLoadPictureBox.Image = Properties.Resources.ammoLoaded;
+                    break;
+
+                case GlobalVars.AMMOLOAD_NOT_LOADED:
+                    this.ammoLoadPictureBox.Image = Properties.Resources.ammoNotLoaded;
+                    break;
+
+                case GlobalVars.AMMOLOAD_OPEN:
+                    this.ammoLoadPictureBox.Image = Properties.Resources.ammoOpen;
+                    break;
+
+                default:
+                    break;
+            }
+            //更新剩余弹量文本框
+            this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
+            //更新俯仰角度显示值            
+            this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngle);
+            //更新仪表盘角度显示值
+            this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngle);
         }
 
         VideoCapture camCapter = null;
@@ -88,7 +128,11 @@ namespace DCS
             camCapter.ImageGrabbed += Cam_ImageGrabbed;
             camCapter.Start();
         }
-
+        /// <summary>
+        /// Emgcv捕捉视频流每一帧显示在窗口上
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         //将捕捉到的视频帧显示到ImageBox上
         private void Cam_ImageGrabbed(object sender, EventArgs e)
         {
@@ -112,6 +156,12 @@ namespace DCS
             }
         }
 
+
+        /// <summary>
+        /// 串口接收数据的处理过程
+        /// </summary>
+        //刷新界面显示的委托
+        FreshUIDisplay flushUI = null;
         //接收字节的缓存队列
         private List<byte> buffer = new List<byte>(4096);
         //串口接收数据以后的委托方法
@@ -178,28 +228,8 @@ namespace DCS
                                     GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
                                     GlobalVars.focalDistanceMultiple = receivedBytes[8];
 
-                                    //更新UI状态
-                                    写到委托里！
-                                    this.safeStatePitureBox.Image = GlobalVars.safeState ? Properties.Resources.safetyOn : Properties.Resources.safetyOff;
-                                    switch (GlobalVars.ammoLoadState)
-                                    {
-                                        case GlobalVars.AMMOLOAD_LOADED:
-                                            this.ammoLoadPictureBox.Image = Properties.Resources.ammoLoaded;
-                                            break;
-
-                                        case GlobalVars.AMMOLOAD_NOT_LOADED:
-                                            this.ammoLoadPictureBox.Image = Properties.Resources.ammoNotLoaded;
-                                            break;
-
-                                        case GlobalVars.AMMOLOAD_OPEN:
-                                            this.ammoLoadPictureBox.Image = Properties.Resources.ammoOpen;
-                                            break;
-
-                                        default:
-                                            break;          
-                                    }
-                                    //this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
-
+                                    //调用委托更新UI界面显示                                    
+                                    this.Invoke(flushUI);
                                 }
                             }
                             else
@@ -240,6 +270,7 @@ namespace DCS
             {
                 return true;
             }
+            //测试！全返回ture
             return true;
         }
         //为准备好的待发送数据计算校验和字节
@@ -255,8 +286,80 @@ namespace DCS
             return checksumL;
         }
 
-        
 
+
+        /// <summary>
+        /// 定时用串口发送数据
+        /// </summary>
+        Byte[] dataToSend = new Byte[8];
+        private void DataSendTimer_Tick(object sender, EventArgs e)
+        {
+            dataToSend[0] = 0xff;
+            dataToSend[1] = 0x81;
+            //伺服开关
+            if (GlobalVars.servoControlSwitchState)
+            {
+                dataToSend[2] = 0xAA;
+            }
+            else
+            {
+                dataToSend[2] = 0x55;              
+            }
+            //激光开关
+            if (GlobalVars.laserControlSwitchState)
+            {
+                dataToSend[3] = 0xAA;
+            }
+            else
+            {
+                dataToSend[3] = 0x55;           
+            }
+            //射弹计数清零
+            if (GlobalVars.projectileCountClear)
+            {
+                dataToSend[4] = 0xAA;
+                GlobalVars.projectileCountClear = false;
+            }
+            else
+            {
+                dataToSend[4] = 0x55;
+            }
+            //方位清零
+            if (GlobalVars.dialPlateAngleClear)
+            {
+                dataToSend[5] = 0xAA;
+                GlobalVars.dialPlateAngleClear = false;
+            }
+            else
+            {
+                dataToSend[5] = 0x55;
+            }
+            //俯仰清零
+            if (GlobalVars.pitchAngleClear)
+            {
+                dataToSend[6] = 0xAA;
+                GlobalVars.pitchAngleClear = false;
+            }
+            else
+            {
+                dataToSend[6] = 0x55;
+            }
+            //校验和
+            byte checksum = CalculateChecksumForDataToSend(dataToSend);
+            dataToSend[7] = checksum;
+            //发送数据
+            serialPort.Write(dataToSend, 0, 8);
+        }
+
+        private void ServoControlSwitchButton_Click(object sender, EventArgs e)
+        {
+            GlobalVars.servoControlSwitchState = !GlobalVars.servoControlSwitchState;
+        }
+
+        private void LaserControlSwitchButton_Click(object sender, EventArgs e)
+        {
+            GlobalVars.laserControlSwitchState = !GlobalVars.laserControlSwitchState;
+        }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -273,6 +376,10 @@ namespace DCS
         {
             AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
             ammoLoadConfigForm.ShowDialog();
+            GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
+            Console.WriteLine(GlobalVars.ammoLeftNum);
+            this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
+
         }
     }
 }

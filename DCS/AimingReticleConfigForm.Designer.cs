@@ -30,40 +30,19 @@
         {
             this.configTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,6 +55,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -88,6 +68,7 @@
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -100,6 +81,7 @@
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -112,6 +94,7 @@
             this.button40 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -124,6 +107,7 @@
             this.button48 = new System.Windows.Forms.Button();
             this.button49 = new System.Windows.Forms.Button();
             this.button50 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -136,6 +120,7 @@
             this.button56 = new System.Windows.Forms.Button();
             this.button57 = new System.Windows.Forms.Button();
             this.button58 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -148,6 +133,7 @@
             this.button64 = new System.Windows.Forms.Button();
             this.button65 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -160,6 +146,7 @@
             this.button72 = new System.Windows.Forms.Button();
             this.button73 = new System.Windows.Forms.Button();
             this.button74 = new System.Windows.Forms.Button();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -172,6 +159,7 @@
             this.button80 = new System.Windows.Forms.Button();
             this.button81 = new System.Windows.Forms.Button();
             this.button82 = new System.Windows.Forms.Button();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -184,6 +172,7 @@
             this.button88 = new System.Windows.Forms.Button();
             this.button89 = new System.Windows.Forms.Button();
             this.button90 = new System.Windows.Forms.Button();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -196,6 +185,7 @@
             this.button96 = new System.Windows.Forms.Button();
             this.button97 = new System.Windows.Forms.Button();
             this.button98 = new System.Windows.Forms.Button();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -208,6 +198,7 @@
             this.button104 = new System.Windows.Forms.Button();
             this.button105 = new System.Windows.Forms.Button();
             this.button106 = new System.Windows.Forms.Button();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -220,6 +211,7 @@
             this.button112 = new System.Windows.Forms.Button();
             this.button113 = new System.Windows.Forms.Button();
             this.button114 = new System.Windows.Forms.Button();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -232,6 +224,7 @@
             this.button120 = new System.Windows.Forms.Button();
             this.button121 = new System.Windows.Forms.Button();
             this.button122 = new System.Windows.Forms.Button();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -244,6 +237,7 @@
             this.button128 = new System.Windows.Forms.Button();
             this.button129 = new System.Windows.Forms.Button();
             this.button130 = new System.Windows.Forms.Button();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -256,6 +250,7 @@
             this.button136 = new System.Windows.Forms.Button();
             this.button137 = new System.Windows.Forms.Button();
             this.button138 = new System.Windows.Forms.Button();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -268,6 +263,7 @@
             this.button144 = new System.Windows.Forms.Button();
             this.button145 = new System.Windows.Forms.Button();
             this.button146 = new System.Windows.Forms.Button();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -280,6 +276,7 @@
             this.button152 = new System.Windows.Forms.Button();
             this.button153 = new System.Windows.Forms.Button();
             this.button154 = new System.Windows.Forms.Button();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -292,65 +289,68 @@
             this.button160 = new System.Windows.Forms.Button();
             this.button161 = new System.Windows.Forms.Button();
             this.button162 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.configTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.tabPage11.SuspendLayout();
-            this.tabPage12.SuspendLayout();
-            this.tabPage13.SuspendLayout();
-            this.tabPage14.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.tabPage16.SuspendLayout();
-            this.tabPage17.SuspendLayout();
-            this.tabPage18.SuspendLayout();
-            this.tabPage19.SuspendLayout();
-            this.tabPage20.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
+            this.tabPage5.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
+            this.tabPage6.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
+            this.tabPage7.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
+            this.tabPage8.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).BeginInit();
+            this.tabPage9.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).BeginInit();
+            this.tabPage10.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).BeginInit();
+            this.tabPage11.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).BeginInit();
+            this.tabPage12.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).BeginInit();
+            this.tabPage13.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar13)).BeginInit();
+            this.tabPage14.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).BeginInit();
+            this.tabPage15.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar15)).BeginInit();
+            this.tabPage16.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar16)).BeginInit();
+            this.tabPage17.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar17)).BeginInit();
+            this.tabPage18.SuspendLayout();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar18)).BeginInit();
+            this.tabPage19.SuspendLayout();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar19)).BeginInit();
+            this.tabPage20.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).BeginInit();
             this.SuspendLayout();
@@ -396,226 +396,9 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "1";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(478, 304);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panel3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(478, 304);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panel4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(478, 304);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.panel5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(478, 304);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.panel6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 24);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(478, 304);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "6";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.panel7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 24);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(478, 304);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "7";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.panel8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 24);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(478, 304);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "8";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.panel9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 24);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(478, 304);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "9";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.panel10);
-            this.tabPage10.Location = new System.Drawing.Point(4, 24);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(478, 304);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "10";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.panel11);
-            this.tabPage11.Location = new System.Drawing.Point(4, 24);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(478, 304);
-            this.tabPage11.TabIndex = 10;
-            this.tabPage11.Text = "11";
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
-            // tabPage12
-            // 
-            this.tabPage12.Controls.Add(this.panel12);
-            this.tabPage12.Location = new System.Drawing.Point(4, 24);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(478, 304);
-            this.tabPage12.TabIndex = 11;
-            this.tabPage12.Text = "12";
-            this.tabPage12.UseVisualStyleBackColor = true;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Controls.Add(this.panel13);
-            this.tabPage13.Location = new System.Drawing.Point(4, 24);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(478, 304);
-            this.tabPage13.TabIndex = 12;
-            this.tabPage13.Text = "13";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Controls.Add(this.panel14);
-            this.tabPage14.Location = new System.Drawing.Point(4, 24);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(478, 304);
-            this.tabPage14.TabIndex = 13;
-            this.tabPage14.Text = "14";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.panel15);
-            this.tabPage15.Location = new System.Drawing.Point(4, 24);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(478, 304);
-            this.tabPage15.TabIndex = 14;
-            this.tabPage15.Text = "15";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.Controls.Add(this.panel16);
-            this.tabPage16.Location = new System.Drawing.Point(4, 24);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Size = new System.Drawing.Size(478, 304);
-            this.tabPage16.TabIndex = 15;
-            this.tabPage16.Text = "16";
-            this.tabPage16.UseVisualStyleBackColor = true;
-            // 
-            // tabPage17
-            // 
-            this.tabPage17.Controls.Add(this.panel17);
-            this.tabPage17.Location = new System.Drawing.Point(4, 24);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(478, 304);
-            this.tabPage17.TabIndex = 16;
-            this.tabPage17.Text = "17";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // tabPage18
-            // 
-            this.tabPage18.Controls.Add(this.panel18);
-            this.tabPage18.Location = new System.Drawing.Point(4, 24);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Size = new System.Drawing.Size(478, 304);
-            this.tabPage18.TabIndex = 17;
-            this.tabPage18.Text = "18";
-            this.tabPage18.UseVisualStyleBackColor = true;
-            // 
-            // tabPage19
-            // 
-            this.tabPage19.Controls.Add(this.panel19);
-            this.tabPage19.Location = new System.Drawing.Point(4, 24);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(478, 304);
-            this.tabPage19.TabIndex = 18;
-            this.tabPage19.Text = "19";
-            this.tabPage19.UseVisualStyleBackColor = true;
-            // 
-            // tabPage20
-            // 
-            this.tabPage20.Controls.Add(this.panel20);
-            this.tabPage20.Location = new System.Drawing.Point(4, 24);
-            this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(478, 304);
-            this.tabPage20.TabIndex = 19;
-            this.tabPage20.Text = "20";
-            this.tabPage20.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(217, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "瞄准分划设置";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(201, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "确定";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(307, 411);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.trackBar1);
@@ -633,77 +416,25 @@
             this.panel1.Size = new System.Drawing.Size(478, 304);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // label3
             // 
-            this.button3.Location = new System.Drawing.Point(147, 264);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "确定";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(322, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "调整大小";
             // 
-            // button4
+            // label2
             // 
-            this.button4.Location = new System.Drawing.Point(253, 264);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "取消";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(89, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(47, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "上";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(89, 161);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(47, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "下";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(42, 117);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(47, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "左";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(136, 117);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(47, 23);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "右";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(308, 58);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(34, 50);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "增大";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(308, 147);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(34, 50);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "缩小";
-            this.button10.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(74, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "调整位置";
             // 
             // trackBar1
             // 
@@ -718,25 +449,87 @@
             this.trackBar1.TickFrequency = 5;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
-            // label2
+            // button10
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(74, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "调整位置";
+            this.button10.Location = new System.Drawing.Point(308, 147);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(34, 50);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "缩小";
+            this.button10.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // button9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(322, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "调整大小";
+            this.button9.Location = new System.Drawing.Point(308, 58);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(34, 50);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "增大";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(136, 117);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(47, 23);
+            this.button8.TabIndex = 5;
+            this.button8.Text = "右";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(42, 117);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(47, 23);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "左";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(89, 161);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(47, 23);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "下";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(89, 72);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(47, 23);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "上";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(253, 264);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "取消";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(147, 264);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "确定";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(478, 304);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -862,6 +655,16 @@
             this.button18.Text = "确定";
             this.button18.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(478, 304);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label6);
@@ -985,6 +788,16 @@
             this.button26.TabIndex = 0;
             this.button26.Text = "确定";
             this.button26.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(478, 304);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -1110,6 +923,16 @@
             this.button34.Text = "确定";
             this.button34.UseVisualStyleBackColor = true;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.panel5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(478, 304);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label10);
@@ -1233,6 +1056,16 @@
             this.button42.TabIndex = 0;
             this.button42.Text = "确定";
             this.button42.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.panel6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(478, 304);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "6";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -1358,6 +1191,16 @@
             this.button50.Text = "确定";
             this.button50.UseVisualStyleBackColor = true;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.panel7);
+            this.tabPage7.Location = new System.Drawing.Point(4, 24);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(478, 304);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label14);
@@ -1481,6 +1324,16 @@
             this.button58.TabIndex = 0;
             this.button58.Text = "确定";
             this.button58.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.panel8);
+            this.tabPage8.Location = new System.Drawing.Point(4, 24);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(478, 304);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "8";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
@@ -1606,6 +1459,16 @@
             this.button66.Text = "确定";
             this.button66.UseVisualStyleBackColor = true;
             // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.panel9);
+            this.tabPage9.Location = new System.Drawing.Point(4, 24);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(478, 304);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "9";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label18);
@@ -1729,6 +1592,16 @@
             this.button74.TabIndex = 0;
             this.button74.Text = "确定";
             this.button74.UseVisualStyleBackColor = true;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.panel10);
+            this.tabPage10.Location = new System.Drawing.Point(4, 24);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(478, 304);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "10";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
@@ -1854,6 +1727,16 @@
             this.button82.Text = "确定";
             this.button82.UseVisualStyleBackColor = true;
             // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.panel11);
+            this.tabPage11.Location = new System.Drawing.Point(4, 24);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(478, 304);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "11";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.label22);
@@ -1977,6 +1860,16 @@
             this.button90.TabIndex = 0;
             this.button90.Text = "确定";
             this.button90.UseVisualStyleBackColor = true;
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.Controls.Add(this.panel12);
+            this.tabPage12.Location = new System.Drawing.Point(4, 24);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Size = new System.Drawing.Size(478, 304);
+            this.tabPage12.TabIndex = 11;
+            this.tabPage12.Text = "12";
+            this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // panel12
             // 
@@ -2102,6 +1995,16 @@
             this.button98.Text = "确定";
             this.button98.UseVisualStyleBackColor = true;
             // 
+            // tabPage13
+            // 
+            this.tabPage13.Controls.Add(this.panel13);
+            this.tabPage13.Location = new System.Drawing.Point(4, 24);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Size = new System.Drawing.Size(478, 304);
+            this.tabPage13.TabIndex = 12;
+            this.tabPage13.Text = "13";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.label26);
@@ -2225,6 +2128,16 @@
             this.button106.TabIndex = 0;
             this.button106.Text = "确定";
             this.button106.UseVisualStyleBackColor = true;
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.panel14);
+            this.tabPage14.Location = new System.Drawing.Point(4, 24);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Size = new System.Drawing.Size(478, 304);
+            this.tabPage14.TabIndex = 13;
+            this.tabPage14.Text = "14";
+            this.tabPage14.UseVisualStyleBackColor = true;
             // 
             // panel14
             // 
@@ -2350,6 +2263,16 @@
             this.button114.Text = "确定";
             this.button114.UseVisualStyleBackColor = true;
             // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.panel15);
+            this.tabPage15.Location = new System.Drawing.Point(4, 24);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Size = new System.Drawing.Size(478, 304);
+            this.tabPage15.TabIndex = 14;
+            this.tabPage15.Text = "15";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
             // panel15
             // 
             this.panel15.Controls.Add(this.label30);
@@ -2473,6 +2396,16 @@
             this.button122.TabIndex = 0;
             this.button122.Text = "确定";
             this.button122.UseVisualStyleBackColor = true;
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.panel16);
+            this.tabPage16.Location = new System.Drawing.Point(4, 24);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Size = new System.Drawing.Size(478, 304);
+            this.tabPage16.TabIndex = 15;
+            this.tabPage16.Text = "16";
+            this.tabPage16.UseVisualStyleBackColor = true;
             // 
             // panel16
             // 
@@ -2598,6 +2531,16 @@
             this.button130.Text = "确定";
             this.button130.UseVisualStyleBackColor = true;
             // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.panel17);
+            this.tabPage17.Location = new System.Drawing.Point(4, 24);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Size = new System.Drawing.Size(478, 304);
+            this.tabPage17.TabIndex = 16;
+            this.tabPage17.Text = "17";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
             // panel17
             // 
             this.panel17.Controls.Add(this.label34);
@@ -2721,6 +2664,16 @@
             this.button138.TabIndex = 0;
             this.button138.Text = "确定";
             this.button138.UseVisualStyleBackColor = true;
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.panel18);
+            this.tabPage18.Location = new System.Drawing.Point(4, 24);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Size = new System.Drawing.Size(478, 304);
+            this.tabPage18.TabIndex = 17;
+            this.tabPage18.Text = "18";
+            this.tabPage18.UseVisualStyleBackColor = true;
             // 
             // panel18
             // 
@@ -2846,6 +2799,16 @@
             this.button146.Text = "确定";
             this.button146.UseVisualStyleBackColor = true;
             // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.panel19);
+            this.tabPage19.Location = new System.Drawing.Point(4, 24);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Size = new System.Drawing.Size(478, 304);
+            this.tabPage19.TabIndex = 18;
+            this.tabPage19.Text = "19";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
             // panel19
             // 
             this.panel19.Controls.Add(this.label38);
@@ -2969,6 +2932,16 @@
             this.button154.TabIndex = 0;
             this.button154.Text = "确定";
             this.button154.UseVisualStyleBackColor = true;
+            // 
+            // tabPage20
+            // 
+            this.tabPage20.Controls.Add(this.panel20);
+            this.tabPage20.Location = new System.Drawing.Point(4, 24);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Size = new System.Drawing.Size(478, 304);
+            this.tabPage20.TabIndex = 19;
+            this.tabPage20.Text = "20";
+            this.tabPage20.UseVisualStyleBackColor = true;
             // 
             // panel20
             // 
@@ -3094,6 +3067,34 @@
             this.button162.Text = "确定";
             this.button162.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(217, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "瞄准分划设置";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(201, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "确定";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(307, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "取消";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // AimingReticleConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3109,82 +3110,82 @@
             this.Load += new System.EventHandler(this.AimingReticleConfigForm_Load);
             this.configTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage10.ResumeLayout(false);
-            this.tabPage11.ResumeLayout(false);
-            this.tabPage12.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage14.ResumeLayout(false);
-            this.tabPage15.ResumeLayout(false);
-            this.tabPage16.ResumeLayout(false);
-            this.tabPage17.ResumeLayout(false);
-            this.tabPage18.ResumeLayout(false);
-            this.tabPage19.ResumeLayout(false);
-            this.tabPage20.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
+            this.tabPage5.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
+            this.tabPage6.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
+            this.tabPage7.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
+            this.tabPage8.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).EndInit();
+            this.tabPage9.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).EndInit();
+            this.tabPage10.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).EndInit();
+            this.tabPage11.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).EndInit();
+            this.tabPage12.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).EndInit();
+            this.tabPage13.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar13)).EndInit();
+            this.tabPage14.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).EndInit();
+            this.tabPage15.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar15)).EndInit();
+            this.tabPage16.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar16)).EndInit();
+            this.tabPage17.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar17)).EndInit();
+            this.tabPage18.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar18)).EndInit();
+            this.tabPage19.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar19)).EndInit();
+            this.tabPage20.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).EndInit();
