@@ -292,6 +292,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.pitchAngleClearButton = new System.Windows.Forms.Button();
+            this.dialPlateAngleClearButton = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.configTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -353,6 +361,8 @@
             this.tabPage20.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).BeginInit();
+            this.panel21.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // configTabControl
@@ -447,7 +457,6 @@
             this.trackBar1.Size = new System.Drawing.Size(45, 198);
             this.trackBar1.TabIndex = 8;
             this.trackBar1.TickFrequency = 5;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
             // button10
             // 
@@ -3095,11 +3104,99 @@
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.pitchAngleClearButton);
+            this.panel21.Controls.Add(this.dialPlateAngleClearButton);
+            this.panel21.Controls.Add(this.label42);
+            this.panel21.Location = new System.Drawing.Point(555, 97);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(200, 119);
+            this.panel21.TabIndex = 4;
+            // 
+            // pitchAngleClearButton
+            // 
+            this.pitchAngleClearButton.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pitchAngleClearButton.ForeColor = System.Drawing.Color.Red;
+            this.pitchAngleClearButton.Location = new System.Drawing.Point(49, 85);
+            this.pitchAngleClearButton.Name = "pitchAngleClearButton";
+            this.pitchAngleClearButton.Size = new System.Drawing.Size(107, 23);
+            this.pitchAngleClearButton.TabIndex = 2;
+            this.pitchAngleClearButton.Text = "俯仰零位";
+            this.pitchAngleClearButton.UseVisualStyleBackColor = true;
+            this.pitchAngleClearButton.Click += new System.EventHandler(this.pitchAngleClearButton_Click);
+            // 
+            // dialPlateAngleClearButton
+            // 
+            this.dialPlateAngleClearButton.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dialPlateAngleClearButton.ForeColor = System.Drawing.Color.Red;
+            this.dialPlateAngleClearButton.Location = new System.Drawing.Point(49, 45);
+            this.dialPlateAngleClearButton.Name = "dialPlateAngleClearButton";
+            this.dialPlateAngleClearButton.Size = new System.Drawing.Size(107, 23);
+            this.dialPlateAngleClearButton.TabIndex = 1;
+            this.dialPlateAngleClearButton.Text = "方位零位";
+            this.dialPlateAngleClearButton.UseVisualStyleBackColor = true;
+            this.dialPlateAngleClearButton.Click += new System.EventHandler(this.DialPlateAngleClearButton_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label42.Location = new System.Drawing.Point(46, 13);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(110, 16);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "系统零位设置";
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.label45);
+            this.panel22.Controls.Add(this.label44);
+            this.panel22.Controls.Add(this.label43);
+            this.panel22.Location = new System.Drawing.Point(555, 243);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(200, 128);
+            this.panel22.TabIndex = 5;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label45.ForeColor = System.Drawing.Color.Red;
+            this.label45.Location = new System.Drawing.Point(67, 82);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(67, 14);
+            this.label45.TabIndex = 3;
+            this.label45.Text = "角度：°";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label44.ForeColor = System.Drawing.Color.Red;
+            this.label44.Location = new System.Drawing.Point(68, 47);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(76, 14);
+            this.label44.TabIndex = 2;
+            this.label44.Text = "密位：mil";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label43.Location = new System.Drawing.Point(67, 15);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(76, 16);
+            this.label43.TabIndex = 1;
+            this.label43.Text = "显示量纲";
+            // 
             // AimingReticleConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 453);
+            this.Controls.Add(this.panel22);
+            this.Controls.Add(this.panel21);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -3189,6 +3286,10 @@
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).EndInit();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3460,5 +3561,13 @@
         private System.Windows.Forms.Button button160;
         private System.Windows.Forms.Button button161;
         private System.Windows.Forms.Button button162;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Button pitchAngleClearButton;
+        private System.Windows.Forms.Button dialPlateAngleClearButton;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
     }
 }

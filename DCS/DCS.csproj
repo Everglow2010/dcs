@@ -89,6 +89,12 @@
     <Compile Include="AimingReticleConfigForm.Designer.cs">
       <DependentUpon>AimingReticleConfigForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AimingReticleConfigPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AimingReticleConfigPanel.Designer.cs">
+      <DependentUpon>AimingReticleConfigPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AmmoLoadConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="AimingReticleConfigForm.resx">
       <DependentUpon>AimingReticleConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AimingReticleConfigPanel.resx">
+      <DependentUpon>AimingReticleConfigPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AmmoLoadConfigForm.resx">
       <DependentUpon>AmmoLoadConfigForm.cs</DependentUpon>

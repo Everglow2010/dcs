@@ -21,5 +21,15 @@ namespace DCS
         {
 
         }
+
+        private void DialPlateAngleClearButton_Click(object sender, EventArgs e)
+        {
+            GlobalVars.dialPlateAngleClear = true;
+        }
+
+        private void pitchAngleClearButton_Click(object sender, EventArgs e)
+        {
+            GlobalVars.pitchAngleClear = true;
+        }
     }
 }

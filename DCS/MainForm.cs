@@ -115,6 +115,8 @@ namespace DCS
             this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngle);
             //更新仪表盘角度显示值
             this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngle);
+            //更新仪表盘指针图像
+            //更新俯仰角指针图像
         }
 
         VideoCapture camCapter = null;
