@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.sizeTrackBarValueLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,9 +44,6 @@
             this.buttonUp = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonConfirm = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sizeTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(478, 304);
             this.panel1.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(433, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "-100";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(433, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(11, 12);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(433, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 12);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "100";
             // 
             // sizeTrackBarValueLabel
             // 
@@ -124,6 +151,7 @@
             this.buttonDecrease.TabIndex = 7;
             this.buttonDecrease.Text = "缩小";
             this.buttonDecrease.UseVisualStyleBackColor = true;
+            this.buttonDecrease.Click += new System.EventHandler(this.buttonDecrease_Click);
             // 
             // buttonIncrease
             // 
@@ -133,6 +161,7 @@
             this.buttonIncrease.TabIndex = 6;
             this.buttonIncrease.Text = "增大";
             this.buttonIncrease.UseVisualStyleBackColor = true;
+            this.buttonIncrease.Click += new System.EventHandler(this.buttonIncrease_Click);
             // 
             // buttonRight
             // 
@@ -142,6 +171,7 @@
             this.buttonRight.TabIndex = 5;
             this.buttonRight.Text = "右";
             this.buttonRight.UseVisualStyleBackColor = true;
+            this.buttonRight.Click += new System.EventHandler(this.buttonRight_Click);
             // 
             // buttonLeft
             // 
@@ -151,6 +181,7 @@
             this.buttonLeft.TabIndex = 4;
             this.buttonLeft.Text = "左";
             this.buttonLeft.UseVisualStyleBackColor = true;
+            this.buttonLeft.Click += new System.EventHandler(this.buttonLeft_Click);
             // 
             // buttonDown
             // 
@@ -160,6 +191,7 @@
             this.buttonDown.TabIndex = 3;
             this.buttonDown.Text = "下";
             this.buttonDown.UseVisualStyleBackColor = true;
+            this.buttonDown.Click += new System.EventHandler(this.buttonDown_Click);
             // 
             // buttonUp
             // 
@@ -169,6 +201,7 @@
             this.buttonUp.TabIndex = 2;
             this.buttonUp.Text = "上";
             this.buttonUp.UseVisualStyleBackColor = true;
+            this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
             // 
             // buttonCancel
             // 
@@ -178,6 +211,7 @@
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonConfirm
             // 
@@ -187,33 +221,7 @@
             this.buttonConfirm.TabIndex = 0;
             this.buttonConfirm.Text = "确定";
             this.buttonConfirm.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 12);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "100";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(433, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(11, 12);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(433, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "-100";
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // AimingReticleConfigPanel
             // 

@@ -46,7 +46,9 @@ namespace DCS
             //初始化20个焦距档位对应的瞄准分划大小和位置
             for (int i = 0; i < 20; i++)
             {
-
+                GlobalVars.aimingReticleConfigs[i].posX = i * 10 + 1;
+                GlobalVars.aimingReticleConfigs[i].posY = i * 10 + 2;
+                GlobalVars.aimingReticleConfigs[i].sizePercent = i * 4 + 1;
             }
             //实例化委托
             flushUI = new FreshUIDisplay(DisplayToUI);
