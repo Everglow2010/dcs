@@ -77,9 +77,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(433, 231);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.Size = new System.Drawing.Size(35, 12);
             this.label5.TabIndex = 14;
-            this.label5.Text = "-100";
+            this.label5.Text = "-100%";
             // 
             // label4
             // 
@@ -95,9 +95,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(433, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 12);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 12;
-            this.label1.Text = "100";
+            this.label1.Text = "100%";
             // 
             // sizeTrackBarValueLabel
             // 
@@ -161,7 +161,7 @@
             this.buttonIncrease.TabIndex = 6;
             this.buttonIncrease.Text = "增大";
             this.buttonIncrease.UseVisualStyleBackColor = true;
-            this.buttonIncrease.Click += new System.EventHandler(this.buttonIncrease_Click);
+            this.buttonIncrease.Click += new System.EventHandler(this.ButtonIncrease_Click);
             // 
             // buttonRight
             // 
@@ -171,7 +171,7 @@
             this.buttonRight.TabIndex = 5;
             this.buttonRight.Text = "右";
             this.buttonRight.UseVisualStyleBackColor = true;
-            this.buttonRight.Click += new System.EventHandler(this.buttonRight_Click);
+            this.buttonRight.Click += new System.EventHandler(this.ButtonRight_Click);
             // 
             // buttonLeft
             // 
@@ -181,7 +181,7 @@
             this.buttonLeft.TabIndex = 4;
             this.buttonLeft.Text = "左";
             this.buttonLeft.UseVisualStyleBackColor = true;
-            this.buttonLeft.Click += new System.EventHandler(this.buttonLeft_Click);
+            this.buttonLeft.Click += new System.EventHandler(this.ButtonLeft_Click);
             // 
             // buttonDown
             // 
@@ -211,7 +211,7 @@
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // buttonConfirm
             // 
@@ -221,7 +221,7 @@
             this.buttonConfirm.TabIndex = 0;
             this.buttonConfirm.Text = "确定";
             this.buttonConfirm.UseVisualStyleBackColor = true;
-            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            this.buttonConfirm.Click += new System.EventHandler(this.ButtonConfirm_Click);
             // 
             // AimingReticleConfigPanel
             // 

@@ -65,6 +65,7 @@
       <HintPath>D:\ProgramFiles\emgucv-windesktop 3.4.1.2976\bin\Emgu.CV.World.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.ServiceModel" />
@@ -101,12 +102,16 @@
     <Compile Include="AmmoLoadConfigForm.Designer.cs">
       <DependentUpon>AmmoLoadConfigForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppConfigManager.cs" />
     <Compile Include="GlobalVars.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pitchAnglePictureBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,9 +167,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
@@ -191,6 +193,7 @@
     <Content Include="DOC\图片素材\监控背景画面.jpg" />
     <Content Include="DOC\图片素材\瞄准划分.png" />
     <Content Include="DOC\图片素材\绘图1.png" />
+    <None Include="Resources\aimingDivision.png" />
     <Content Include="Resources\bgVideo.mp4" />
     <Content Include="Resources\btncheckoff1.png" />
     <Content Include="Resources\btncheckoff2.png" />
@@ -204,19 +207,13 @@
     <Content Include="Resources\btncheckon4.png" />
     <Content Include="Resources\btncheckon5.png" />
     <Content Include="Resources\btncheckon6.png" />
+    <None Include="Resources\pitchAngleRuler.bmp" />
     <Content Include="Resources\仪表盘指针.png" />
-    <None Include="Resources\仪表盘指针1.png" />
     <Content Include="Resources\仪表盘表盘.png" />
-    <None Include="Resources\仪表盘表盘1.png" />
     <Content Include="Resources\保险关.png" />
-    <None Include="Resources\瞄准划分1.png" />
-    <None Include="Resources\保险关1.png" />
     <Content Include="Resources\保险开.png" />
-    <None Include="Resources\保险开1.png" />
     <Content Include="Resources\俯仰角度标尺.png" />
-    <None Include="Resources\俯仰角度标尺1.png" />
     <Content Include="Resources\俯仰角度标尺指针.png" />
-    <None Include="Resources\俯仰角度标尺指针1.png" />
     <Content Include="Resources\已装.png" />
     <Content Include="Resources\开.png" />
     <Content Include="Resources\未装.png" />

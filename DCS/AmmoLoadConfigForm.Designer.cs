@@ -210,6 +210,7 @@
             this.projectileCountClearButton.TabIndex = 14;
             this.projectileCountClearButton.Text = "射弹数清零";
             this.projectileCountClearButton.UseVisualStyleBackColor = true;
+            this.projectileCountClearButton.Click += new System.EventHandler(this.ProjectileCountClearButton_Click);
             // 
             // AmmoLoadConfigForm
             // 

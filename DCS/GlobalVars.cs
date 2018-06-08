@@ -29,12 +29,14 @@ namespace DCS
         public static bool projectileCountClear = false;
 
         //记录俯仰角度的mil值，记的是解析出来的数据，-1667~10000，1LSB=0.1mil
-        public static int pitchAngle = 0;
+        public static int pitchAngleWithMil = 0;
+        public static int pitchAngleWithDegree = 0;
         //俯仰角度清零与否，每次发送数据时检测此项，为true则发送一次清零控制并重置成false
         public static bool pitchAngleClear = false;
 
         //记录方位位置值的mil值，记的是解析出来的数据，0~59999，1LSB=0.1mil
-        public static int dialPlateAngle = 0;
+        public static int dialPlateAngleWithMil = 0;
+        public static int dialPlateAngleWithDegree = 0;
         //方位位置值清零与否，每次发送数据时检测此项，为true则发送一次清零控制并重置成false
         public static bool dialPlateAngleClear = false;
 
@@ -47,12 +49,13 @@ namespace DCS
             public int posX;//位置的x坐标
             public int posY;//位置的y坐标
             public int sizePercent;//瞄准分划的大小百分比，-100~100
-
-            public AimingReticleConfigParameter(int x,int y,int percent)
+            public int size;//瞄准分划大小的实际尺寸，正方形，宽高一样
+            public AimingReticleConfigParameter(int x,int y,int percent,int s)
             {
                 posX = x;
                 posY = y;
                 sizePercent = percent;
+                size = s;
             }
         }
         //二十个焦距档位的参数记录

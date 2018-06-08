@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DCS
@@ -98,7 +91,6 @@ namespace DCS
                 ammoLoadNumInt = Convert.ToInt32(ammoLoadNumStr);
                 ammoLoadNumTextbox.Text = ammoLoadNumStr;
                 GlobalVars.ammoLoadNum = ammoLoadNumInt;
-                //this.DialogResult = DialogResult.OK;
                 MessageBox.Show("装弹数量已成功设置为：" + ammoLoadNumInt);
                 ammoLoadNumStr = "";
                 
@@ -109,6 +101,11 @@ namespace DCS
                 ammoLoadNumTextbox.Clear();
             }
             
+        }
+        //射弹计数清零按钮点击触发
+        private void ProjectileCountClearButton_Click(object sender, EventArgs e)
+        {
+            GlobalVars.projectileCountClear = true;
         }
     }
 }

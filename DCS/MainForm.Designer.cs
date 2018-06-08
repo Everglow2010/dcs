@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.topBar = new System.Windows.Forms.Panel();
             this.servoControlSwitchButton = new DCS.OnOffSwitchButton();
             this.batteryLabel = new System.Windows.Forms.Label();
@@ -46,9 +47,9 @@
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlateValueLabel = new System.Windows.Forms.Label();
-            this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
+            this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.pitchAngleValueLabel = new System.Windows.Forms.Label();
             this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
             this.topBar.SuspendLayout();
@@ -56,9 +57,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).BeginInit();
             this.cameraViewImageBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // topBar
@@ -117,7 +118,7 @@
             // 
             // safeStatePitureBox
             // 
-            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.safetyOff;
+            this.safeStatePitureBox.Image = ((System.Drawing.Image)(resources.GetObject("safeStatePitureBox.Image")));
             this.safeStatePitureBox.Location = new System.Drawing.Point(808, 38);
             this.safeStatePitureBox.Name = "safeStatePitureBox";
             this.safeStatePitureBox.Size = new System.Drawing.Size(119, 21);
@@ -235,7 +236,7 @@
             // aimingReticlePictureBox
             // 
             this.aimingReticlePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.aimingReticlePictureBox.Image = global::DCS.Properties.Resources.aimingDivision;
+            this.aimingReticlePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("aimingReticlePictureBox.Image")));
             this.aimingReticlePictureBox.Location = new System.Drawing.Point(515, 235);
             this.aimingReticlePictureBox.Name = "aimingReticlePictureBox";
             this.aimingReticlePictureBox.Size = new System.Drawing.Size(250, 250);
@@ -246,13 +247,15 @@
             // dialPlatePictureBox
             // 
             this.dialPlatePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.dialPlatePictureBox.Image = global::DCS.Properties.Resources.dialPlate;
+            this.dialPlatePictureBox.BackgroundImage = global::DCS.Properties.Resources.dialPlate;
+            this.dialPlatePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dialPlatePictureBox.Location = new System.Drawing.Point(88, 503);
             this.dialPlatePictureBox.Name = "dialPlatePictureBox";
             this.dialPlatePictureBox.Size = new System.Drawing.Size(160, 160);
             this.dialPlatePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dialPlatePictureBox.TabIndex = 0;
             this.dialPlatePictureBox.TabStop = false;
+            this.dialPlatePictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.DialPlatePictureBox_Paint);
             // 
             // dialPlateValueLabel
             // 
@@ -266,17 +269,6 @@
             this.dialPlateValueLabel.TabIndex = 4;
             this.dialPlateValueLabel.Text = "0";
             this.dialPlateValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pitchAngleRulerPictureBox
-            // 
-            this.pitchAngleRulerPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.pitchAngleRulerPictureBox.Image = global::DCS.Properties.Resources.pitchAngleRuler;
-            this.pitchAngleRulerPictureBox.Location = new System.Drawing.Point(29, 503);
-            this.pitchAngleRulerPictureBox.Name = "pitchAngleRulerPictureBox";
-            this.pitchAngleRulerPictureBox.Size = new System.Drawing.Size(34, 160);
-            this.pitchAngleRulerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pitchAngleRulerPictureBox.TabIndex = 2;
-            this.pitchAngleRulerPictureBox.TabStop = false;
             // 
             // serialPort
             // 
@@ -297,6 +289,19 @@
             this.cameraViewImageBox.Size = new System.Drawing.Size(1280, 720);
             this.cameraViewImageBox.TabIndex = 2;
             this.cameraViewImageBox.TabStop = false;
+            // 
+            // pitchAngleRulerPictureBox
+            // 
+            this.pitchAngleRulerPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pitchAngleRulerPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pitchAngleRulerPictureBox.BackgroundImage")));
+            this.pitchAngleRulerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pitchAngleRulerPictureBox.Location = new System.Drawing.Point(29, 503);
+            this.pitchAngleRulerPictureBox.Name = "pitchAngleRulerPictureBox";
+            this.pitchAngleRulerPictureBox.Size = new System.Drawing.Size(34, 160);
+            this.pitchAngleRulerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pitchAngleRulerPictureBox.TabIndex = 2;
+            this.pitchAngleRulerPictureBox.TabStop = false;
+            this.pitchAngleRulerPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.PitchAngleRulerPictureBox_Paint);
             // 
             // pitchAngleValueLabel
             // 
@@ -334,9 +339,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).EndInit();
             this.cameraViewImageBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,13 +364,13 @@
         private System.Windows.Forms.ProgressBar batteryBar;
         private System.Windows.Forms.Label batteryLabel;
         private System.IO.Ports.SerialPort serialPort;
-        private System.Windows.Forms.PictureBox pitchAngleRulerPictureBox;
         private System.Windows.Forms.PictureBox dialPlatePictureBox;
         private System.Windows.Forms.PictureBox aimingReticlePictureBox;
         private Emgu.CV.UI.ImageBox cameraViewImageBox;
         private System.Windows.Forms.Label pitchAngleValueLabel;
         private System.Windows.Forms.Label dialPlateValueLabel;
         private System.Windows.Forms.Timer dataSendTimer;
+        private System.Windows.Forms.PictureBox pitchAngleRulerPictureBox;
     }
 }
 
