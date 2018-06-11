@@ -405,12 +405,16 @@ namespace DCS
         private void AmmoLeftSetButton_Click(object sender, EventArgs e)
         {
             AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
+            //ammoLoadConfigForm.MdiParent = this;
             ammoLoadConfigForm.ShowDialog();
 
             //更新设置后的参数
-            GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
-            Console.WriteLine(GlobalVars.ammoLeftNum);
-            this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
+            if (ammoLoadConfigForm.DialogResult==DialogResult.OK)
+            {
+                GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
+                Console.WriteLine(GlobalVars.ammoLeftNum);
+                this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
+            }
         }
 
         //俯仰角度标尺的指针

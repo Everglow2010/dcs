@@ -15,7 +15,7 @@ namespace DCS
 
         private void AmmoLoadConfigForm_Load(object sender, EventArgs e)
         {
-            ammoLoadNumTextbox.Text = Convert.ToString(GlobalVars.ammoLoadNum);
+            //ammoLoadNumTextbox.Text = Convert.ToString(GlobalVars.ammoLoadNum);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace DCS
                 GlobalVars.ammoLoadNum = ammoLoadNumInt;
                 MessageBox.Show("装弹数量已成功设置为：" + ammoLoadNumInt);
                 ammoLoadNumStr = "";
-                
+                DialogResult = DialogResult.OK;
             }
             catch (Exception)
             {

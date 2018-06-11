@@ -194,6 +194,9 @@
     <Content Include="DOC\图片素材\瞄准划分.png" />
     <Content Include="DOC\图片素材\绘图1.png" />
     <None Include="Resources\aimingDivision.png" />
+    <Content Include="Resources\UIV2\AmmoLoadedNotLoaded.png" />
+    <Content Include="Resources\UIV2\AmmoLoadedOpen.png" />
+    <Content Include="Resources\UIV2\AmmoLoadedReady.png" />
     <Content Include="Resources\bgVideo.mp4" />
     <Content Include="Resources\btncheckoff1.png" />
     <Content Include="Resources\btncheckoff2.png" />
@@ -208,6 +211,12 @@
     <Content Include="Resources\btncheckon5.png" />
     <Content Include="Resources\btncheckon6.png" />
     <None Include="Resources\pitchAngleRuler.bmp" />
+    <Content Include="Resources\UIV2\LaserOff.png" />
+    <Content Include="Resources\UIV2\LaserOn.png" />
+    <Content Include="Resources\UIV2\SafetyOff.png" />
+    <Content Include="Resources\UIV2\SafetyOn.png" />
+    <Content Include="Resources\UIV2\YellowCornor.png" />
+    <None Include="Resources\YellowCornor.bmp" />
     <Content Include="Resources\仪表盘指针.png" />
     <Content Include="Resources\仪表盘表盘.png" />
     <Content Include="Resources\保险关.png" />

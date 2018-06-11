@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.topBar = new System.Windows.Forms.Panel();
-            this.servoControlSwitchButton = new DCS.OnOffSwitchButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.batteryLabel = new System.Windows.Forms.Label();
             this.batteryBar = new System.Windows.Forms.ProgressBar();
             this.safeStatePitureBox = new System.Windows.Forms.PictureBox();
@@ -41,7 +41,6 @@
             this.ammoLeftLabel = new System.Windows.Forms.Label();
             this.parameterConfigButton = new System.Windows.Forms.Button();
             this.parameterConfigLabel = new System.Windows.Forms.Label();
-            this.laserControlSwitchButton = new DCS.OnOffSwitchButton();
             this.laserControlLabel = new System.Windows.Forms.Label();
             this.servoControlLabel = new System.Windows.Forms.Label();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
@@ -52,6 +51,8 @@
             this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.pitchAngleValueLabel = new System.Windows.Forms.Label();
             this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
+            this.servoControlSwitchButton = new DCS.OnOffSwitchButton();
+            this.laserControlSwitchButton = new DCS.OnOffSwitchButton();
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).BeginInit();
@@ -64,7 +65,8 @@
             // 
             // topBar
             // 
-            this.topBar.BackColor = System.Drawing.Color.Black;
+            this.topBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.topBar.Controls.Add(this.label1);
             this.topBar.Controls.Add(this.servoControlSwitchButton);
             this.topBar.Controls.Add(this.batteryLabel);
             this.topBar.Controls.Add(this.batteryBar);
@@ -83,17 +85,13 @@
             this.topBar.Size = new System.Drawing.Size(1280, 80);
             this.topBar.TabIndex = 0;
             // 
-            // servoControlSwitchButton
+            // label1
             // 
-            this.servoControlSwitchButton.BackColor = System.Drawing.Color.Transparent;
-            this.servoControlSwitchButton.Checked = false;
-            this.servoControlSwitchButton.CheckStyleX = DCS.SwitchButtonStyle.style1;
-            this.servoControlSwitchButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.servoControlSwitchButton.Location = new System.Drawing.Point(88, 38);
-            this.servoControlSwitchButton.Name = "servoControlSwitchButton";
-            this.servoControlSwitchButton.Size = new System.Drawing.Size(51, 16);
-            this.servoControlSwitchButton.TabIndex = 0;
-            this.servoControlSwitchButton.Click += new System.EventHandler(this.ServoControlSwitchButton_Click);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(128, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(3, 80);
+            this.label1.TabIndex = 13;
             // 
             // batteryLabel
             // 
@@ -196,18 +194,6 @@
             this.parameterConfigLabel.Size = new System.Drawing.Size(76, 16);
             this.parameterConfigLabel.TabIndex = 4;
             this.parameterConfigLabel.Text = "参数设置";
-            // 
-            // laserControlSwitchButton
-            // 
-            this.laserControlSwitchButton.BackColor = System.Drawing.Color.Transparent;
-            this.laserControlSwitchButton.Checked = false;
-            this.laserControlSwitchButton.CheckStyleX = DCS.SwitchButtonStyle.style1;
-            this.laserControlSwitchButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.laserControlSwitchButton.Location = new System.Drawing.Point(237, 38);
-            this.laserControlSwitchButton.Name = "laserControlSwitchButton";
-            this.laserControlSwitchButton.Size = new System.Drawing.Size(51, 16);
-            this.laserControlSwitchButton.TabIndex = 3;
-            this.laserControlSwitchButton.Click += new System.EventHandler(this.LaserControlSwitchButton_Click);
             // 
             // laserControlLabel
             // 
@@ -321,6 +307,30 @@
             this.dataSendTimer.Interval = 1000;
             this.dataSendTimer.Tick += new System.EventHandler(this.DataSendTimer_Tick);
             // 
+            // servoControlSwitchButton
+            // 
+            this.servoControlSwitchButton.BackColor = System.Drawing.Color.Transparent;
+            this.servoControlSwitchButton.Checked = false;
+            this.servoControlSwitchButton.CheckStyleX = DCS.SwitchButtonStyle.style1;
+            this.servoControlSwitchButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.servoControlSwitchButton.Location = new System.Drawing.Point(88, 38);
+            this.servoControlSwitchButton.Name = "servoControlSwitchButton";
+            this.servoControlSwitchButton.Size = new System.Drawing.Size(51, 16);
+            this.servoControlSwitchButton.TabIndex = 0;
+            this.servoControlSwitchButton.Click += new System.EventHandler(this.ServoControlSwitchButton_Click);
+            // 
+            // laserControlSwitchButton
+            // 
+            this.laserControlSwitchButton.BackColor = System.Drawing.Color.Transparent;
+            this.laserControlSwitchButton.Checked = false;
+            this.laserControlSwitchButton.CheckStyleX = DCS.SwitchButtonStyle.style1;
+            this.laserControlSwitchButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.laserControlSwitchButton.Location = new System.Drawing.Point(237, 38);
+            this.laserControlSwitchButton.Name = "laserControlSwitchButton";
+            this.laserControlSwitchButton.Size = new System.Drawing.Size(51, 16);
+            this.laserControlSwitchButton.TabIndex = 3;
+            this.laserControlSwitchButton.Click += new System.EventHandler(this.LaserControlSwitchButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -330,6 +340,7 @@
             this.Controls.Add(this.dialPlateValueLabel);
             this.Controls.Add(this.cameraViewImageBox);
             this.Controls.Add(this.topBar);
+            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Text = "DCS";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -371,6 +382,7 @@
         private System.Windows.Forms.Label dialPlateValueLabel;
         private System.Windows.Forms.Timer dataSendTimer;
         private System.Windows.Forms.PictureBox pitchAngleRulerPictureBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 
