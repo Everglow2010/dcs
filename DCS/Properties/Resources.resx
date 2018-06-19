@@ -118,50 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btncheckoff5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bgVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgVideo.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btncheckon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ammoNotLoaded" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\未装.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pitchAngleRuler" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\俯仰角度标尺.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="safetyOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\保险开.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckoff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="safetyOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\保险关.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dialPointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\仪表盘指针.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,28 +130,40 @@
   <data name="dialPlate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\仪表盘表盘.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ammoLoaded" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\已装.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="aimingDivision" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aimingDivision.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pitchAnglePointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\俯仰角度标尺指针.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btncheckoff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckoff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ammoOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\开.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btncheckon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncheckon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cameraView" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\监控背景画面.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="YellowCornor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UIV2\YellowCornor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AimingReticle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\aimingreticle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AmmoLoadedNotLoaded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\ammoloadednotloaded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AmmoLoadedOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\ammoloadedopen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AmmoLoadedReady" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\ammoloadedready.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LaserOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\laseroff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LaserOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\laseron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SafetyOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\safetyoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SafetyOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\uiv2\safetyon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -73,9 +73,9 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap ammoLoaded {
+        internal static System.Drawing.Bitmap AimingReticle {
             get {
-                object obj = ResourceManager.GetObject("ammoLoaded", resourceCulture);
+                object obj = ResourceManager.GetObject("AimingReticle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap ammoNotLoaded {
+        internal static System.Drawing.Bitmap AmmoLoadedNotLoaded {
             get {
-                object obj = ResourceManager.GetObject("ammoNotLoaded", resourceCulture);
+                object obj = ResourceManager.GetObject("AmmoLoadedNotLoaded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,19 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap ammoOpen {
+        internal static System.Drawing.Bitmap AmmoLoadedOpen {
             get {
-                object obj = ResourceManager.GetObject("ammoOpen", resourceCulture);
+                object obj = ResourceManager.GetObject("AmmoLoadedOpen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap AmmoLoadedReady {
+            get {
+                object obj = ResourceManager.GetObject("AmmoLoadedReady", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -107,126 +117,6 @@ namespace DCS.Properties {
             get {
                 object obj = ResourceManager.GetObject("bgVideo", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckoff1 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckoff1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckoff2 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckoff2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckoff3 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckoff3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckoff4 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckoff4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckoff5 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckoff5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckoff6 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckoff6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckon1 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckon2 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckon2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckon3 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckon3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckon4 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckon4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckon5 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckon5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap btncheckon6 {
-            get {
-                object obj = ResourceManager.GetObject("btncheckon6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -263,6 +153,26 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap LaserOff {
+            get {
+                object obj = ResourceManager.GetObject("LaserOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap LaserOn {
+            get {
+                object obj = ResourceManager.GetObject("LaserOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap pitchAnglePointer {
             get {
                 object obj = ResourceManager.GetObject("pitchAnglePointer", resourceCulture);
@@ -283,9 +193,9 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap safetyOff {
+        internal static System.Drawing.Bitmap SafetyOff {
             get {
-                object obj = ResourceManager.GetObject("safetyOff", resourceCulture);
+                object obj = ResourceManager.GetObject("SafetyOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +203,9 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap safetyOn {
+        internal static System.Drawing.Bitmap SafetyOn {
             get {
-                object obj = ResourceManager.GetObject("safetyOn", resourceCulture);
+                object obj = ResourceManager.GetObject("SafetyOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

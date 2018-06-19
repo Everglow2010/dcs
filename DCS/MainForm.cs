@@ -4,6 +4,7 @@ using System.IO.Ports;
 using Emgu.CV;
 using System.Collections.Generic;
 using System.Drawing;
+using Emgu.CV.Structure;
 
 namespace DCS
 {
@@ -109,20 +110,20 @@ namespace DCS
         {
             //更新UI状态
             //更新保险开关状态
-            this.safeStatePitureBox.Image = GlobalVars.safeState ? Properties.Resources.safetyOn : Properties.Resources.safetyOff;
+            this.safeStatePitureBox.Image = GlobalVars.safeState ? Properties.Resources.SafetyOn : Properties.Resources.SafetyOff;
             //更新装填指示状态
             switch (GlobalVars.ammoLoadState)
             {
                 case GlobalVars.AMMOLOAD_LOADED:
-                    this.ammoLoadPictureBox.Image = Properties.Resources.ammoLoaded;
+                    this.ammoLoadPictureBox.Image = Properties.Resources.AmmoLoadedReady;
                     break;
 
                 case GlobalVars.AMMOLOAD_NOT_LOADED:
-                    this.ammoLoadPictureBox.Image = Properties.Resources.ammoNotLoaded;
+                    this.ammoLoadPictureBox.Image = Properties.Resources.AmmoLoadedNotLoaded;
                     break;
 
                 case GlobalVars.AMMOLOAD_OPEN:
-                    this.ammoLoadPictureBox.Image = Properties.Resources.ammoOpen;
+                    this.ammoLoadPictureBox.Image = Properties.Resources.AmmoLoadedOpen;
                     break;
 
                 default:
@@ -171,6 +172,7 @@ namespace DCS
                         return;
                     }
                     if (frame.IsEmpty) return;
+                    //Image<Bgr, Byte> image = frame.ToImage<Bgr,Byte>();
                     this.cameraViewImageBox.Image = frame;
                 }
             }
@@ -405,8 +407,11 @@ namespace DCS
         private void AmmoLeftSetButton_Click(object sender, EventArgs e)
         {
             AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
-            //ammoLoadConfigForm.MdiParent = this;
-            ammoLoadConfigForm.ShowDialog();
+            //ammoLoadConfigForm.IsMdiContainer
+            ammoLoadConfigForm.MdiParent = this;
+            ammoLoadConfigForm.Parent = this.cameraViewImageBox;
+            ammoLoadConfigForm.TopMost = true;
+            ammoLoadConfigForm.Show();
 
             //更新设置后的参数
             if (ammoLoadConfigForm.DialogResult==DialogResult.OK)
@@ -482,6 +487,22 @@ namespace DCS
         private void DialPlatePictureBox_Paint(object sender, PaintEventArgs e)
         {
             DrawDialPlatePointerImg(e.Graphics);
+        }
+
+        private void AmmoLeftTextBox_Click(object sender, EventArgs e)
+        {
+            AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
+            ammoLoadConfigForm.MdiParent = this;
+            ammoLoadConfigForm.TopMost = true;
+            ammoLoadConfigForm.Show();
+
+            //更新设置后的参数
+            if (ammoLoadConfigForm.DialogResult == DialogResult.OK)
+            {
+                GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
+                Console.WriteLine(GlobalVars.ammoLeftNum);
+                this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
+            }
         }
     }
 }

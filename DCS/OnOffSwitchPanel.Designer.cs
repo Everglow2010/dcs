@@ -1,6 +1,6 @@
 ﻿namespace DCS
 {
-    partial class OnOffSwitchButton
+    partial class OnOffSwitchPanel
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // OnOffSwitchButton
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "OnOffSwitchButton";
-            this.Size = new System.Drawing.Size(142, 119);
-            this.Click += new System.EventHandler(this.OnOffSwitchButton_Click);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
