@@ -409,7 +409,9 @@ namespace DCS
             AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
             //ammoLoadConfigForm.IsMdiContainer
             ammoLoadConfigForm.MdiParent = this;
+            //ammoLoadConfigForm.TopLevel = false;
             ammoLoadConfigForm.Parent = this.cameraViewImageBox;
+            //ammoLoadConfigForm.Owner = this;
             ammoLoadConfigForm.TopMost = true;
             ammoLoadConfigForm.Show();
 

@@ -91,9 +91,10 @@ namespace DCS
                 ammoLoadNumInt = Convert.ToInt32(ammoLoadNumStr);
                 ammoLoadNumTextbox.Text = ammoLoadNumStr;
                 GlobalVars.ammoLoadNum = ammoLoadNumInt;
+                GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
                 MessageBox.Show("装弹数量已成功设置为：" + ammoLoadNumInt);
                 ammoLoadNumStr = "";
-                DialogResult = DialogResult.OK;
+
             }
             catch (Exception)
             {
