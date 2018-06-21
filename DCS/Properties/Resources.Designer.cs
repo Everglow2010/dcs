@@ -153,6 +153,26 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap LaserControlTurnOffButtonImage {
+            get {
+                object obj = ResourceManager.GetObject("LaserControlTurnOffButtonImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap LaserControlTurnOnButtonImage {
+            get {
+                object obj = ResourceManager.GetObject("LaserControlTurnOnButtonImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap LaserOff {
             get {
                 object obj = ResourceManager.GetObject("LaserOff", resourceCulture);
@@ -206,6 +226,26 @@ namespace DCS.Properties {
         internal static System.Drawing.Bitmap SafetyOn {
             get {
                 object obj = ResourceManager.GetObject("SafetyOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap ServoControlTurnOffButtonImage {
+            get {
+                object obj = ResourceManager.GetObject("ServoControlTurnOffButtonImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap ServoControlTurnOnButtonImage {
+            get {
+                object obj = ResourceManager.GetObject("ServoControlTurnOnButtonImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

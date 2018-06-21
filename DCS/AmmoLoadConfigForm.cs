@@ -15,7 +15,6 @@ namespace DCS
 
         private void AmmoLoadConfigForm_Load(object sender, EventArgs e)
         {
-            //ammoLoadNumTextbox.Text = Convert.ToString(GlobalVars.ammoLoadNum);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -84,6 +83,9 @@ namespace DCS
             ammoLoadNumTextbox.Clear();
         }
 
+        public delegate void ChangeProjectileCountHandler(int num);
+        public event ChangeProjectileCountHandler ChangeProjectileCount;
+
         private void ButtonOK_Click(object sender, EventArgs e)
         {
             try
@@ -92,9 +94,10 @@ namespace DCS
                 ammoLoadNumTextbox.Text = ammoLoadNumStr;
                 GlobalVars.ammoLoadNum = ammoLoadNumInt;
                 GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
+                ChangeProjectileCount?.Invoke(GlobalVars.ammoLeftNum);
                 MessageBox.Show("装弹数量已成功设置为：" + ammoLoadNumInt);
                 ammoLoadNumStr = "";
-
+                this.Close();
             }
             catch (Exception)
             {

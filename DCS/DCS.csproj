@@ -133,6 +133,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OnOffSwitchPanel.resx">
+      <DependentUpon>OnOffSwitchPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -209,10 +212,14 @@
     <Content Include="Resources\btncheckon5.png" />
     <Content Include="Resources\btncheckon6.png" />
     <None Include="Resources\pitchAngleRuler.bmp" />
+    <Content Include="Resources\UIV2\LaserControlTurnOffButtonImage.png" />
+    <Content Include="Resources\UIV2\LaserControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\LaserOff.png" />
     <Content Include="Resources\UIV2\LaserOn.png" />
     <Content Include="Resources\UIV2\SafetyOff.png" />
     <Content Include="Resources\UIV2\SafetyOn.png" />
+    <Content Include="Resources\UIV2\ServoControlTurnOffButtonImage.png" />
+    <Content Include="Resources\UIV2\ServoControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\YellowCornor.png" />
     <None Include="Resources\YellowCornor.bmp" />
     <Content Include="Resources\仪表盘指针.png" />

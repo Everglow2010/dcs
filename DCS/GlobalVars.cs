@@ -12,6 +12,8 @@ namespace DCS
         public const int AMMOLOAD_NOT_LOADED = 0;
         public const int AMMOLOAD_OPEN = 1;
         public const int AMMOLOAD_LOADED = 2;
+        public const int SERVO_CONTROL = 1;
+        public const int LASER_CONTROL = 2;
 
         //各个指示灯的状态记录变量，bool型的true代表开，false代表关
         public static bool servoControlSwitchState = false;

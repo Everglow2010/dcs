@@ -260,6 +260,7 @@
             this.Controls.Add(this.ammoLoadNumTextbox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(142, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AmmoLoadConfigForm";
