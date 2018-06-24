@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DCS
 {
-    public partial class AimingReticleConfigForm : Form
+    public partial class AimingReticleConfigForm0 : Form
     {
-        public AimingReticleConfigForm()
+        public AimingReticleConfigForm0()
         {
             InitializeComponent();
         }

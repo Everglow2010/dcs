@@ -1,6 +1,6 @@
 ﻿namespace DCS
 {
-    partial class AimingReticleConfigForm
+    partial class AimingReticleConfigForm0
     {
         /// <summary>
         /// Required designer variable.

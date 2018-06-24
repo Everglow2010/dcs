@@ -401,7 +401,7 @@ namespace DCS
 
         private void ParameterConfigButton_Click(object sender, EventArgs e)
         {
-            AimingReticleConfigForm aimingReticleConfigForm = new AimingReticleConfigForm();
+            AimingReticleConfigForm0 aimingReticleConfigForm = new AimingReticleConfigForm0();
             aimingReticleConfigForm.ShowDialog();
         }
         /// <summary>
