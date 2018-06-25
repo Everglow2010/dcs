@@ -16,5 +16,10 @@ namespace DCS
         {
             InitializeComponent();
         }
+
+        private void AimingRecticleConfigForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -127,6 +127,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AimingRecticleConfigForm.resx">
+      <DependentUpon>AimingRecticleConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AimingReticleConfigForm0.resx">
       <DependentUpon>AimingReticleConfigForm0.cs</DependentUpon>
     </EmbeddedResource>
