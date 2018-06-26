@@ -59,13 +59,13 @@ namespace DCS
             {
                 GlobalVars.aimingReticleConfigs[i].posX = 515;
                 GlobalVars.aimingReticleConfigs[i].posY = 235;
-                GlobalVars.aimingReticleConfigs[i].sizePercent = 0;
-                GlobalVars.aimingReticleConfigs[i].size = 250 + (int)((GlobalVars.aimingReticleConfigs[i].sizePercent / 100.0) * 250);
+                //GlobalVars.aimingReticleConfigs[i].sizePercent = 0;
+                //GlobalVars.aimingReticleConfigs[i].size = 250 + (int)((GlobalVars.aimingReticleConfigs[i].sizePercent / 100.0) * 250);
 
                 AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posX", "515");
                 AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", "235");
-                AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".sizePercent", "0");
-                AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".size", GlobalVars.aimingReticleConfigs[i].size.ToString());
+                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".sizePercent", "0");
+                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".size", GlobalVars.aimingReticleConfigs[i].size.ToString());
             }
             //实例化更新UI界面委托
             flushAllUI = new FreshUIDisplay(DisplayToUI);

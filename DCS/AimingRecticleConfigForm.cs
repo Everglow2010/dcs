@@ -21,5 +21,8 @@ namespace DCS
         {
 
         }
+
+        private int focalLevelSlected = 0;
+
     }
 }

@@ -50,14 +50,14 @@ namespace DCS
         {
             public int posX;//位置的x坐标
             public int posY;//位置的y坐标
-            public int sizePercent;//瞄准分划的大小百分比，-100~100
-            public int size;//瞄准分划大小的实际尺寸，正方形，宽高一样
-            public AimingReticleConfigParameter(int x,int y,int percent,int s)
+            //public int sizePercent;//瞄准分划的大小百分比，-100~100
+            //public int size;//瞄准分划大小的实际尺寸，正方形，宽高一样
+            public AimingReticleConfigParameter(int x,int y)
             {
                 posX = x;
                 posY = y;
-                sizePercent = percent;
-                size = s;
+                //sizePercent = percent;
+                //size = s;
             }
         }
         //二十个焦距档位的参数记录
