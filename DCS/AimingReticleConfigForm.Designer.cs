@@ -1,6 +1,6 @@
 ﻿namespace DCS
 {
-    partial class AimingRecticleConfigForm
+    partial class AimingReticleConfigForm
     {
         /// <summary>
         /// Required designer variable.
@@ -178,6 +178,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -193,6 +194,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -208,6 +210,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 
@@ -223,6 +226,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button6
             // 
@@ -238,6 +242,7 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // button7
             // 
@@ -253,6 +258,7 @@
             this.button7.TabIndex = 13;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button8
             // 
@@ -268,6 +274,7 @@
             this.button8.TabIndex = 14;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // button9
             // 
@@ -283,6 +290,7 @@
             this.button9.TabIndex = 15;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // button10
             // 
@@ -298,6 +306,7 @@
             this.button10.TabIndex = 16;
             this.button10.Text = "10";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.Button10_Click);
             // 
             // button11
             // 
@@ -313,6 +322,7 @@
             this.button11.TabIndex = 17;
             this.button11.Text = "11";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // button12
             // 
@@ -328,6 +338,7 @@
             this.button12.TabIndex = 18;
             this.button12.Text = "12";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.Button12_Click);
             // 
             // button13
             // 
@@ -343,6 +354,7 @@
             this.button13.TabIndex = 19;
             this.button13.Text = "13";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // button14
             // 
@@ -358,6 +370,7 @@
             this.button14.TabIndex = 20;
             this.button14.Text = "14";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.Button14_Click);
             // 
             // button15
             // 
@@ -373,6 +386,7 @@
             this.button15.TabIndex = 21;
             this.button15.Text = "15";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // button16
             // 
@@ -388,6 +402,7 @@
             this.button16.TabIndex = 22;
             this.button16.Text = "16";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.Button16_Click);
             // 
             // button17
             // 
@@ -403,6 +418,7 @@
             this.button17.TabIndex = 23;
             this.button17.Text = "17";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.Button17_Click);
             // 
             // button18
             // 
@@ -418,6 +434,7 @@
             this.button18.TabIndex = 24;
             this.button18.Text = "18";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.Button18_Click);
             // 
             // button19
             // 
@@ -433,6 +450,7 @@
             this.button19.TabIndex = 25;
             this.button19.Text = "19";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.Button19_Click);
             // 
             // button20
             // 
@@ -448,6 +466,7 @@
             this.button20.TabIndex = 26;
             this.button20.Text = "20";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.Button20_Click);
             // 
             // recticleResetButton
             // 
@@ -463,6 +482,7 @@
             this.recticleResetButton.TabIndex = 27;
             this.recticleResetButton.Text = "复位";
             this.recticleResetButton.UseVisualStyleBackColor = false;
+            this.recticleResetButton.Click += new System.EventHandler(this.recticleResetButton_Click);
             // 
             // recticleApplyButton
             // 

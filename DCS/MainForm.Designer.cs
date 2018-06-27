@@ -57,8 +57,6 @@
             this.pitchAngleValueLabel = new System.Windows.Forms.Label();
             this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.laserControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel(GlobalVars.LASER_CONTROL);
-            this.servoControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel(GlobalVars.SERVO_CONTROL);
             this.ammoLeftTextBoxBlinkTimer = new System.Windows.Forms.Timer(this.components);
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
@@ -110,7 +108,7 @@
             resources.ApplyResources(this.laserControlPictureBox, "laserControlPictureBox");
             this.laserControlPictureBox.Name = "laserControlPictureBox";
             this.laserControlPictureBox.TabStop = false;
-            this.laserControlPictureBox.Click += new System.EventHandler(this.laserControlPictureBox_Click);
+            this.laserControlPictureBox.Click += new System.EventHandler(this.LaserControlPictureBox_Click);
             // 
             // servoControlPictureBox
             // 
@@ -231,6 +229,7 @@
             resources.ApplyResources(this.parameterConfigLabel, "parameterConfigLabel");
             this.parameterConfigLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.parameterConfigLabel.Name = "parameterConfigLabel";
+            this.parameterConfigLabel.Click += new System.EventHandler(this.ParameterConfigLabel_Click);
             // 
             // laserControlLabel
             // 

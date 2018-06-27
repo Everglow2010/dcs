@@ -67,14 +67,15 @@ namespace DCS
                 //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".sizePercent", "0");
                 //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".size", GlobalVars.aimingReticleConfigs[i].size.ToString());
             }
+            //初始化各种弹出窗口面板和事件订阅
             //实例化更新UI界面委托
             flushAllUI = new FreshUIDisplay(DisplayToUI);
-            //初始化伺服使能开关面板
+            //初始化伺服使能开关面板控件
             this.servoControlOnOffSwitchPanel.Parent = this.cameraViewImageBox;
             this.servoControlOnOffSwitchPanel.SwitchStateChange += new OnOffSwitchPanel.SwitchStateChangeHandler(ChangeServoControlPictureBox);
             this.servoControlOnOffSwitchPanel.Enabled = false;
             this.servoControlOnOffSwitchPanel.Visible = false;
-            //初始化辅助瞄准开关面板
+            //初始化辅助瞄准开关面板控件
             this.laserControlOnOffSwitchPanel.Parent = this.cameraViewImageBox;
             this.laserControlOnOffSwitchPanel.SwitchStateChange += new OnOffSwitchPanel.SwitchStateChangeHandler(ChangeLaserControlPictureBox);
             this.laserControlOnOffSwitchPanel.Enabled = false;
@@ -113,8 +114,6 @@ namespace DCS
             //启动数据发送定时器
             dataSendTimer.Start();
         }
-
-
 
         public delegate void FreshUIDisplay();
         public void DisplayToUI()
@@ -200,7 +199,6 @@ namespace DCS
         /// </summary>
         //刷新界面显示的委托
         FreshUIDisplay flushAllUI = null;
-
         //接收字节的缓存队列
         private List<byte> buffer = new List<byte>(4096);
         //串口接收数据以后的委托方法
@@ -329,8 +327,6 @@ namespace DCS
             return checksumL;
         }
 
-
-
         /// <summary>
         /// 定时用串口发送数据
         /// </summary>
@@ -404,77 +400,16 @@ namespace DCS
             AimingReticleConfigForm0 aimingReticleConfigForm = new AimingReticleConfigForm0();
             aimingReticleConfigForm.ShowDialog();
         }
-        /// <summary>
-        /// 剩余弹量文本框点击事件函数
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AmmoLeftSetButton_Click(object sender, EventArgs e)
-        {
-            AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
-            ammoLoadConfigForm.MdiParent = this;
-            ammoLoadConfigForm.Parent = this.cameraViewImageBox;
-            ammoLoadConfigForm.TopMost = true;
-            ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
-            ammoLoadConfigForm.Show();
-        }
-        /// <summary>
-        /// 修改弹药剩余量文本框显示数值
-        /// </summary>
-        /// <param name="num"></param>
-        public void ChangeAmmoLeftTextBox(int num)
-        {
-            if (num >= 100)
-            {
-                this.ammoLeftTextBoxBlinkTimer.Stop();
-                this.ammoLeftTextBox.ForeColor = Color.LimeGreen;
-            }else if (num >= 30)
-            {
-                this.ammoLeftTextBoxBlinkTimer.Stop();
-                this.ammoLeftTextBox.ForeColor = Color.Yellow;
-            }
-            else if (num < 30)
-            {
-                this.ammoLeftTextBox.ForeColor = Color.Red;
-                this.ammoLeftTextBoxBlinkTimer.Start();
-            }
-            this.ammoLeftTextBox.Text = num.ToString();
-        }
-        /// <summary>
-        /// 修改伺服使能状态指示灯
-        /// </summary>
-        /// <param name="state"></param>
-        public void ChangeServoControlPictureBox(bool state)
-        {
-            if (state)
-            {
-                this.servoControlPictureBox.Image = Properties.Resources.SafetyOn;
-            }
-            else
-            {
-                this.servoControlPictureBox.Image = Properties.Resources.SafetyOff;
-            }
-        }
-        /// <summary>
-        /// 修改辅助瞄准状态指示灯
-        /// </summary>
-        /// <param name="state"></param>
-        public void ChangeLaserControlPictureBox(bool state)
-        {
-            if (state)
-            {
-                this.laserControlPictureBox.Image = Properties.Resources.LaserOn;
-            }
-            else
-            {
-                this.laserControlPictureBox.Image = Properties.Resources.LaserOff;
-            }
-        }
+
         //俯仰角度标尺的指针
         private Image pitchAnglePointerImg = Properties.Resources.pitchAnglePointer;
         //方位角度表盘的指针
         private Image dialPlatePointerImg = Properties.Resources.dialPointer;
 
+        private void PitchAngleRulerPictureBox_Paint(object sender, PaintEventArgs e)
+        {
+            DrawPitchAnglePointerImg(e.Graphics);
+        }
         /// <summary>
         /// 为俯仰角度标尺上画对应角度的指针
         /// </summary>
@@ -498,11 +433,12 @@ namespace DCS
             g.Dispose();
             bitmap.Dispose();
         }
-        private void PitchAngleRulerPictureBox_Paint(object sender, PaintEventArgs e)
-        {
-            DrawPitchAnglePointerImg(e.Graphics);
-        }
 
+
+        private void DialPlatePictureBox_Paint(object sender, PaintEventArgs e)
+        {
+            DrawDialPlatePointerImg(e.Graphics);
+        }
         /// <summary>
         /// 为仪表盘画对应度数的方位角指针
         /// </summary>
@@ -532,12 +468,10 @@ namespace DCS
             g.Dispose();
             bitmap.Dispose();
         }
-        private void DialPlatePictureBox_Paint(object sender, PaintEventArgs e)
-        {
-            DrawDialPlatePointerImg(e.Graphics);
-        }
+
+
         /// <summary>
-        /// 弹药剩余量文本显示框点击时间函数
+        /// 弹药剩余量文本显示框点击事件函数
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -549,6 +483,29 @@ namespace DCS
             ammoLoadConfigForm.TopMost = true;
             ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
             ammoLoadConfigForm.Show();
+        }
+        /// <summary>
+        /// 修改弹药剩余量文本框显示数值
+        /// </summary>
+        /// <param name="num"></param>
+        public void ChangeAmmoLeftTextBox(int num)
+        {
+            if (num >= 100)
+            {
+                this.ammoLeftTextBoxBlinkTimer.Stop();
+                this.ammoLeftTextBox.ForeColor = Color.LimeGreen;
+            }
+            else if (num >= 30)
+            {
+                this.ammoLeftTextBoxBlinkTimer.Stop();
+                this.ammoLeftTextBox.ForeColor = Color.Yellow;
+            }
+            else if (num < 30)
+            {
+                this.ammoLeftTextBox.ForeColor = Color.Red;
+                this.ammoLeftTextBoxBlinkTimer.Start();
+            }
+            this.ammoLeftTextBox.Text = num.ToString();
         }
         /// <summary>
         /// 弹药剩余量文本显示框闪动timer的tick函数
@@ -573,12 +530,49 @@ namespace DCS
             this.servoControlOnOffSwitchPanel.BringToFront();          
             this.servoControlOnOffSwitchPanel.Show();
         }
+        /// <summary>
+        /// 修改伺服使能状态指示灯
+        /// </summary>
+        /// <param name="state"></param>
+        public void ChangeServoControlPictureBox(bool state)
+        {
+            if (state)
+            {
+                this.servoControlPictureBox.Image = Properties.Resources.SafetyOn;
+            }
+            else
+            {
+                this.servoControlPictureBox.Image = Properties.Resources.SafetyOff;
+            }
+        }
 
-        private void laserControlPictureBox_Click(object sender, EventArgs e)
+        private void LaserControlPictureBox_Click(object sender, EventArgs e)
         {
             this.laserControlOnOffSwitchPanel.Enabled = true;
             this.laserControlOnOffSwitchPanel.BringToFront();
             this.laserControlOnOffSwitchPanel.Show();
         }
+        /// <summary>
+        /// 修改辅助瞄准状态指示灯
+        /// </summary>
+        /// <param name="state"></param>
+        public void ChangeLaserControlPictureBox(bool state)
+        {
+            if (state)
+            {
+                this.laserControlPictureBox.Image = Properties.Resources.LaserOn;
+            }
+            else
+            {
+                this.laserControlPictureBox.Image = Properties.Resources.LaserOff;
+            }
+        }
+
+        private void ParameterConfigLabel_Click(object sender, EventArgs e)
+        {
+            AimingReticleConfigForm aimingReticleConfigForm = new AimingReticleConfigForm();
+
+        }
+
     }
 }

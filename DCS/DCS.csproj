@@ -84,11 +84,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AimingRecticleConfigForm.cs">
+    <Compile Include="AimingReticleConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AimingRecticleConfigForm.Designer.cs">
-      <DependentUpon>AimingRecticleConfigForm.cs</DependentUpon>
+    <Compile Include="AimingReticleConfigForm.Designer.cs">
+      <DependentUpon>AimingReticleConfigForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AimingReticleConfigForm0.cs">
       <SubType>Form</SubType>
@@ -127,8 +127,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AimingRecticleConfigForm.resx">
-      <DependentUpon>AimingRecticleConfigForm.cs</DependentUpon>
+    <EmbeddedResource Include="AimingReticleConfigForm.resx">
+      <DependentUpon>AimingReticleConfigForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AimingReticleConfigForm0.resx">
       <DependentUpon>AimingReticleConfigForm0.cs</DependentUpon>
