@@ -571,7 +571,20 @@ namespace DCS
         private void ParameterConfigLabel_Click(object sender, EventArgs e)
         {
             AimingReticleConfigForm aimingReticleConfigForm = new AimingReticleConfigForm();
-
+            aimingReticleConfigForm.MdiParent = this;
+            aimingReticleConfigForm.Parent = this.cameraViewImageBox;
+            aimingReticleConfigForm.TopMost = true;
+            aimingReticleConfigForm.AimingReticlePositionChange += new AimingReticleConfigForm.AimingReticlePositionChangeHandler(MoveAimingReticlePictureBox);
+            aimingReticleConfigForm.Show();
+        }
+        /// <summary>
+        /// 移动瞄准分划位置
+        /// </summary>
+        /// <param name="pos"></param>
+        public void MoveAimingReticlePictureBox(Point pos)
+        {
+            this.aimingReticlePictureBox.Location = pos;
+            this.aimingReticlePictureBox.Refresh();
         }
 
     }

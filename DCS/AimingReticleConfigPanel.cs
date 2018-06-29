@@ -30,8 +30,6 @@ namespace DCS
             this.posY = GlobalVars.aimingReticleConfigs[index].posY;
             this.posXModified = this.posX;
             this.posYModified = this.posY;
-            this.sizePercent = GlobalVars.aimingReticleConfigs[index].sizePercent;
-            Console.WriteLine(this.indexInList + "  " + this.posX + "  " + this.posY + "  " + this.sizePercent);
         }
 
         private void SizeTrackBar_ValueChanged(object sender, EventArgs e)
@@ -78,8 +76,6 @@ namespace DCS
 
             GlobalVars.aimingReticleConfigs[this.indexInList].posX = this.posX;
             GlobalVars.aimingReticleConfigs[this.indexInList].posY = this.posY;
-            GlobalVars.aimingReticleConfigs[this.indexInList].sizePercent = this.sizePercent;
-            GlobalVars.aimingReticleConfigs[this.indexInList].size = this.size;
 
             //写入配置文件
             AppConfigManager.SetValue("aimingReticleConfig" + this.indexInList + ".posX", this.posX.ToString());
@@ -92,8 +88,6 @@ namespace DCS
         {
             this.posX = GlobalVars.aimingReticleConfigs[indexInList].posX;
             this.posY = GlobalVars.aimingReticleConfigs[indexInList].posY;
-            this.sizePercent = GlobalVars.aimingReticleConfigs[indexInList].sizePercent;
-            this.sizeTrackBar.Value = GlobalVars.aimingReticleConfigs[indexInList].sizePercent;
         }
     }
 }

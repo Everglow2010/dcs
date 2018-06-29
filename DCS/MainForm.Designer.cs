@@ -62,6 +62,8 @@
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
             this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
+            this.servoControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.SERVO_CONTROL);
+            this.laserControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.LASER_CONTROL);
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servoControlPictureBox)).BeginInit();

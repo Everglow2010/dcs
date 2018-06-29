@@ -482,7 +482,7 @@
             this.recticleResetButton.TabIndex = 27;
             this.recticleResetButton.Text = "复位";
             this.recticleResetButton.UseVisualStyleBackColor = false;
-            this.recticleResetButton.Click += new System.EventHandler(this.recticleResetButton_Click);
+            this.recticleResetButton.Click += new System.EventHandler(this.RecticleResetButton_Click);
             // 
             // recticleApplyButton
             // 
@@ -498,6 +498,7 @@
             this.recticleApplyButton.TabIndex = 28;
             this.recticleApplyButton.Text = "应用";
             this.recticleApplyButton.UseVisualStyleBackColor = false;
+            this.recticleApplyButton.Click += new System.EventHandler(this.RecticleApplyButton_Click);
             // 
             // recticleQuitButton
             // 
@@ -513,6 +514,7 @@
             this.recticleQuitButton.TabIndex = 29;
             this.recticleQuitButton.Text = "退出";
             this.recticleQuitButton.UseVisualStyleBackColor = false;
+            this.recticleQuitButton.Click += new System.EventHandler(this.RecticleQuitButton_Click);
             // 
             // button24
             // 
@@ -710,7 +712,7 @@
             this.unitQuitButton.Text = "退出";
             this.unitQuitButton.UseVisualStyleBackColor = false;
             // 
-            // AimingRecticleConfigForm
+            // AimingReticleConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -764,7 +766,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AimingRecticleConfigForm";
+            this.Name = "AimingReticleConfigForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "AimingRecticleConfigForm";

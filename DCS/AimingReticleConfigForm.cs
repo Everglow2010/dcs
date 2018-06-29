@@ -193,7 +193,7 @@ namespace DCS
             LightOnlyOneButton(20);
         }
 
-        private void recticleResetButton_Click(object sender, EventArgs e)
+        private void RecticleResetButton_Click(object sender, EventArgs e)
         {
             if (focalLevelSlected==0)
             {
@@ -204,10 +204,39 @@ namespace DCS
                 //复位
                 adjustedPosition.X = originalPosition.X;
                 adjustedPosition.Y = originalPosition.Y;
-
                 //触发事件
-                
+                this.AimingReticlePositionChange?.Invoke(new Point(adjustedPosition.X, adjustedPosition.Y));
             }
+        }
+
+        private void RecticleApplyButton_Click(object sender, EventArgs e)
+        {
+            if (focalLevelSlected == 0)
+            {
+                MessageBox.Show("请先选定焦距级别！");
+            }
+            else
+            {
+                //应用位置
+                GlobalVars.aimingReticleConfigs[focalLevelSlected - 1].posX = adjustedPosition.X;
+                GlobalVars.aimingReticleConfigs[focalLevelSlected - 1].posY = adjustedPosition.Y;
+                //写入配置文件
+                AppConfigManager.SetValue("aimingReticleConfig" + focalLevelSlected + ".posX", adjustedPosition.X.ToString());
+                AppConfigManager.SetValue("aimingReticleConfig" + focalLevelSlected + ".posY", adjustedPosition.Y.ToString());
+                //触发事件
+                this.AimingReticlePositionChange?.Invoke(new Point(adjustedPosition.X, adjustedPosition.Y));
+            }
+        }
+
+        private void RecticleQuitButton_Click(object sender, EventArgs e)
+        {
+            //更新配置文件
+            for (int i = 0; i < FOCAL_LEVEL_NUM; i++)
+            {
+                AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posX", GlobalVars.aimingReticleConfigs[i].posX.ToString());
+                AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", GlobalVars.aimingReticleConfigs[i].posY.ToString());
+            }
+            this.Close();
         }
     }
 }
