@@ -37,22 +37,55 @@ namespace DCS
             buttonList.Add(this.button18);
             buttonList.Add(this.button19);
             buttonList.Add(this.button20);
+
+            if (GlobalVars.degreeOrMil)
+            {
+                this.buttonSetUnitToDegree.FlatAppearance.BorderColor = Color.Yellow;
+            }
+            else
+            {
+                this.buttonSetUnitToMil.FlatAppearance.BorderColor = Color.Yellow;
+            }
+
+            if (GlobalVars.degreeOrMil)//用角度
+            {
+                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithDegree.ToString("0.0");
+                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithDegree.ToString("0.0");
+            }
+            else//用密位
+            {
+                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithMil.ToString("0.0");
+                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithMil.ToString("0.0");
+            }
+            this.UnitChange += new UnitChangeHandler(ChangeUnit);
         }
 
         private void AimingRecticleConfigForm_Load(object sender, EventArgs e)
         {
 
         }
+
         //当前选中的要调整的焦距级别的瞄准分划
         private int focalLevelSlected = 0;
         //调整前位置记录
         private Point originalPosition = new Point(0, 0);
         //调整后位置记录
         private Point adjustedPosition = new Point(0, 0);
+        //俯仰零位设置
+        private bool pitchZero = false;
+        //水平零位设置
+        private bool horizontalZero = false;
+        //系统单位标记,true表示用度，false表示用密位；
+        private bool degreeOrMil = GlobalVars.degreeOrMil;
 
+        //触发移动瞄准分划事件
         public delegate void AimingReticlePositionChangeHandler(Point pos);
         public event AimingReticlePositionChangeHandler AimingReticlePositionChange;
 
+        //更新显示单位事件
+        public delegate void UnitChangeHandler(bool type);
+        public event UnitChangeHandler UnitChange;
+         
         private void LightOnlyOneButton(int index)
         {
             for (int i = 0; i < FOCAL_LEVEL_NUM; i++)
@@ -237,6 +270,108 @@ namespace DCS
                 AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", GlobalVars.aimingReticleConfigs[i].posY.ToString());
             }
             this.Close();
+        }
+
+        private void ButtonUP_Click(object sender, EventArgs e)
+        {
+            this.adjustedPosition.Y = (this.adjustedPosition.Y - 5) < 0 ? 0 : this.adjustedPosition.Y - 5;
+            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+        }
+
+        private void ButtonDowm_Click(object sender, EventArgs e)
+        {
+            this.adjustedPosition.Y = (this.adjustedPosition.Y + 5) > 720 ? 720 : this.adjustedPosition.Y + 5;
+            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+        }
+
+        private void ButtonLeft_Click(object sender, EventArgs e)
+        {
+            this.adjustedPosition.X = (this.adjustedPosition.X - 5) < 0 ? 0 : this.adjustedPosition.X - 5;
+            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+        }
+
+        private void ButtonRight_Click(object sender, EventArgs e)
+        {
+            this.adjustedPosition.X = (this.adjustedPosition.X + 5) > 1280 ? 1280 : this.adjustedPosition.X + 5;
+            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+        }
+
+        private void PitchZeroButton_Click(object sender, EventArgs e)
+        {
+            pitchZero = true;
+            this.pitchZeroButton.FlatAppearance.BorderColor = Color.Yellow;
+        }
+
+        private void HorizontalZeroButton_Click(object sender, EventArgs e)
+        {
+            horizontalZero = true;
+            this.horizontalZeroButton.FlatAppearance.BorderColor = Color.Yellow;        
+        }
+
+        private void ZeroApplyButton_Click(object sender, EventArgs e)
+        {
+            if (pitchZero)
+            {
+                GlobalVars.pitchAngleClear = true;
+                pitchZero = false;
+            }
+            if (horizontalZero)
+            {
+                GlobalVars.dialPlateAngleClear = true;
+                horizontalZero = false;
+            }
+            this.pitchZeroButton.FlatAppearance.BorderColor = Color.Black;
+            this.horizontalZeroButton.FlatAppearance.BorderColor = Color.Black;
+        }
+
+        private void ZeroQuitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ButtonSetUnitToDegree_Click(object sender, EventArgs e)
+        {
+            if (!degreeOrMil)//当前是密位亮
+            {
+                degreeOrMil = true;
+                this.buttonSetUnitToMil.FlatAppearance.BorderColor = Color.Black;
+                this.buttonSetUnitToDegree.FlatAppearance.BorderColor = Color.Yellow;
+            }
+        }
+
+        private void ButtonSetUnitToMil_Click(object sender, EventArgs e)
+        {
+            if (degreeOrMil)//当前是角度亮
+            {
+                degreeOrMil = false;
+                this.buttonSetUnitToDegree.FlatAppearance.BorderColor = Color.Black;
+                this.buttonSetUnitToMil.FlatAppearance.BorderColor = Color.Yellow;
+            }
+        }
+
+        private void UnitApplyButton_Click(object sender, EventArgs e)
+        {
+            GlobalVars.degreeOrMil = degreeOrMil;
+            this.UnitChange?.Invoke(degreeOrMil);
+        }
+
+        private void UnitQuitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChangeUnit(bool type)
+        {
+            if (type)//用角度
+            {
+                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithDegree.ToString("0.0");
+                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithDegree.ToString("0.0");
+            }
+            else//用密位
+            {
+                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithMil.ToString("0.0");
+                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithMil.ToString("0.0");
+            }
         }
     }
 }

@@ -259,12 +259,12 @@ namespace DCS
                                             break;
                                     }
                                     byte[] bytes45 = new byte[2] { receivedBytes[3], receivedBytes[4] };
-                                    GlobalVars.dialPlateAngleWithMil = BitConverter.ToInt16(receivedBytes, 3);
+                                    GlobalVars.dialPlateAngleWithMil = BitConverter.ToInt16(receivedBytes, 3)/10.0;
                                     Console.WriteLine(GlobalVars.dialPlateAngleWithMil);
-                                    GlobalVars.dialPlateAngleWithDegree = (int)((GlobalVars.dialPlateAngleWithMil / 6000.0) * 360);
+                                    GlobalVars.dialPlateAngleWithDegree = (GlobalVars.dialPlateAngleWithMil / 6000.0) * 360.0;
                                     Console.WriteLine(GlobalVars.dialPlateAngleWithDegree);
-                                    GlobalVars.pitchAngleWithMil = BitConverter.ToInt16(receivedBytes, 5);
-                                    GlobalVars.pitchAngleWithDegree = (int)((GlobalVars.pitchAngleWithMil + 166.7) / 1166.7 * 70 - 10);
+                                    GlobalVars.pitchAngleWithMil = BitConverter.ToInt16(receivedBytes, 5)/10.0;
+                                    GlobalVars.pitchAngleWithDegree = ((GlobalVars.pitchAngleWithMil + 166.7) / 1166.7 * 70.0 - 10);
                                     GlobalVars.projectileCount = receivedBytes[7];
                                     GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
                                     GlobalVars.focalDistanceMultiple = receivedBytes[8];
@@ -452,7 +452,7 @@ namespace DCS
             //开始画方位角表盘上的指针
             int dialPlateWidth = this.dialPlatePictureBox.Width;
             int dialPlateHeight = this.dialPlatePictureBox.Height;
-            int angle = GlobalVars.dialPlateAngleWithDegree;
+            int angle = (int)(GlobalVars.dialPlateAngleWithDegree);
             //将graphics平移原点
             g.TranslateTransform(dialPlateWidth / 2, dialPlateHeight / 2);
             //将graphics旋转相应角度(绕当前原点)
@@ -469,7 +469,7 @@ namespace DCS
             bitmap.Dispose();
         }
 
-
+        private AmmoLoadConfigForm ammoLoadConfigForm = null;
         /// <summary>
         /// 弹药剩余量文本显示框点击事件函数
         /// </summary>
@@ -477,12 +477,17 @@ namespace DCS
         /// <param name="e"></param>
         private void AmmoLeftTextBox_Click(object sender, EventArgs e)
         {
-            AmmoLoadConfigForm ammoLoadConfigForm = new AmmoLoadConfigForm();
-            ammoLoadConfigForm.MdiParent = this;
-            ammoLoadConfigForm.Parent = this.cameraViewImageBox;
-            ammoLoadConfigForm.TopMost = true;
-            ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
-            ammoLoadConfigForm.Show();
+            if (ammoLoadConfigForm == null || ammoLoadConfigForm.IsDisposed)
+            {
+                ammoLoadConfigForm = new AmmoLoadConfigForm
+                {
+                    MdiParent = this,
+                    Parent = this.cameraViewImageBox,
+                    TopMost = true
+                };
+                ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
+                ammoLoadConfigForm.Show();
+            }
         }
         /// <summary>
         /// 修改弹药剩余量文本框显示数值
@@ -568,14 +573,20 @@ namespace DCS
             }
         }
 
+        AimingReticleConfigForm aimingReticleConfigForm = null;
         private void ParameterConfigLabel_Click(object sender, EventArgs e)
         {
-            AimingReticleConfigForm aimingReticleConfigForm = new AimingReticleConfigForm();
-            aimingReticleConfigForm.MdiParent = this;
-            aimingReticleConfigForm.Parent = this.cameraViewImageBox;
-            aimingReticleConfigForm.TopMost = true;
-            aimingReticleConfigForm.AimingReticlePositionChange += new AimingReticleConfigForm.AimingReticlePositionChangeHandler(MoveAimingReticlePictureBox);
-            aimingReticleConfigForm.Show();
+            if (aimingReticleConfigForm == null || aimingReticleConfigForm.IsDisposed)
+            {
+                aimingReticleConfigForm = new AimingReticleConfigForm
+                {
+                    MdiParent = this,
+                    Parent = this.cameraViewImageBox,
+                    TopMost = true
+                };
+                aimingReticleConfigForm.AimingReticlePositionChange += new AimingReticleConfigForm.AimingReticlePositionChangeHandler(MoveAimingReticlePictureBox);
+                aimingReticleConfigForm.Show();
+            }
         }
         /// <summary>
         /// 移动瞄准分划位置

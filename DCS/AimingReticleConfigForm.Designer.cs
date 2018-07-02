@@ -58,18 +58,18 @@
             this.recticleResetButton = new System.Windows.Forms.Button();
             this.recticleApplyButton = new System.Windows.Forms.Button();
             this.recticleQuitButton = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.buttonUP = new System.Windows.Forms.Button();
+            this.buttonLeft = new System.Windows.Forms.Button();
+            this.buttonRight = new System.Windows.Forms.Button();
+            this.buttonDowm = new System.Windows.Forms.Button();
+            this.pitchAngleLabel = new System.Windows.Forms.Label();
             this.pitchZeroButton = new System.Windows.Forms.Button();
             this.horizontalZeroButton = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.horizontalLabel = new System.Windows.Forms.Label();
             this.zeroApplyButton = new System.Windows.Forms.Button();
             this.zeroQuitButton = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
+            this.buttonSetUnitToDegree = new System.Windows.Forms.Button();
+            this.buttonSetUnitToMil = new System.Windows.Forms.Button();
             this.unitApplyButton = new System.Windows.Forms.Button();
             this.unitQuitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -516,69 +516,72 @@
             this.recticleQuitButton.UseVisualStyleBackColor = false;
             this.recticleQuitButton.Click += new System.EventHandler(this.RecticleQuitButton_Click);
             // 
-            // button24
+            // buttonUP
             // 
-            this.button24.BackColor = System.Drawing.Color.White;
-            this.button24.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button24.Location = new System.Drawing.Point(250, 220);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(50, 50);
-            this.button24.TabIndex = 30;
-            this.button24.Text = "上";
-            this.button24.UseVisualStyleBackColor = false;
+            this.buttonUP.BackColor = System.Drawing.Color.White;
+            this.buttonUP.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUP.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonUP.Location = new System.Drawing.Point(250, 220);
+            this.buttonUP.Name = "buttonUP";
+            this.buttonUP.Size = new System.Drawing.Size(50, 50);
+            this.buttonUP.TabIndex = 30;
+            this.buttonUP.Text = "上";
+            this.buttonUP.UseVisualStyleBackColor = false;
+            this.buttonUP.Click += new System.EventHandler(this.ButtonUP_Click);
             // 
-            // button25
+            // buttonLeft
             // 
-            this.button25.BackColor = System.Drawing.Color.White;
-            this.button25.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button25.Location = new System.Drawing.Point(200, 270);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(50, 50);
-            this.button25.TabIndex = 31;
-            this.button25.Text = "左";
-            this.button25.UseVisualStyleBackColor = false;
+            this.buttonLeft.BackColor = System.Drawing.Color.White;
+            this.buttonLeft.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLeft.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonLeft.Location = new System.Drawing.Point(200, 270);
+            this.buttonLeft.Name = "buttonLeft";
+            this.buttonLeft.Size = new System.Drawing.Size(50, 50);
+            this.buttonLeft.TabIndex = 31;
+            this.buttonLeft.Text = "左";
+            this.buttonLeft.UseVisualStyleBackColor = false;
+            this.buttonLeft.Click += new System.EventHandler(this.ButtonLeft_Click);
             // 
-            // button26
+            // buttonRight
             // 
-            this.button26.BackColor = System.Drawing.Color.White;
-            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button26.Location = new System.Drawing.Point(300, 270);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(50, 50);
-            this.button26.TabIndex = 32;
-            this.button26.Text = "右";
-            this.button26.UseVisualStyleBackColor = false;
+            this.buttonRight.BackColor = System.Drawing.Color.White;
+            this.buttonRight.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRight.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonRight.Location = new System.Drawing.Point(300, 270);
+            this.buttonRight.Name = "buttonRight";
+            this.buttonRight.Size = new System.Drawing.Size(50, 50);
+            this.buttonRight.TabIndex = 32;
+            this.buttonRight.Text = "右";
+            this.buttonRight.UseVisualStyleBackColor = false;
+            this.buttonRight.Click += new System.EventHandler(this.ButtonRight_Click);
             // 
-            // button27
+            // buttonDowm
             // 
-            this.button27.BackColor = System.Drawing.Color.White;
-            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button27.Location = new System.Drawing.Point(250, 320);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(50, 50);
-            this.button27.TabIndex = 33;
-            this.button27.Text = "下";
-            this.button27.UseVisualStyleBackColor = false;
+            this.buttonDowm.BackColor = System.Drawing.Color.White;
+            this.buttonDowm.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonDowm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDowm.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonDowm.Location = new System.Drawing.Point(250, 320);
+            this.buttonDowm.Name = "buttonDowm";
+            this.buttonDowm.Size = new System.Drawing.Size(50, 50);
+            this.buttonDowm.TabIndex = 33;
+            this.buttonDowm.Text = "下";
+            this.buttonDowm.UseVisualStyleBackColor = false;
+            this.buttonDowm.Click += new System.EventHandler(this.ButtonDowm_Click);
             // 
-            // label8
+            // pitchAngleLabel
             // 
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(30, 444);
-            this.label8.Margin = new System.Windows.Forms.Padding(0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 30);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "0000.0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pitchAngleLabel.BackColor = System.Drawing.Color.White;
+            this.pitchAngleLabel.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pitchAngleLabel.Location = new System.Drawing.Point(30, 444);
+            this.pitchAngleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.pitchAngleLabel.Name = "pitchAngleLabel";
+            this.pitchAngleLabel.Size = new System.Drawing.Size(80, 30);
+            this.pitchAngleLabel.TabIndex = 34;
+            this.pitchAngleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pitchZeroButton
             // 
@@ -594,6 +597,7 @@
             this.pitchZeroButton.TabIndex = 35;
             this.pitchZeroButton.Text = "俯仰零位";
             this.pitchZeroButton.UseVisualStyleBackColor = false;
+            this.pitchZeroButton.Click += new System.EventHandler(this.PitchZeroButton_Click);
             // 
             // horizontalZeroButton
             // 
@@ -609,18 +613,18 @@
             this.horizontalZeroButton.TabIndex = 37;
             this.horizontalZeroButton.Text = "水平零位";
             this.horizontalZeroButton.UseVisualStyleBackColor = false;
+            this.horizontalZeroButton.Click += new System.EventHandler(this.HorizontalZeroButton_Click);
             // 
-            // label9
+            // horizontalLabel
             // 
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(30, 494);
-            this.label9.Margin = new System.Windows.Forms.Padding(0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 30);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "0000.0";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.horizontalLabel.BackColor = System.Drawing.Color.White;
+            this.horizontalLabel.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.horizontalLabel.Location = new System.Drawing.Point(30, 494);
+            this.horizontalLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.horizontalLabel.Name = "horizontalLabel";
+            this.horizontalLabel.Size = new System.Drawing.Size(80, 30);
+            this.horizontalLabel.TabIndex = 36;
+            this.horizontalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // zeroApplyButton
             // 
@@ -636,6 +640,7 @@
             this.zeroApplyButton.TabIndex = 38;
             this.zeroApplyButton.Text = "应用";
             this.zeroApplyButton.UseVisualStyleBackColor = false;
+            this.zeroApplyButton.Click += new System.EventHandler(this.ZeroApplyButton_Click);
             // 
             // zeroQuitButton
             // 
@@ -651,36 +656,39 @@
             this.zeroQuitButton.TabIndex = 39;
             this.zeroQuitButton.Text = "退出";
             this.zeroQuitButton.UseVisualStyleBackColor = false;
+            this.zeroQuitButton.Click += new System.EventHandler(this.ZeroQuitButton_Click);
             // 
-            // button32
+            // buttonSetUnitToDegree
             // 
-            this.button32.BackColor = System.Drawing.Color.Black;
-            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Location = new System.Drawing.Point(30, 604);
-            this.button32.Margin = new System.Windows.Forms.Padding(0);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(100, 30);
-            this.button32.TabIndex = 40;
-            this.button32.Text = "角度 °";
-            this.button32.UseVisualStyleBackColor = false;
+            this.buttonSetUnitToDegree.BackColor = System.Drawing.Color.Black;
+            this.buttonSetUnitToDegree.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonSetUnitToDegree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSetUnitToDegree.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonSetUnitToDegree.ForeColor = System.Drawing.Color.White;
+            this.buttonSetUnitToDegree.Location = new System.Drawing.Point(30, 604);
+            this.buttonSetUnitToDegree.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonSetUnitToDegree.Name = "buttonSetUnitToDegree";
+            this.buttonSetUnitToDegree.Size = new System.Drawing.Size(100, 30);
+            this.buttonSetUnitToDegree.TabIndex = 40;
+            this.buttonSetUnitToDegree.Text = "角度 °";
+            this.buttonSetUnitToDegree.UseVisualStyleBackColor = false;
+            this.buttonSetUnitToDegree.Click += new System.EventHandler(this.ButtonSetUnitToDegree_Click);
             // 
-            // button33
+            // buttonSetUnitToMil
             // 
-            this.button33.BackColor = System.Drawing.Color.Black;
-            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button33.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button33.ForeColor = System.Drawing.Color.White;
-            this.button33.Location = new System.Drawing.Point(141, 604);
-            this.button33.Margin = new System.Windows.Forms.Padding(0);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(100, 30);
-            this.button33.TabIndex = 41;
-            this.button33.Text = "密位 mil";
-            this.button33.UseVisualStyleBackColor = false;
+            this.buttonSetUnitToMil.BackColor = System.Drawing.Color.Black;
+            this.buttonSetUnitToMil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonSetUnitToMil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSetUnitToMil.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonSetUnitToMil.ForeColor = System.Drawing.Color.White;
+            this.buttonSetUnitToMil.Location = new System.Drawing.Point(141, 604);
+            this.buttonSetUnitToMil.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonSetUnitToMil.Name = "buttonSetUnitToMil";
+            this.buttonSetUnitToMil.Size = new System.Drawing.Size(100, 30);
+            this.buttonSetUnitToMil.TabIndex = 41;
+            this.buttonSetUnitToMil.Text = "密位 mil";
+            this.buttonSetUnitToMil.UseVisualStyleBackColor = false;
+            this.buttonSetUnitToMil.Click += new System.EventHandler(this.ButtonSetUnitToMil_Click);
             // 
             // unitApplyButton
             // 
@@ -696,6 +704,7 @@
             this.unitApplyButton.TabIndex = 42;
             this.unitApplyButton.Text = "应用";
             this.unitApplyButton.UseVisualStyleBackColor = false;
+            this.unitApplyButton.Click += new System.EventHandler(this.UnitApplyButton_Click);
             // 
             // unitQuitButton
             // 
@@ -711,6 +720,7 @@
             this.unitQuitButton.TabIndex = 43;
             this.unitQuitButton.Text = "退出";
             this.unitQuitButton.UseVisualStyleBackColor = false;
+            this.unitQuitButton.Click += new System.EventHandler(this.UnitQuitButton_Click);
             // 
             // AimingReticleConfigForm
             // 
@@ -721,18 +731,18 @@
             this.ControlBox = false;
             this.Controls.Add(this.unitQuitButton);
             this.Controls.Add(this.unitApplyButton);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.button32);
+            this.Controls.Add(this.buttonSetUnitToMil);
+            this.Controls.Add(this.buttonSetUnitToDegree);
             this.Controls.Add(this.zeroQuitButton);
             this.Controls.Add(this.zeroApplyButton);
             this.Controls.Add(this.horizontalZeroButton);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.horizontalLabel);
             this.Controls.Add(this.pitchZeroButton);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button24);
+            this.Controls.Add(this.pitchAngleLabel);
+            this.Controls.Add(this.buttonDowm);
+            this.Controls.Add(this.buttonRight);
+            this.Controls.Add(this.buttonLeft);
+            this.Controls.Add(this.buttonUP);
             this.Controls.Add(this.recticleQuitButton);
             this.Controls.Add(this.recticleApplyButton);
             this.Controls.Add(this.recticleResetButton);
@@ -764,6 +774,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(860, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AimingReticleConfigForm";
@@ -808,18 +819,18 @@
         private System.Windows.Forms.Button recticleResetButton;
         private System.Windows.Forms.Button recticleApplyButton;
         private System.Windows.Forms.Button recticleQuitButton;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonUP;
+        private System.Windows.Forms.Button buttonLeft;
+        private System.Windows.Forms.Button buttonRight;
+        private System.Windows.Forms.Button buttonDowm;
+        private System.Windows.Forms.Label pitchAngleLabel;
         private System.Windows.Forms.Button pitchZeroButton;
         private System.Windows.Forms.Button horizontalZeroButton;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label horizontalLabel;
         private System.Windows.Forms.Button zeroApplyButton;
         private System.Windows.Forms.Button zeroQuitButton;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button buttonSetUnitToDegree;
+        private System.Windows.Forms.Button buttonSetUnitToMil;
         private System.Windows.Forms.Button unitApplyButton;
         private System.Windows.Forms.Button unitQuitButton;
     }
