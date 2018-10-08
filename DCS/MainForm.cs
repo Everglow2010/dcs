@@ -4,13 +4,17 @@ using System.IO.Ports;
 using Emgu.CV;
 using System.Collections.Generic;
 using System.Drawing;
-using Emgu.CV.Structure;
 using static DCS.AmmoLoadConfigForm;
 
 namespace DCS
 {
     public partial class MainForm : Form
     {
+        //协议接收的数据包的字节大小
+        public const int RECEIVE_DATA_PACKAGE_SIZE = 12;
+        //协议发送的数据包的字节大小
+        public const int SEND_DATA_PACKAGE_SIZE = 7;
+
         public MainForm()
         {
             InitializeComponent();
@@ -86,7 +90,7 @@ namespace DCS
         {
             Console.WriteLine(GlobalVars.cameraRTSPPath);
             //启动emgucv视频捕捉显示
-            PlayVideo();
+            //PlayVideo();
 
             //byte[] c = new byte[2];
             //c[0] = 0x79;
@@ -218,63 +222,107 @@ namespace DCS
                     //缓存接收到的数据
                     buffer.AddRange(receivedData);
 
-                    while (buffer.Count >= 10)
+                    while (buffer.Count >= RECEIVE_DATA_PACKAGE_SIZE)
                     {
-                        Byte[] receivedBytes = new Byte[10];//暂存一次接收的一个完整数据包
+                        Byte[] receivedBytes = new Byte[RECEIVE_DATA_PACKAGE_SIZE];//暂存一次接收的一个完整数据包
                         if (buffer[0] == 0xFF)//数据帧头第一字节检测
                         {
-                            if (buffer[1] == 0xC3)
+                            if (buffer[1] == 0xC3)//数据帧头第二字节标志位检查
                             {
                                 Console.WriteLine("数据帧头正确，准备解析数据包");
-                                buffer.CopyTo(0, receivedBytes, 0, 10);//取出数据
+                                buffer.CopyTo(0, receivedBytes, 0, RECEIVE_DATA_PACKAGE_SIZE);//取出数据包
                                 string strReceived = BitConverter.ToString(receivedBytes);
-                                Console.WriteLine(strReceived);
+                                Console.WriteLine("取出的数据包原始数据为：" + strReceived);
                                 bool checkSumIsRight = CalculateChecksumForReceivedData(receivedBytes);
                                 if (!checkSumIsRight)//校验不正确
                                 {
-                                    buffer.RemoveRange(0, 10);
-                                    Console.WriteLine("数据包校验和出错！丢弃10个字节");
+                                    buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
+                                    Console.WriteLine("数据包校验和出错！丢弃整个数据包");
                                     continue;
                                 }
                                 else
                                 {
-                                    buffer.RemoveRange(0, 10);
+                                    buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
                                     //解析数据并更新界面控件显示参数
+                                    //第三字节，控制各种指示灯
                                     byte byte3 = receivedBytes[2];
-                                    GlobalVars.safeState = (byte3 & 0x20) == 32 ? true : false;
-                                    switch (byte3 & 0x07)
+
+                                    //辅助瞄准Bit7、Bit6：00灰色，11绿色
+                                    if ((byte3 & 192) == 192) GlobalVars.laserControlSwitchState = true;
+                                    else if ((byte3 & 192) == 0) GlobalVars.laserControlSwitchState = false;
+                                    else
                                     {
-                                        case 4:
+                                        Console.WriteLine("辅助瞄准指示位出错");
+                                    }
+
+                                    //伺服使能Bit5、Bit4：00红色，11绿色
+                                    if ((byte3 & 48) == 48) GlobalVars.servoControlSwitchState = true;
+                                    else if ((byte3 & 48) == 0) GlobalVars.servoControlSwitchState = false;
+                                    else
+                                    {
+                                        Console.WriteLine("伺服使能指示位出错");
+                                    }
+
+                                    //射击保险Bit3、Bit2：00红，11绿
+                                    if ((byte3 & 12) == 12) GlobalVars.safeState = true;
+                                    else if ((byte3 & 12) == 0) GlobalVars.safeState = false;
+                                    else
+                                    {
+                                        Console.WriteLine("射击保险指示位出错");
+                                    }
+
+                                    //装填状态Bit1、Bit0：00红/红，10绿/红，11绿/绿
+                                    switch (byte3 & 3)
+                                    {
+                                        case 3:
                                             GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_LOADED;
                                             break;
                                         case 2:
                                             GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_OPEN;
                                             break;
-                                        case 1:
+                                        case 0:
                                             GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
                                             break;
 
                                         default:
+                                            Console.WriteLine("装填状态指示位出错");
                                             GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
                                             break;
                                     }
+                                    //通信协议中的Byte4与Byte5：方位位置值L和方位位置值H
                                     byte[] bytes45 = new byte[2] { receivedBytes[3], receivedBytes[4] };
+
+                                    //将Byte4与Byte5转为方位位置数值(同时记录mil值和对应的degree值)
                                     GlobalVars.dialPlateAngleWithMil = BitConverter.ToInt16(receivedBytes, 3)/10.0;
-                                    Console.WriteLine(GlobalVars.dialPlateAngleWithMil);
+                                    Console.WriteLine("方位位置值mil:" + GlobalVars.dialPlateAngleWithMil);
                                     GlobalVars.dialPlateAngleWithDegree = (GlobalVars.dialPlateAngleWithMil / 6000.0) * 360.0;
-                                    Console.WriteLine(GlobalVars.dialPlateAngleWithDegree);
+                                    Console.WriteLine("方位位置值degree：" + GlobalVars.dialPlateAngleWithDegree);
+
+                                    //将Byte6与Byte7转为俯仰位置值的数值(同时记录mil值和对应的degree值)
                                     GlobalVars.pitchAngleWithMil = BitConverter.ToInt16(receivedBytes, 5)/10.0;
                                     GlobalVars.pitchAngleWithDegree = ((GlobalVars.pitchAngleWithMil + 166.7) / 1166.7 * 70.0 - 10);
+                                    Console.WriteLine("俯仰位置值mil：" + GlobalVars.pitchAngleWithMil);
+                                    Console.WriteLine("俯仰位置值degree：" + GlobalVars.pitchAngleWithDegree);
+
+                                    //将Byte8转为射弹计数，同时计算剩余弹量
                                     GlobalVars.projectileCount = receivedBytes[7];
                                     GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
+                                    Console.WriteLine("射弹计数：" + GlobalVars.projectileCount);
+
+                                    //将Byte9转为当前焦距状态
                                     GlobalVars.focalDistanceMultiple = receivedBytes[8];
+                                    Console.WriteLine("当前焦距状态：" + GlobalVars.focalDistanceMultiple);
+
+                                    //将Byte10与Byte11转为距离数值
+                                    GlobalVars.distanceMeter = BitConverter.ToUInt16(receivedBytes, 9)/10.0;
+                                    Console.WriteLine("距离数值(米)：" + GlobalVars.distanceMeter);
 
                                     //调用委托更新UI界面显示                                    
                                     this.Invoke(flushAllUI);
                                 }
                             }
                             else
-                            {
+                            {//数据包帧头第一字节正确而第二字节不正确
                                 buffer.RemoveAt(0);
                                 buffer.RemoveAt(1);
                                 Console.WriteLine("数据帧头第一字节正确而第二字节不正确，丢弃前两字节");
@@ -301,7 +349,7 @@ namespace DCS
         private bool CalculateChecksumForReceivedData(byte[] receivedBytes)
         {
             short checksum = 0;
-            for (int i = 2; i < 9; i++)
+            for (int i = 2; i < 11; i++)
             {
                 checksum += receivedBytes[i];
             }
@@ -318,7 +366,7 @@ namespace DCS
         private byte CalculateChecksumForDataToSend(byte[] data)
         {
             short checksum = 0;
-            for (int i = 2; i < 7; i++)
+            for (int i = 2; i < 6; i++)
             {
                 checksum += data[i];
             }
@@ -328,66 +376,73 @@ namespace DCS
         }
 
         /// <summary>
-        /// 定时用串口发送数据
+        /// 定时用串口发送数据触发方法
         /// </summary>
-        Byte[] dataToSend = new Byte[8];
+        Byte[] dataToSend = new Byte[SEND_DATA_PACKAGE_SIZE];
         private void DataSendTimer_Tick(object sender, EventArgs e)
         {
             dataToSend[0] = 0xff;
             dataToSend[1] = 0x81;
-            //伺服开关
-            if (GlobalVars.servoControlSwitchState)
-            {
-                dataToSend[2] = 0xAA;
-            }
-            else
-            {
-                dataToSend[2] = 0x55;              
-            }
-            //激光开关
-            if (GlobalVars.laserControlSwitchState)
-            {
-                dataToSend[3] = 0xAA;
-            }
-            else
-            {
-                dataToSend[3] = 0x55;           
-            }
-            //射弹计数清零
+
+            //Byte3-射弹计数清零
             if (GlobalVars.projectileCountClear)
             {
+                dataToSend[2] = 0xAA;
+                GlobalVars.projectileCountClear = false;//开关状态恢复
+            }
+            else
+            {
+                dataToSend[2] = 0x55;
+            }
+
+            //Byte4-方位零位设置
+            if (GlobalVars.dialPlateAngleClear)
+            {
+                dataToSend[3] = 0xAA;
+                GlobalVars.dialPlateAngleClear = false;//开关状态恢复
+            }
+            else
+            {
+                dataToSend[3] = 0x55;
+            }
+
+            //Byte5-俯仰零位设置
+            if (GlobalVars.pitchAngleClear)
+            {
                 dataToSend[4] = 0xAA;
-                GlobalVars.projectileCountClear = false;
+                GlobalVars.pitchAngleClear = false;
             }
             else
             {
                 dataToSend[4] = 0x55;
             }
-            //方位清零
-            if (GlobalVars.dialPlateAngleClear)
+
+            //Byte6-辅助瞄准开关
+            if (GlobalVars.laserControlSwitchState)
             {
                 dataToSend[5] = 0xAA;
-                GlobalVars.dialPlateAngleClear = false;
             }
             else
             {
                 dataToSend[5] = 0x55;
             }
-            //俯仰清零
-            if (GlobalVars.pitchAngleClear)
-            {
-                dataToSend[6] = 0xAA;
-                GlobalVars.pitchAngleClear = false;
-            }
-            else
-            {
-                dataToSend[6] = 0x55;
-            }
+
+            //伺服开关
+            //if (GlobalVars.servoControlSwitchState)
+            //{
+            //    dataToSend[2] = 0xAA;
+            //}
+            //else
+            //{
+            //    dataToSend[2] = 0x55;              
+            //}
+
             //校验和
             byte checksum = CalculateChecksumForDataToSend(dataToSend);
-            dataToSend[7] = checksum;
+            dataToSend[6] = checksum;
             //发送数据
-            serialPort.Write(dataToSend, 0, 8);
+            //Console.WriteLine(BitConverter.ToString(dataToSend));
+            serialPort.Write(dataToSend, 0, SEND_DATA_PACKAGE_SIZE);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -16,10 +16,10 @@ namespace DCS
         public const int LASER_CONTROL = 2;
 
         //各个指示灯的状态记录变量，bool型的true代表开，false代表关
-        public static bool servoControlSwitchState = false;
-        public static bool laserControlSwitchState = false;
-        public static bool safeState = false;
-        public static int ammoLoadState = AMMOLOAD_NOT_LOADED;
+        public static bool servoControlSwitchState = false;//伺服使能
+        public static bool laserControlSwitchState = false;//辅助瞄准
+        public static bool safeState = false;//射击保险
+        public static int ammoLoadState = AMMOLOAD_NOT_LOADED;//装填装填
 
         //记录剩余弹量
         public static int ammoLeftNum = 200;
@@ -29,6 +29,9 @@ namespace DCS
         public static int projectileCount = 0;
         //射弹数清零与否，每次发送数据时检测此项，为true则发送一次清零控制并重置成false
         public static bool projectileCountClear = false;
+
+        //记录距离
+        public static double distanceMeter = 0;
 
         //记录俯仰角度的mil值，记的是解析出来的数据，-1667~10000，1LSB=0.1mil
         public static double pitchAngleWithMil = 0;
