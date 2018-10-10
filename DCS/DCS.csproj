@@ -226,7 +226,9 @@
     <Content Include="Resources\UIV2\LaserOff.png" />
     <Content Include="Resources\UIV2\LaserOn.png" />
     <Content Include="Resources\UIV2\SafetyOff.png" />
+    <None Include="Resources\UIV2\safetyoff1.png" />
     <Content Include="Resources\UIV2\SafetyOn.png" />
+    <None Include="Resources\UIV2\safetyon1.png" />
     <Content Include="Resources\UIV2\ServoControlTurnOffButtonImage.png" />
     <Content Include="Resources\UIV2\ServoControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\YellowCornor.png" />

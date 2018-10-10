@@ -123,6 +123,10 @@ namespace DCS
         public void DisplayToUI()
         {
             //更新UI状态
+            //更新辅助瞄准指示灯状态
+            this.laserControlPictureBox.Image = GlobalVars.laserControlSwitchState ? Properties.Resources.LaserOn : Properties.Resources.LaserOff;
+            //更新伺服使能指示灯状态
+            this.servoControlPictureBox.Image = GlobalVars.servoControlSwitchState ? Properties.Resources.ServoOn : Properties.Resources.ServoOff;
             //更新保险开关状态
             this.safeStatePitureBox.Image = GlobalVars.safeState ? Properties.Resources.SafetyOn : Properties.Resources.SafetyOff;
             //更新装填指示状态
@@ -145,6 +149,21 @@ namespace DCS
             }
             //更新剩余弹量文本框
             this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
+            if (GlobalVars.ammoLeftNum >= 100)
+            {
+                this.ammoLeftTextBoxBlinkTimer.Stop();
+                this.ammoLeftTextBox.ForeColor = Color.LimeGreen;
+            }
+            else if (GlobalVars.ammoLeftNum >= 30)
+            {
+                this.ammoLeftTextBoxBlinkTimer.Stop();
+                this.ammoLeftTextBox.ForeColor = Color.Yellow;
+            }
+            else if (GlobalVars.ammoLeftNum < 30)
+            {
+                this.ammoLeftTextBox.ForeColor = Color.Red;
+                this.ammoLeftTextBoxBlinkTimer.Start();
+            }
             //更新俯仰角度显示值            
             this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
             //更新仪表盘角度显示值
@@ -225,9 +244,9 @@ namespace DCS
                     while (buffer.Count >= RECEIVE_DATA_PACKAGE_SIZE)
                     {
                         Byte[] receivedBytes = new Byte[RECEIVE_DATA_PACKAGE_SIZE];//暂存一次接收的一个完整数据包
-                        if (buffer[0] == 0xFF)//数据帧头第一字节检测
+                        if ((buffer[0] == 0xFF) && (buffer[1] == 0xC3))//数据帧头检测是否出错
                         {
-                            if (buffer[1] == 0xC3)//数据帧头第二字节标志位检查
+                            //if (buffer[1] == 0xC3)//数据帧头第二字节标志位检查
                             {
                                 Console.WriteLine("数据帧头正确，准备解析数据包");
                                 buffer.CopyTo(0, receivedBytes, 0, RECEIVE_DATA_PACKAGE_SIZE);//取出数据包
@@ -242,6 +261,7 @@ namespace DCS
                                 }
                                 else
                                 {
+                                    //读取完一个包，删除缓存中这个包数据
                                     buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
                                     //解析数据并更新界面控件显示参数
                                     //第三字节，控制各种指示灯
@@ -293,13 +313,13 @@ namespace DCS
                                     byte[] bytes45 = new byte[2] { receivedBytes[3], receivedBytes[4] };
 
                                     //将Byte4与Byte5转为方位位置数值(同时记录mil值和对应的degree值)
-                                    GlobalVars.dialPlateAngleWithMil = BitConverter.ToInt16(receivedBytes, 3)/10.0;
+                                    GlobalVars.dialPlateAngleWithMil = BitConverter.ToUInt16(receivedBytes, 3)/10.0;
                                     Console.WriteLine("方位位置值mil:" + GlobalVars.dialPlateAngleWithMil);
                                     GlobalVars.dialPlateAngleWithDegree = (GlobalVars.dialPlateAngleWithMil / 6000.0) * 360.0;
                                     Console.WriteLine("方位位置值degree：" + GlobalVars.dialPlateAngleWithDegree);
 
                                     //将Byte6与Byte7转为俯仰位置值的数值(同时记录mil值和对应的degree值)
-                                    GlobalVars.pitchAngleWithMil = BitConverter.ToInt16(receivedBytes, 5)/10.0;
+                                    GlobalVars.pitchAngleWithMil = (BitConverter.ToUInt16(receivedBytes, 5) - 32768)/10.0;
                                     GlobalVars.pitchAngleWithDegree = ((GlobalVars.pitchAngleWithMil + 166.7) / 1166.7 * 70.0 - 10);
                                     Console.WriteLine("俯仰位置值mil：" + GlobalVars.pitchAngleWithMil);
                                     Console.WriteLine("俯仰位置值degree：" + GlobalVars.pitchAngleWithDegree);
@@ -321,18 +341,19 @@ namespace DCS
                                     this.Invoke(flushAllUI);
                                 }
                             }
-                            else
-                            {//数据包帧头第一字节正确而第二字节不正确
-                                buffer.RemoveAt(0);
-                                buffer.RemoveAt(1);
-                                Console.WriteLine("数据帧头第一字节正确而第二字节不正确，丢弃前两字节");
-                                continue;
-                            }
+                            //else
+                            //{//数据包帧头第一字节正确而第二字节不正确
+                            //    buffer.RemoveAt(0);
+                            //    buffer.RemoveAt(1);
+                            //    Console.WriteLine("数据帧头第一字节正确而第二字节不正确，丢弃前两字节");
+                            //    continue;
+                            //}
                         }
                         else
-                        {//帧头第一字节不正确时
-                            buffer.RemoveAt(0);
-                            Console.WriteLine("数据帧头第一字节不正确，丢弃");
+                        {//帧头不正确时
+                            //buffer.RemoveAt(0);
+                            buffer.RemoveRange(0, 2);
+                            Console.WriteLine("数据帧头字节不正确，丢弃");
                             continue;
                         }
                     }
@@ -421,6 +442,7 @@ namespace DCS
             if (GlobalVars.laserControlSwitchState)
             {
                 dataToSend[5] = 0xAA;
+                GlobalVars.laserControlSwitchState = false;
             }
             else
             {
