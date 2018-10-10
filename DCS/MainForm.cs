@@ -164,8 +164,20 @@ namespace DCS
                 this.ammoLeftTextBox.ForeColor = Color.Red;
                 this.ammoLeftTextBoxBlinkTimer.Start();
             }
-            //更新俯仰角度显示值            
+            //更新距离数值显示值
+            this.distanceValueLabel.Text = Convert.ToString(GlobalVars.distanceMeter) + "m";
+            //更新俯仰角度显示值和水平数值显示值            
             this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
+            if (GlobalVars.degreeOrMil)//true表示用度数
+            {
+                this.pitchValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithDegree) + "°";
+                this.herizonValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree) + "°";
+            }
+            else//false表示用密位单位
+            {
+                this.pitchValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
+                this.herizonValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithMil) + "mil";
+            }
             //更新仪表盘角度显示值
             this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree) + "°";
             //更新仪表盘指针图像

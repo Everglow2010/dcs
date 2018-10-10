@@ -64,6 +64,12 @@
             this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.servoControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.SERVO_CONTROL);
             this.laserControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.LASER_CONTROL);
+            this.distaneLabel = new System.Windows.Forms.Label();
+            this.pitchLabel = new System.Windows.Forms.Label();
+            this.herizonLabel = new System.Windows.Forms.Label();
+            this.distanceValueLabel = new System.Windows.Forms.Label();
+            this.pitchValueLabel = new System.Windows.Forms.Label();
+            this.herizonValueLabel = new System.Windows.Forms.Label();
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servoControlPictureBox)).BeginInit();
@@ -332,12 +338,54 @@
             this.pitchAngleRulerPictureBox.TabStop = false;
             this.pitchAngleRulerPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.PitchAngleRulerPictureBox_Paint);
             // 
+            // distaneLabel
+            // 
+            resources.ApplyResources(this.distaneLabel, "distaneLabel");
+            this.distaneLabel.ForeColor = System.Drawing.Color.Red;
+            this.distaneLabel.Name = "distaneLabel";
+            // 
+            // pitchLabel
+            // 
+            resources.ApplyResources(this.pitchLabel, "pitchLabel");
+            this.pitchLabel.ForeColor = System.Drawing.Color.Red;
+            this.pitchLabel.Name = "pitchLabel";
+            // 
+            // herizonLabel
+            // 
+            resources.ApplyResources(this.herizonLabel, "herizonLabel");
+            this.herizonLabel.ForeColor = System.Drawing.Color.Red;
+            this.herizonLabel.Name = "herizonLabel";
+            // 
+            // distanceValueLabel
+            // 
+            resources.ApplyResources(this.distanceValueLabel, "distanceValueLabel");
+            this.distanceValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.distanceValueLabel.Name = "distanceValueLabel";
+            // 
+            // pitchValueLabel
+            // 
+            resources.ApplyResources(this.pitchValueLabel, "pitchValueLabel");
+            this.pitchValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.pitchValueLabel.Name = "pitchValueLabel";
+            // 
+            // herizonValueLabel
+            // 
+            resources.ApplyResources(this.herizonValueLabel, "herizonValueLabel");
+            this.herizonValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.herizonValueLabel.Name = "herizonValueLabel";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.herizonValueLabel);
+            this.Controls.Add(this.pitchValueLabel);
+            this.Controls.Add(this.distanceValueLabel);
+            this.Controls.Add(this.herizonLabel);
+            this.Controls.Add(this.pitchLabel);
             this.Controls.Add(this.pitchAngleValueLabel);
             this.Controls.Add(this.dialPlateValueLabel);
+            this.Controls.Add(this.distaneLabel);
             this.Controls.Add(this.topBar);
             this.Controls.Add(this.cameraViewImageBox);
             this.Controls.Add(this.bottomPanel);
@@ -398,6 +446,12 @@
         private System.Windows.Forms.Timer ammoLeftTextBoxBlinkTimer;
         private OnOffSwitchPanel servoControlOnOffSwitchPanel;
         private OnOffSwitchPanel laserControlOnOffSwitchPanel;
+        private System.Windows.Forms.Label distaneLabel;
+        private System.Windows.Forms.Label pitchLabel;
+        private System.Windows.Forms.Label herizonLabel;
+        private System.Windows.Forms.Label distanceValueLabel;
+        private System.Windows.Forms.Label pitchValueLabel;
+        private System.Windows.Forms.Label herizonValueLabel;
     }
 }
 
