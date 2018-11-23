@@ -20,6 +20,7 @@ namespace DCS
         public static bool laserControlSwitchState = false;//辅助瞄准
         public static bool safeState = false;//射击保险
         public static int ammoLoadState = AMMOLOAD_NOT_LOADED;//装填装填
+        public static string serialPortName = "COM1";//串口名称
 
         //记录剩余弹量
         public static int ammoLeftNum = 200;
