@@ -117,11 +117,288 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;laserControlPictureBox.Name" xml:space="preserve">
+    <value>laserControlPictureBox</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.Name" xml:space="preserve">
+    <value>servoControlPictureBox</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.Name" xml:space="preserve">
+    <value>safeStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.Name" xml:space="preserve">
+    <value>ammoLoadLabel</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.Name" xml:space="preserve">
+    <value>batteryLabel</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.Name" xml:space="preserve">
+    <value>batteryBar</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.Name" xml:space="preserve">
+    <value>safeStatePitureBox</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.Name" xml:space="preserve">
+    <value>ammoLoadPictureBox</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.Name" xml:space="preserve">
+    <value>ammoLeftTextBox</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.Name" xml:space="preserve">
+    <value>ammoLeftLabel</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigButton.Name" xml:space="preserve">
+    <value>parameterConfigButton</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigButton.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigButton.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.Name" xml:space="preserve">
+    <value>parameterConfigLabel</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.Name" xml:space="preserve">
+    <value>laserControlLabel</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.Name" xml:space="preserve">
+    <value>servoControlLabel</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="topBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="topBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="topBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 80</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="topBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;topBar.Name" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;topBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;topBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;topBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="laserControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="laserControlPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>790, 36</value>
   </data>
@@ -134,7 +411,6 @@
   <data name="laserControlPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="laserControlPictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -609,6 +885,9 @@
   <data name="&gt;&gt;ammoLeftLabel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="parameterConfigButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="parameterConfigButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 6.75pt, style=Bold</value>
   </data>
@@ -626,6 +905,9 @@
   </data>
   <data name="parameterConfigButton.Text" xml:space="preserve">
     <value>设置</value>
+  </data>
+  <data name="parameterConfigButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;parameterConfigButton.Name" xml:space="preserve">
     <value>parameterConfigButton</value>
@@ -747,30 +1029,6 @@
   <data name="&gt;&gt;servoControlLabel.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="topBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="topBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="topBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 80</value>
-  </data>
-  <data name="topBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;topBar.Name" xml:space="preserve">
-    <value>topBar</value>
-  </data>
-  <data name="&gt;&gt;topBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;topBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;topBar.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="dialPlateValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -781,7 +1039,7 @@
     <value>NoControl</value>
   </data>
   <data name="dialPlateValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 746</value>
+    <value>35, 668</value>
   </data>
   <data name="dialPlateValueLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 14</value>
@@ -802,10 +1060,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dialPlateValueLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;dialPlateValueLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>11</value>
   </data>
   <metadata name="serialPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -820,7 +1078,7 @@
     <value>NoControl</value>
   </data>
   <data name="pitchAngleValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 746</value>
+    <value>158, 668</value>
   </data>
   <data name="pitchAngleValueLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 14</value>
@@ -841,14 +1099,62 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pitchAngleValueLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchAngleValueLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>12</value>
   </data>
   <metadata name="dataSendTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 17</value>
   </metadata>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Name" xml:space="preserve">
+    <value>laserControlOnOffSwitchPanel</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Type" xml:space="preserve">
+    <value>DCS.OnOffSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;servoControlOnOffSwitchPanel.Name" xml:space="preserve">
+    <value>servoControlOnOffSwitchPanel</value>
+  </data>
+  <data name="&gt;&gt;servoControlOnOffSwitchPanel.Type" xml:space="preserve">
+    <value>DCS.OnOffSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;servoControlOnOffSwitchPanel.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;servoControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="bottomPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="bottomPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 720</value>
+  </data>
+  <data name="bottomPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Name" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 0</value>
   </data>
@@ -896,30 +1202,6 @@
   </data>
   <data name="&gt;&gt;servoControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bottomPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="bottomPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 720</value>
-  </data>
-  <data name="bottomPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Name" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <metadata name="ammoLeftTextBoxBlinkTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
@@ -1276,6 +1558,201 @@
   <data name="&gt;&gt;pitchAngleRulerPictureBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="distaneLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="distaneLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="distaneLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 520</value>
+  </data>
+  <data name="distaneLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="distaneLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="distaneLabel.Text" xml:space="preserve">
+    <value>距离：</value>
+  </data>
+  <data name="&gt;&gt;distaneLabel.Name" xml:space="preserve">
+    <value>distaneLabel</value>
+  </data>
+  <data name="&gt;&gt;distaneLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;distaneLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;distaneLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="distanceValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="distanceValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="distanceValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="distanceValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 520</value>
+  </data>
+  <data name="distanceValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="distanceValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="distanceValueLabel.Text" xml:space="preserve">
+    <value>0000m</value>
+  </data>
+  <data name="&gt;&gt;distanceValueLabel.Name" xml:space="preserve">
+    <value>distanceValueLabel</value>
+  </data>
+  <data name="&gt;&gt;distanceValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;distanceValueLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;distanceValueLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pitchLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pitchLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="pitchLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pitchLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 560</value>
+  </data>
+  <data name="pitchLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="pitchLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="pitchLabel.Text" xml:space="preserve">
+    <value>俯仰：</value>
+  </data>
+  <data name="&gt;&gt;pitchLabel.Name" xml:space="preserve">
+    <value>pitchLabel</value>
+  </data>
+  <data name="&gt;&gt;pitchLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pitchLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;pitchLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pitchValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pitchValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="pitchValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pitchValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 560</value>
+  </data>
+  <data name="pitchValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 22</value>
+  </data>
+  <data name="pitchValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="pitchValueLabel.Text" xml:space="preserve">
+    <value>0000mil</value>
+  </data>
+  <data name="&gt;&gt;pitchValueLabel.Name" xml:space="preserve">
+    <value>pitchValueLabel</value>
+  </data>
+  <data name="&gt;&gt;pitchValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pitchValueLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;pitchValueLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="herizonLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="herizonLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="herizonLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="herizonLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 600</value>
+  </data>
+  <data name="herizonLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="herizonLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="herizonLabel.Text" xml:space="preserve">
+    <value>水平：</value>
+  </data>
+  <data name="&gt;&gt;herizonLabel.Name" xml:space="preserve">
+    <value>herizonLabel</value>
+  </data>
+  <data name="&gt;&gt;herizonLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;herizonLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;herizonLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="herizonValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="herizonValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="herizonValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="herizonValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 600</value>
+  </data>
+  <data name="herizonValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 22</value>
+  </data>
+  <data name="herizonValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="herizonValueLabel.Text" xml:space="preserve">
+    <value>0000mil</value>
+  </data>
+  <data name="&gt;&gt;herizonValueLabel.Name" xml:space="preserve">
+    <value>herizonValueLabel</value>
+  </data>
+  <data name="&gt;&gt;herizonValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;herizonValueLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;herizonValueLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="cameraViewImageBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1304,202 +1781,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cameraViewImageBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="distaneLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="distaneLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
-  </data>
-  <data name="distaneLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 600</value>
-  </data>
-  <data name="distaneLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="distaneLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="distaneLabel.Text" xml:space="preserve">
-    <value>距离：</value>
-  </data>
-  <data name="&gt;&gt;distaneLabel.Name" xml:space="preserve">
-    <value>distaneLabel</value>
-  </data>
-  <data name="&gt;&gt;distaneLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;distaneLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;distaneLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="pitchLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pitchLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
-  </data>
-  <data name="pitchLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pitchLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 640</value>
-  </data>
-  <data name="pitchLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="pitchLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="pitchLabel.Text" xml:space="preserve">
-    <value>俯仰：</value>
-  </data>
-  <data name="&gt;&gt;pitchLabel.Name" xml:space="preserve">
-    <value>pitchLabel</value>
-  </data>
-  <data name="&gt;&gt;pitchLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pitchLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pitchLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="herizonLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="herizonLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
-  </data>
-  <data name="herizonLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="herizonLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 680</value>
-  </data>
-  <data name="herizonLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="herizonLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="herizonLabel.Text" xml:space="preserve">
-    <value>水平：</value>
-  </data>
-  <data name="&gt;&gt;herizonLabel.Name" xml:space="preserve">
-    <value>herizonLabel</value>
-  </data>
-  <data name="&gt;&gt;herizonLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;herizonLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;herizonLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="distanceValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="distanceValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
-  </data>
-  <data name="distanceValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="distanceValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 600</value>
-  </data>
-  <data name="distanceValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 22</value>
-  </data>
-  <data name="distanceValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="distanceValueLabel.Text" xml:space="preserve">
-    <value>0000m</value>
-  </data>
-  <data name="&gt;&gt;distanceValueLabel.Name" xml:space="preserve">
-    <value>distanceValueLabel</value>
-  </data>
-  <data name="&gt;&gt;distanceValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;distanceValueLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;distanceValueLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pitchValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pitchValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
-  </data>
-  <data name="pitchValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pitchValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 640</value>
-  </data>
-  <data name="pitchValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 22</value>
-  </data>
-  <data name="pitchValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="pitchValueLabel.Text" xml:space="preserve">
-    <value>0000mil</value>
-  </data>
-  <data name="&gt;&gt;pitchValueLabel.Name" xml:space="preserve">
-    <value>pitchValueLabel</value>
-  </data>
-  <data name="&gt;&gt;pitchValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pitchValueLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pitchValueLabel.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="herizonValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="herizonValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
-  </data>
-  <data name="herizonValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="herizonValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 680</value>
-  </data>
-  <data name="herizonValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 22</value>
-  </data>
-  <data name="herizonValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="herizonValueLabel.Text" xml:space="preserve">
-    <value>0000mil</value>
-  </data>
-  <data name="&gt;&gt;herizonValueLabel.Name" xml:space="preserve">
-    <value>herizonValueLabel</value>
-  </data>
-  <data name="&gt;&gt;herizonValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;herizonValueLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;herizonValueLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

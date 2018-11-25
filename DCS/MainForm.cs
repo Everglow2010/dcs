@@ -29,6 +29,8 @@ namespace DCS
             GlobalVars.userName = AppConfigManager.GetValue("userName");
             GlobalVars.userPassword = AppConfigManager.GetValue("userPassword");
             GlobalVars.cameraRTSPPath = AppConfigManager.GetValue("cameraRTSPPath");
+            GlobalVars.serialPortName = AppConfigManager.GetValue("serialPortName");
+            serialPort.PortName = GlobalVars.serialPortName;
 
             //GlobalVars.cameraIP = "178.178.1.131";
             //GlobalVars.cameraPort = "554";
@@ -112,7 +114,7 @@ namespace DCS
             {
                 //打开串口
                 serialPort.Open();
-                Console.WriteLine(portsNames[0]);
+                Console.WriteLine("打开的串口为：" + serialPort.PortName);
                 Console.WriteLine("serialPort is opened.");
             }
             //启动数据发送定时器
@@ -363,9 +365,9 @@ namespace DCS
                         }
                         else
                         {//帧头不正确时
-                            //buffer.RemoveAt(0);
-                            buffer.RemoveRange(0, 2);
-                            Console.WriteLine("数据帧头字节不正确，丢弃");
+                            buffer.RemoveAt(0);
+                            //buffer.RemoveRange(0, 2);
+                            Console.WriteLine("数据帧头字节不正确，丢弃一个字节");
                             continue;
                         }
                     }
@@ -547,7 +549,7 @@ namespace DCS
             //将graphics平移原点
             g.TranslateTransform(dialPlateWidth / 2, dialPlateHeight / 2);
             //将graphics旋转相应角度(绕当前原点)
-            g.RotateTransform(angle);
+            g.RotateTransform(angle + 90);
             //将graphics恢复在水平和垂直方向上的平移（沿当前原点）
             g.TranslateTransform(-dialPlateWidth / 2, -dialPlateHeight / 2);
             g.DrawImage(dialPlatePointerImg, new Rectangle(0, dialPlateHeight / 2, dialPlateWidth / 2, 5));

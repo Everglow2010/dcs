@@ -309,6 +309,14 @@
             this.cameraViewImageBox.Controls.Add(this.aimingReticlePictureBox);
             this.cameraViewImageBox.Controls.Add(this.dialPlatePictureBox);
             this.cameraViewImageBox.Controls.Add(this.pitchAngleRulerPictureBox);
+            this.cameraViewImageBox.Controls.Add(this.distaneLabel);
+            this.cameraViewImageBox.Controls.Add(this.distanceValueLabel);
+            this.cameraViewImageBox.Controls.Add(this.pitchLabel);
+            this.cameraViewImageBox.Controls.Add(this.pitchValueLabel);
+            this.cameraViewImageBox.Controls.Add(this.herizonLabel);
+            this.cameraViewImageBox.Controls.Add(this.herizonValueLabel);
+            this.cameraViewImageBox.Controls.Add(this.dialPlateValueLabel);
+            this.cameraViewImageBox.Controls.Add(this.pitchAngleValueLabel);
             this.cameraViewImageBox.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
             resources.ApplyResources(this.cameraViewImageBox, "cameraViewImageBox");
             this.cameraViewImageBox.Name = "cameraViewImageBox";
@@ -379,14 +387,6 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.herizonValueLabel);
-            this.Controls.Add(this.pitchValueLabel);
-            this.Controls.Add(this.distanceValueLabel);
-            this.Controls.Add(this.herizonLabel);
-            this.Controls.Add(this.pitchLabel);
-            this.Controls.Add(this.pitchAngleValueLabel);
-            this.Controls.Add(this.dialPlateValueLabel);
-            this.Controls.Add(this.distaneLabel);
             this.Controls.Add(this.topBar);
             this.Controls.Add(this.cameraViewImageBox);
             this.Controls.Add(this.bottomPanel);
@@ -403,11 +403,11 @@
             this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).EndInit();
             this.cameraViewImageBox.ResumeLayout(false);
+            this.cameraViewImageBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
