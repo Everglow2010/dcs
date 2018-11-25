@@ -65,10 +65,10 @@
             this.servoControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.SERVO_CONTROL);
             this.laserControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.LASER_CONTROL);
             this.distaneLabel = new System.Windows.Forms.Label();
-            this.pitchLabel = new System.Windows.Forms.Label();
-            this.herizonLabel = new System.Windows.Forms.Label();
             this.distanceValueLabel = new System.Windows.Forms.Label();
+            this.pitchLabel = new System.Windows.Forms.Label();
             this.pitchValueLabel = new System.Windows.Forms.Label();
+            this.herizonLabel = new System.Windows.Forms.Label();
             this.herizonValueLabel = new System.Windows.Forms.Label();
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).BeginInit();
@@ -353,11 +353,25 @@
             this.distaneLabel.ForeColor = System.Drawing.Color.Red;
             this.distaneLabel.Name = "distaneLabel";
             // 
+            // distanceValueLabel
+            // 
+            resources.ApplyResources(this.distanceValueLabel, "distanceValueLabel");
+            this.distanceValueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.distanceValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.distanceValueLabel.Name = "distanceValueLabel";
+            // 
             // pitchLabel
             // 
             resources.ApplyResources(this.pitchLabel, "pitchLabel");
             this.pitchLabel.ForeColor = System.Drawing.Color.Red;
             this.pitchLabel.Name = "pitchLabel";
+            // 
+            // pitchValueLabel
+            // 
+            resources.ApplyResources(this.pitchValueLabel, "pitchValueLabel");
+            this.pitchValueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pitchValueLabel.ForeColor = System.Drawing.Color.Red;
+            this.pitchValueLabel.Name = "pitchValueLabel";
             // 
             // herizonLabel
             // 
@@ -365,21 +379,10 @@
             this.herizonLabel.ForeColor = System.Drawing.Color.Red;
             this.herizonLabel.Name = "herizonLabel";
             // 
-            // distanceValueLabel
-            // 
-            resources.ApplyResources(this.distanceValueLabel, "distanceValueLabel");
-            this.distanceValueLabel.ForeColor = System.Drawing.Color.Red;
-            this.distanceValueLabel.Name = "distanceValueLabel";
-            // 
-            // pitchValueLabel
-            // 
-            resources.ApplyResources(this.pitchValueLabel, "pitchValueLabel");
-            this.pitchValueLabel.ForeColor = System.Drawing.Color.Red;
-            this.pitchValueLabel.Name = "pitchValueLabel";
-            // 
             // herizonValueLabel
             // 
             resources.ApplyResources(this.herizonValueLabel, "herizonValueLabel");
+            this.herizonValueLabel.BackColor = System.Drawing.Color.Transparent;
             this.herizonValueLabel.ForeColor = System.Drawing.Color.Red;
             this.herizonValueLabel.Name = "herizonValueLabel";
             // 

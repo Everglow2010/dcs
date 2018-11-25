@@ -690,6 +690,5 @@ namespace DCS
             this.aimingReticlePictureBox.Location = pos;
             this.aimingReticlePictureBox.Refresh();
         }
-
     }
 }
