@@ -90,7 +90,7 @@ namespace DCS
         {
             Console.WriteLine(GlobalVars.cameraRTSPPath);
             //启动emgucv视频捕捉显示
-            //PlayVideo();
+            PlayVideo();
 
             //byte[] c = new byte[2];
             //c[0] = 0x79;
@@ -386,14 +386,16 @@ namespace DCS
             {
                 checksum += receivedBytes[i];
             }
-            byte checksumL = (byte)(checksum >> 8);//取低字节
-            checksumL = (byte)(checksumL & 0x7f);//取低字节的低七位
-            if (checksumL == receivedBytes[9])
+            //byte checksumL = checksum & ;//取低字节
+            byte checksumL = (byte)(checksum & 0x7f);//取低字节的低七位
+            Console.WriteLine("校验和：" + checksumL);
+            Console.WriteLine("收到校验和：" + receivedBytes[11]);
+            if (checksumL == receivedBytes[11])
             {
                 return true;
             }
             //测试！全返回ture
-            return true;
+            return false;
         }
         //为准备好的待发送数据计算校验和字节
         private byte CalculateChecksumForDataToSend(byte[] data)
@@ -403,8 +405,8 @@ namespace DCS
             {
                 checksum += data[i];
             }
-            byte checksumL = (byte)(checksum >> 8);//取低字节
-            checksumL = (byte)(checksumL & 0x7f);//取低字节的低七位
+            //byte checksumL = (byte)(checksum >> 8);//取低字节
+            byte checksumL = (byte)(checksum & 0x7f);//取低字节的低七位
             return checksumL;
         }
 

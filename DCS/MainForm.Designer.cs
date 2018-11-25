@@ -262,6 +262,7 @@
             // 
             this.serialPort.BaudRate = 115200;
             this.serialPort.Parity = System.IO.Ports.Parity.Even;
+            this.serialPort.PortName = "COM5";
             this.serialPort.ReceivedBytesThreshold = 12;
             this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort_DataReceived);
             // 
