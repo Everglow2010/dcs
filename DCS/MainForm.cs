@@ -76,11 +76,11 @@ namespace DCS
             //初始化各种弹出窗口面板和事件订阅
             //实例化更新UI界面委托
             flushAllUI = new FreshUIDisplay(DisplayToUI);
-            //初始化伺服使能开关面板控件
-            this.servoControlOnOffSwitchPanel.Parent = this.cameraViewImageBox;
-            this.servoControlOnOffSwitchPanel.SwitchStateChange += new OnOffSwitchPanel.SwitchStateChangeHandler(ChangeServoControlPictureBox);
-            this.servoControlOnOffSwitchPanel.Enabled = false;
-            this.servoControlOnOffSwitchPanel.Visible = false;
+            //初始化伺服使能开关面板控件（弃用）
+            //.servoControlOnOffSwitchPanel.Parent = this.cameraViewImageBox;
+            //this.servoControlOnOffSwitchPanel.SwitchStateChange += new OnOffSwitchPanel.SwitchStateChangeHandler(ChangeServoControlPictureBox);
+            //this.servoControlOnOffSwitchPanel.Enabled = false;
+            //this.servoControlOnOffSwitchPanel.Visible = false;
             //初始化辅助瞄准开关面板控件
             this.laserControlOnOffSwitchPanel.Parent = this.cameraViewImageBox;
             this.laserControlOnOffSwitchPanel.SwitchStateChange += new OnOffSwitchPanel.SwitchStateChangeHandler(ChangeLaserControlPictureBox);
@@ -92,17 +92,7 @@ namespace DCS
         {
             Console.WriteLine(GlobalVars.cameraRTSPPath);
             //启动emgucv视频捕捉显示
-            PlayVideo();
-
-            //byte[] c = new byte[2];
-            //c[0] = 0x79;
-            //c[1] = 0xfd;
-            //short x = BitConverter.ToInt16(c, 0);
-            //Console.WriteLine(x);
-            //short a = -1667;
-            //byte[] b = new byte[2];
-            //b = BitConverter.GetBytes(a);
-            //Console.WriteLine(BitConverter.ToString(b));
+            //PlayVideo();
 
             String[] portsNames = SerialPort.GetPortNames();
             if (portsNames == null)
@@ -622,12 +612,13 @@ namespace DCS
             }
         }
 
-        private void ServoControlPictureBox_Click(object sender, EventArgs e)
-        {
-            this.servoControlOnOffSwitchPanel.Enabled = true;
-            this.servoControlOnOffSwitchPanel.BringToFront();          
-            this.servoControlOnOffSwitchPanel.Show();
-        }
+        //private void ServoControlPictureBox_Click(object sender, EventArgs e)
+        //{
+            //this.servoControlOnOffSwitchPanel.Enabled = true;
+            //this.servoControlOnOffSwitchPanel.BringToFront();          
+            //this.servoControlOnOffSwitchPanel.Show();
+        //}
+
         /// <summary>
         /// 修改伺服使能状态指示灯
         /// </summary>

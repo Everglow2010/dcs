@@ -15,6 +15,7 @@ namespace DCS
         private int switchType;
         public delegate void SwitchStateChangeHandler(Boolean state);
         public event SwitchStateChangeHandler SwitchStateChange;
+        //带参构造函数可以选择伺服开关还是辅助瞄准开关
         public OnOffSwitchPanel(int type)
         {
             InitializeComponent();
@@ -30,10 +31,14 @@ namespace DCS
                 this.turnOffButton.BackgroundImage = Properties.Resources.LaserControlTurnOffButtonImage;
             }
         }
-        //public OnOffSwitchPanel()
-        //{
-
-        //}
+        //默认构造函数是辅助瞄准开关
+        public OnOffSwitchPanel()
+        {
+            InitializeComponent();
+            this.switchType = GlobalVars.LASER_CONTROL;
+            this.turnOnButton.BackgroundImage = Properties.Resources.LaserControlTurnOnButtonImage;
+            this.turnOffButton.BackgroundImage = Properties.Resources.LaserControlTurnOffButtonImage;
+        }
 
         private void TurnOnButton_MouseEnter(object sender, EventArgs e)
         {

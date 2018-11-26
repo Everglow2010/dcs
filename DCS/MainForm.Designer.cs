@@ -48,7 +48,6 @@
             this.ammoLoadPictureBox = new System.Windows.Forms.PictureBox();
             this.ammoLeftTextBox = new System.Windows.Forms.TextBox();
             this.ammoLeftLabel = new System.Windows.Forms.Label();
-            this.parameterConfigButton = new System.Windows.Forms.Button();
             this.parameterConfigLabel = new System.Windows.Forms.Label();
             this.laserControlLabel = new System.Windows.Forms.Label();
             this.servoControlLabel = new System.Windows.Forms.Label();
@@ -57,13 +56,12 @@
             this.pitchAngleValueLabel = new System.Windows.Forms.Label();
             this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
             this.bottomPanel = new System.Windows.Forms.Panel();
+            this.laserControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel();
             this.ammoLeftTextBoxBlinkTimer = new System.Windows.Forms.Timer(this.components);
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
             this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
-            this.servoControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.SERVO_CONTROL);
-            this.laserControlOnOffSwitchPanel = new OnOffSwitchPanel(GlobalVars.LASER_CONTROL);
             this.distaneLabel = new System.Windows.Forms.Label();
             this.distanceValueLabel = new System.Windows.Forms.Label();
             this.pitchLabel = new System.Windows.Forms.Label();
@@ -103,7 +101,6 @@
             this.topBar.Controls.Add(this.ammoLoadPictureBox);
             this.topBar.Controls.Add(this.ammoLeftTextBox);
             this.topBar.Controls.Add(this.ammoLeftLabel);
-            this.topBar.Controls.Add(this.parameterConfigButton);
             this.topBar.Controls.Add(this.parameterConfigLabel);
             this.topBar.Controls.Add(this.laserControlLabel);
             this.topBar.Controls.Add(this.servoControlLabel);
@@ -124,7 +121,6 @@
             resources.ApplyResources(this.servoControlPictureBox, "servoControlPictureBox");
             this.servoControlPictureBox.Name = "servoControlPictureBox";
             this.servoControlPictureBox.TabStop = false;
-            this.servoControlPictureBox.Click += new System.EventHandler(this.ServoControlPictureBox_Click);
             // 
             // safeStatusLabel
             // 
@@ -224,14 +220,6 @@
             this.ammoLeftLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ammoLeftLabel.Name = "ammoLeftLabel";
             // 
-            // parameterConfigButton
-            // 
-            resources.ApplyResources(this.parameterConfigButton, "parameterConfigButton");
-            this.parameterConfigButton.ForeColor = System.Drawing.Color.Red;
-            this.parameterConfigButton.Name = "parameterConfigButton";
-            this.parameterConfigButton.UseVisualStyleBackColor = true;
-            this.parameterConfigButton.Click += new System.EventHandler(this.ParameterConfigButton_Click);
-            // 
             // parameterConfigLabel
             // 
             resources.ApplyResources(this.parameterConfigLabel, "parameterConfigLabel");
@@ -281,7 +269,6 @@
             // bottomPanel
             // 
             this.bottomPanel.Controls.Add(this.laserControlOnOffSwitchPanel);
-            this.bottomPanel.Controls.Add(this.servoControlOnOffSwitchPanel);
             resources.ApplyResources(this.bottomPanel, "bottomPanel");
             this.bottomPanel.Name = "bottomPanel";
             // 
@@ -291,13 +278,6 @@
             this.laserControlOnOffSwitchPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             resources.ApplyResources(this.laserControlOnOffSwitchPanel, "laserControlOnOffSwitchPanel");
             this.laserControlOnOffSwitchPanel.Name = "laserControlOnOffSwitchPanel";
-            // 
-            // servoControlOnOffSwitchPanel
-            // 
-            this.servoControlOnOffSwitchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.servoControlOnOffSwitchPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            resources.ApplyResources(this.servoControlOnOffSwitchPanel, "servoControlOnOffSwitchPanel");
-            this.servoControlOnOffSwitchPanel.Name = "servoControlOnOffSwitchPanel";
             // 
             // ammoLeftTextBoxBlinkTimer
             // 
@@ -419,7 +399,6 @@
         private System.Windows.Forms.Panel topBar;
         private System.Windows.Forms.Label servoControlLabel;
         private System.Windows.Forms.Label laserControlLabel;
-        private System.Windows.Forms.Button parameterConfigButton;
         private System.Windows.Forms.Label parameterConfigLabel;
         private System.Windows.Forms.Label ammoLeftLabel;
         private System.Windows.Forms.TextBox ammoLeftTextBox;
@@ -448,7 +427,6 @@
         private System.Windows.Forms.PictureBox laserControlPictureBox;
         private System.Windows.Forms.Panel bottomPanel;
         private System.Windows.Forms.Timer ammoLeftTextBoxBlinkTimer;
-        private OnOffSwitchPanel servoControlOnOffSwitchPanel;
         private OnOffSwitchPanel laserControlOnOffSwitchPanel;
         private System.Windows.Forms.Label distaneLabel;
         private System.Windows.Forms.Label pitchLabel;
