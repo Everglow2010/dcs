@@ -427,7 +427,7 @@
     <value>NoControl</value>
   </data>
   <data name="batteryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 35</value>
+    <value>1010, 35</value>
   </data>
   <data name="batteryLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -457,10 +457,10 @@
     <value>NoControl</value>
   </data>
   <data name="batteryBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1096, 35</value>
+    <value>1083, 35</value>
   </data>
   <data name="batteryBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 23</value>
+    <value>60, 20</value>
   </data>
   <data name="batteryBar.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -819,18 +819,6 @@
   <metadata name="dataSendTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 17</value>
   </metadata>
-  <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>712, 0</value>
-  </data>
-  <data name="laserControlOnOffSwitchPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="laserControlOnOffSwitchPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 120</value>
-  </data>
-  <data name="laserControlOnOffSwitchPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;laserControlOnOffSwitchPanel.Name" xml:space="preserve">
     <value>laserControlOnOffSwitchPanel</value>
   </data>
@@ -866,6 +854,30 @@
   </data>
   <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>712, 0</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 120</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Name" xml:space="preserve">
+    <value>laserControlOnOffSwitchPanel</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Type" xml:space="preserve">
+    <value>DCS.OnOffSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="ammoLeftTextBoxBlinkTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
