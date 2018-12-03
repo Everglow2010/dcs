@@ -571,6 +571,10 @@ namespace DCS
                 ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
                 ammoLoadConfigForm.Show();
             }
+            else
+            {
+                ammoLoadConfigForm.Close();
+            }
         }
         /// <summary>
         /// 修改弹药剩余量文本框显示数值
