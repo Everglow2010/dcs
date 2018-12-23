@@ -212,6 +212,7 @@
             this.ammoLeftTextBox.ForeColor = System.Drawing.Color.Lime;
             this.ammoLeftTextBox.Name = "ammoLeftTextBox";
             this.ammoLeftTextBox.ReadOnly = true;
+            this.ammoLeftTextBox.TabStop = false;
             this.ammoLeftTextBox.Click += new System.EventHandler(this.AmmoLeftTextBox_Click);
             // 
             // ammoLeftLabel
