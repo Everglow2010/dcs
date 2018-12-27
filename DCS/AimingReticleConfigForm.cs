@@ -269,31 +269,62 @@ namespace DCS
                 AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posX", GlobalVars.aimingReticleConfigs[i].posX.ToString());
                 AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", GlobalVars.aimingReticleConfigs[i].posY.ToString());
             }
+            int focalLevelNow = GlobalVars.focalDistanceMultiple;
+            Point recoverPoint = new Point(GlobalVars.aimingReticleConfigs[focalLevelNow - 1].posX, GlobalVars.aimingReticleConfigs[focalLevelNow - 1].posY);
+            this.AimingReticlePositionChange?.Invoke(recoverPoint);
             this.Close();
         }
 
         private void ButtonUP_Click(object sender, EventArgs e)
         {
-            this.adjustedPosition.Y = (this.adjustedPosition.Y - 5) < 0 ? 0 : this.adjustedPosition.Y - 5;
-            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            if (focalLevelSlected == 0)
+            {
+                MessageBox.Show("请先选定焦距级别！");
+            }
+            else
+            {
+                this.adjustedPosition.Y = (this.adjustedPosition.Y - 5) < 0 ? 0 : this.adjustedPosition.Y - 5;
+                this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            }
         }
 
         private void ButtonDowm_Click(object sender, EventArgs e)
         {
-            this.adjustedPosition.Y = (this.adjustedPosition.Y + 5) > 720 ? 720 : this.adjustedPosition.Y + 5;
-            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            if (focalLevelSlected == 0)
+            {
+                MessageBox.Show("请先选定焦距级别！");
+            }
+            else
+            {
+                this.adjustedPosition.Y = (this.adjustedPosition.Y + 5) > 720 ? 720 : this.adjustedPosition.Y + 5;
+                this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            }
         }
 
         private void ButtonLeft_Click(object sender, EventArgs e)
         {
-            this.adjustedPosition.X = (this.adjustedPosition.X - 5) < 0 ? 0 : this.adjustedPosition.X - 5;
-            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            if (focalLevelSlected == 0)
+            {
+                MessageBox.Show("请先选定焦距级别！");
+            }
+            else
+            {
+                this.adjustedPosition.X = (this.adjustedPosition.X - 5) < 0 ? 0 : this.adjustedPosition.X - 5;
+                this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            }
         }
 
         private void ButtonRight_Click(object sender, EventArgs e)
         {
-            this.adjustedPosition.X = (this.adjustedPosition.X + 5) > 1280 ? 1280 : this.adjustedPosition.X + 5;
-            this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            if (focalLevelSlected == 0)
+            {
+                MessageBox.Show("请先选定焦距级别！");
+            }
+            else
+            {
+                this.adjustedPosition.X = (this.adjustedPosition.X + 5) > 1280 ? 1280 : this.adjustedPosition.X + 5;
+                this.AimingReticlePositionChange?.Invoke(adjustedPosition);
+            }
         }
 
         private void PitchZeroButton_Click(object sender, EventArgs e)

@@ -31,6 +31,7 @@ namespace DCS
             GlobalVars.cameraRTSPPath = AppConfigManager.GetValue("cameraRTSPPath");
             GlobalVars.serialPortName = AppConfigManager.GetValue("serialPortName");
             serialPort.PortName = GlobalVars.serialPortName;
+            GlobalVars.withCamera = "true".Equals(AppConfigManager.GetValue("withCamera")) ? true : false;
 
             //GlobalVars.cameraIP = "178.178.1.131";
             //GlobalVars.cameraPort = "554";
@@ -91,9 +92,27 @@ namespace DCS
         private void MainForm_Load(object sender, EventArgs e)
         {
             Console.WriteLine(GlobalVars.cameraRTSPPath);
-            //启动emgucv视频捕捉显示
-            //PlayVideo();
 
+            //启动emgucv视频捕捉显示
+            if (GlobalVars.withCamera)
+            {
+                Console.WriteLine("根据配置项，准备连接捕捉摄像机画面。");
+                try
+                {
+                    PlayVideo();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("捕捉摄像头失败：" + ex.Message);
+                    MessageBox.Show("摄像头捕捉失败:" + ex.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine("根据配置项，不启动捕捉摄像机画面。");
+            }
+
+            
             String[] portsNames = SerialPort.GetPortNames();
             if (portsNames == null)
             {
@@ -176,6 +195,7 @@ namespace DCS
             this.dialPlatePictureBox.Invalidate();
             //更新俯仰角指针图像
             this.pitchAngleRulerPictureBox.Invalidate();
+            //更新电量显示百分比
         }
 
 

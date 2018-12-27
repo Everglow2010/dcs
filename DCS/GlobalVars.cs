@@ -21,6 +21,7 @@ namespace DCS
         public static bool safeState = false;//射击保险
         public static int ammoLoadState = AMMOLOAD_NOT_LOADED;//装填装填
         public static string serialPortName = "COM1";//串口名称
+        public static bool withCamera = true;//是否启动捕捉摄像机画面
 
         //记录剩余弹量
         public static int ammoLeftNum = 200;
