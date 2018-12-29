@@ -117,11 +117,105 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="topBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="timeRefreshLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="timeRefreshLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="timeRefreshLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="timeRefreshLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1163, 34</value>
+  </data>
+  <data name="timeRefreshLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 22</value>
+  </data>
+  <data name="timeRefreshLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="timeRefreshLabel.Text" xml:space="preserve">
+    <value>时间: 12:00</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.Name" xml:space="preserve">
+    <value>timeRefreshLabel</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1138, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>3, 80</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="logoButtonPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="logoButtonPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 15</value>
+  </data>
+  <data name="logoButtonPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 50</value>
+  </data>
+  <data name="logoButtonPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="logoButtonPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.Name" xml:space="preserve">
+    <value>logoButtonPictureBox</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="laserControlPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="laserControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="laserControlPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>790, 36</value>
   </data>
@@ -134,7 +228,6 @@
   <data name="laserControlPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="laserControlPictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -148,8 +241,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;laserControlPictureBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
+  <metadata name="servoControlPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="servoControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -178,8 +274,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;servoControlPictureBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
+  <metadata name="safeStatusLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="safeStatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -214,8 +313,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;safeStatusLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
+  <metadata name="ammoLoadLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ammoLoadLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -247,13 +349,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLoadLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
+  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>994, 0</value>
+    <value>992, 0</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -271,8 +376,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
+  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -295,8 +403,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
+  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -319,8 +430,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
+  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -343,8 +457,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
+  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -367,8 +484,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -391,8 +511,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -415,8 +538,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
+  <metadata name="batteryLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="batteryLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -427,7 +553,7 @@
     <value>NoControl</value>
   </data>
   <data name="batteryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1010, 35</value>
+    <value>1000, 35</value>
   </data>
   <data name="batteryLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -451,13 +577,19 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;batteryLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
+  <metadata name="batteryBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="batteryBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="batteryBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1083, 35</value>
+    <value>1074, 35</value>
+  </data>
+  <data name="batteryBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="batteryBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 20</value>
@@ -475,8 +607,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;batteryBar.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
+  <metadata name="safeStatePitureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="safeStatePitureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -505,8 +640,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;safeStatePitureBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
+  <metadata name="ammoLoadPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ammoLoadPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -538,8 +676,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLoadPictureBox.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
+  <metadata name="ammoLeftTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ammoLeftTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 24pt, style=Bold</value>
   </data>
@@ -571,8 +712,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLeftTextBox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
+  <metadata name="ammoLeftLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ammoLeftLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -607,8 +751,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLeftLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
+  <metadata name="parameterConfigLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="parameterConfigLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -643,8 +790,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;parameterConfigLabel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
+  <metadata name="laserControlLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="laserControlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -679,8 +829,11 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;laserControlLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
+  <metadata name="servoControlLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="servoControlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -715,7 +868,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;servoControlLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="topBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -741,84 +894,30 @@
   <data name="&gt;&gt;topBar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="dialPlateValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dialPlateValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="dialPlateValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="dialPlateValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 668</value>
-  </data>
-  <data name="dialPlateValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="dialPlateValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="dialPlateValueLabel.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dialPlateValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.Name" xml:space="preserve">
-    <value>dialPlateValueLabel</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.Parent" xml:space="preserve">
-    <value>cameraViewImageBox</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <metadata name="serialPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="pitchAngleValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pitchAngleValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="pitchAngleValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pitchAngleValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 668</value>
-  </data>
-  <data name="pitchAngleValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="pitchAngleValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="pitchAngleValueLabel.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pitchAngleValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.Name" xml:space="preserve">
-    <value>pitchAngleValueLabel</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.Parent" xml:space="preserve">
-    <value>cameraViewImageBox</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <metadata name="dataSendTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 17</value>
   </metadata>
+  <metadata name="bottomPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="laserControlOnOffSwitchPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>712, 0</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 120</value>
+  </data>
+  <data name="laserControlOnOffSwitchPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;laserControlOnOffSwitchPanel.Name" xml:space="preserve">
     <value>laserControlOnOffSwitchPanel</value>
   </data>
@@ -855,32 +954,14 @@
   <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>712, 0</value>
-  </data>
-  <data name="laserControlOnOffSwitchPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="laserControlOnOffSwitchPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 120</value>
-  </data>
-  <data name="laserControlOnOffSwitchPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Name" xml:space="preserve">
-    <value>laserControlOnOffSwitchPanel</value>
-  </data>
-  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Type" xml:space="preserve">
-    <value>DCS.OnOffSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Parent" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="&gt;&gt;laserControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="ammoLeftTextBoxBlinkTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
+  </metadata>
+  <metadata name="cameraViewImageBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="aimingReticlePictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="aimingReticlePictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -909,6 +990,42 @@
   <data name="&gt;&gt;aimingReticlePictureBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="logoPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="logoPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="logoPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="logoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 250</value>
+  </data>
+  <data name="logoPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="logoPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="logoPictureBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;logoPictureBox.Name" xml:space="preserve">
+    <value>logoPictureBox</value>
+  </data>
+  <data name="&gt;&gt;logoPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logoPictureBox.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;logoPictureBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="dialPlatePictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="dialPlatePictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -937,8 +1054,11 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;dialPlatePictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
+  <metadata name="pitchAngleRulerPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pitchAngleRulerPictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWIAAAfjCAYAAAB6YCA9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABu
@@ -1232,13 +1352,19 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchAngleRulerPictureBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
+  <metadata name="distaneLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="distaneLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="distaneLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 12pt, style=Bold</value>
+  </data>
+  <data name="distaneLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="distaneLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 520</value>
@@ -1262,8 +1388,11 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;distaneLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
+  <metadata name="distanceValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="distanceValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1295,8 +1424,11 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;distanceValueLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
+  <metadata name="pitchLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pitchLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1328,8 +1460,11 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
+  <metadata name="pitchValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pitchValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1361,8 +1496,11 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchValueLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
+  <metadata name="herizonLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="herizonLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1394,8 +1532,11 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;herizonLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
+  <metadata name="herizonValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="herizonValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1427,7 +1568,85 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;herizonValueLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <metadata name="dialPlateValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dialPlateValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dialPlateValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="dialPlateValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="dialPlateValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 668</value>
+  </data>
+  <data name="dialPlateValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="dialPlateValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dialPlateValueLabel.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dialPlateValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;dialPlateValueLabel.Name" xml:space="preserve">
+    <value>dialPlateValueLabel</value>
+  </data>
+  <data name="&gt;&gt;dialPlateValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dialPlateValueLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;dialPlateValueLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="pitchAngleValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="pitchAngleValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pitchAngleValueLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="pitchAngleValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pitchAngleValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 668</value>
+  </data>
+  <data name="pitchAngleValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="pitchAngleValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="pitchAngleValueLabel.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pitchAngleValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;pitchAngleValueLabel.Name" xml:space="preserve">
+    <value>pitchAngleValueLabel</value>
+  </data>
+  <data name="&gt;&gt;pitchAngleValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pitchAngleValueLabel.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;pitchAngleValueLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="cameraViewImageBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1459,7 +1678,16 @@
   <data name="&gt;&gt;cameraViewImageBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="batterryQueryTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>486, 17</value>
+  </metadata>
+  <metadata name="timeRefreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>654, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1490,6 +1718,18 @@
     <value>ammoLeftTextBoxBlinkTimer</value>
   </data>
   <data name="&gt;&gt;ammoLeftTextBoxBlinkTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;batterryQueryTimer.Name" xml:space="preserve">
+    <value>batterryQueryTimer</value>
+  </data>
+  <data name="&gt;&gt;batterryQueryTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshTimer.Name" xml:space="preserve">
+    <value>timeRefreshTimer</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

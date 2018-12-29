@@ -81,6 +81,8 @@ namespace DCS
         public static string userPassword;
         //摄像机串流地址
         public static string cameraRTSPPath;
-
+        
+        //电池电量百分比
+        public static int batteryLifePercent = 100;
     }
 }

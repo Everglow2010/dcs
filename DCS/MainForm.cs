@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections;
+using System.Reflection;
+using System.ComponentModel;
 using System.IO.Ports;
 using Emgu.CV;
 using System.Collections.Generic;
@@ -61,19 +64,29 @@ namespace DCS
             this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree);
             this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil);
             this.ammoLeftTextBox.Text = Convert.ToString(GlobalVars.ammoLeftNum);
-            //初始化20个焦距档位对应的瞄准分划大小和位置
+            System.DateTime currentTime = DateTime.Now;
+            string timeStr = currentTime.ToString("HH:mm");
+            string timeShow = "时间: " + timeStr;
+            this.timeRefreshLabel.Text = timeShow;
+            //读取并初始化20个焦距档位对应的瞄准分划大小和位置
             for (int i = 0; i < 20; i++)
             {
-                GlobalVars.aimingReticleConfigs[i].posX = 515;
-                GlobalVars.aimingReticleConfigs[i].posY = 235;
+                string index = Convert.ToString(i + 1);
+                int x = Convert.ToInt32(AppConfigManager.GetValue("aimingReticleConfig" + index + ".posX"));
+                int y = Convert.ToInt32(AppConfigManager.GetValue("aimingReticleConfig" + index + ".posY"));
+                GlobalVars.aimingReticleConfigs[i].posX = x;
+                GlobalVars.aimingReticleConfigs[i].posY = y;
+
+                Console.WriteLine("第" + index + "级的瞄准分划位置为：(" + x + "," + y + ")");
                 //GlobalVars.aimingReticleConfigs[i].sizePercent = 0;
                 //GlobalVars.aimingReticleConfigs[i].size = 250 + (int)((GlobalVars.aimingReticleConfigs[i].sizePercent / 100.0) * 250);
 
-                AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posX", "515");
-                AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", "235");
+                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posX", "515");
+                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", "235");
                 //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".sizePercent", "0");
                 //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".size", GlobalVars.aimingReticleConfigs[i].size.ToString());
             }
+
             //初始化各种弹出窗口面板和事件订阅
             //实例化更新UI界面委托
             flushAllUI = new FreshUIDisplay(DisplayToUI);
@@ -128,6 +141,8 @@ namespace DCS
             }
             //启动数据发送定时器
             dataSendTimer.Start();
+            batterryQueryTimer.Start();
+            timeRefreshTimer.Start();
         }
 
         public delegate void FreshUIDisplay();
@@ -704,6 +719,56 @@ namespace DCS
         {
             this.aimingReticlePictureBox.Location = pos;
             this.aimingReticlePictureBox.Refresh();
+        }
+
+        /// <summary>
+        /// 点击logo图片按钮显示或隐藏公司logo图片
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LogoButtonPictureBox_Click(object sender, EventArgs e)
+        {
+            if (this.logoPictureBox.Visible == true)
+            {
+                this.logoPictureBox.Enabled = false;
+                this.logoPictureBox.Visible = false;
+            }
+            else
+            {
+                this.logoPictureBox.Enabled = true;
+                this.logoPictureBox.Visible = true;
+            }
+
+        }
+
+        /// <summary>
+        /// 定时更新执行查询电池剩余电量
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BatterryQueryTimer_Tick(object sender, EventArgs e)
+        {
+            PowerStatus powerStatus = SystemInformation.PowerStatus;
+            int percent = (int)(powerStatus.BatteryLifePercent * 100);
+            GlobalVars.batteryLifePercent = percent;
+            Console.WriteLine("当前电池剩余百分比为：" + percent);
+            this.batteryBar.Value = percent;
+            this.batteryBar.Refresh();
+        }
+
+        /// <summary>
+        /// 更新时间显示的定时
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TimeRefreshTimer_Tick(object sender, EventArgs e)
+        {
+            System.DateTime currentTime = DateTime.Now;
+            string timeStr = currentTime.ToString("HH:mm");
+            Console.WriteLine("当前时间时分：" + timeStr);
+            string timeShow = "时间: " + timeStr;
+            this.timeRefreshLabel.Text = timeShow;
+            this.Refresh();
         }
     }
 }

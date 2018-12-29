@@ -147,14 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="DOC\DS-2ZMN2007（C）快速指南.PDF" />
     <None Include="DOC\DS-2ZMN2007（C）操作手册%281%29.PDF" />
     <None Include="DOC\EMI16.rar" />
@@ -169,6 +164,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -207,7 +207,6 @@
     <Content Include="Resources\UIV2\AmmoLoadedNotLoaded.png" />
     <Content Include="Resources\UIV2\AmmoLoadedOpen.png" />
     <Content Include="Resources\UIV2\AmmoLoadedReady.png" />
-    <Content Include="Resources\bgVideo.mp4" />
     <Content Include="Resources\btncheckoff1.png" />
     <Content Include="Resources\btncheckoff2.png" />
     <Content Include="Resources\btncheckoff3.png" />
@@ -225,6 +224,8 @@
     <Content Include="Resources\UIV2\LaserControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\LaserOff.png" />
     <Content Include="Resources\UIV2\LaserOn.png" />
+    <None Include="Resources\UIV2\logoButton.png" />
+    <Content Include="Resources\UIV2\logoPicture.png" />
     <Content Include="Resources\UIV2\SafetyOff.png" />
     <None Include="Resources\UIV2\safetyoff1.png" />
     <Content Include="Resources\UIV2\SafetyOn.png" />
