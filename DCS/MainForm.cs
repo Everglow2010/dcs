@@ -64,10 +64,18 @@ namespace DCS
             this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree);
             this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil);
             this.ammoLeftTextBox.Text = Convert.ToString(GlobalVars.ammoLeftNum);
+            //初始化时间
             System.DateTime currentTime = DateTime.Now;
             string timeStr = currentTime.ToString("HH:mm");
             string timeShow = "时间: " + timeStr;
             this.timeRefreshLabel.Text = timeShow;
+            //初始化电量
+            PowerStatus powerStatus = SystemInformation.PowerStatus;
+            int percent = (int)(powerStatus.BatteryLifePercent * 100);
+            GlobalVars.batteryLifePercent = percent;
+            Console.WriteLine("当前电池剩余百分比为：" + percent);
+            this.batteryBar.Value = percent;
+            this.batteryBar.Refresh();
             //读取并初始化20个焦距档位对应的瞄准分划大小和位置
             for (int i = 0; i < 20; i++)
             {
