@@ -127,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeSwitchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimeSwitchPanel.Designer.cs">
+      <DependentUpon>TimeSwitchPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AimingReticleConfigForm.resx">
       <DependentUpon>AimingReticleConfigForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +155,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeSwitchPanel.resx">
+      <DependentUpon>TimeSwitchPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DOC\DS-2ZMN2007（C）快速指南.PDF" />
     <None Include="DOC\DS-2ZMN2007（C）操作手册%281%29.PDF" />
@@ -203,6 +212,7 @@
     <Content Include="DOC\图片素材\瞄准划分.png" />
     <Content Include="DOC\图片素材\绘图1.png" />
     <None Include="Resources\aimingDivision.png" />
+    <None Include="Resources\logoRound.jpg" />
     <Content Include="Resources\UIV2\AimingReticle.png" />
     <Content Include="Resources\UIV2\AmmoLoadedNotLoaded.png" />
     <Content Include="Resources\UIV2\AmmoLoadedOpen.png" />

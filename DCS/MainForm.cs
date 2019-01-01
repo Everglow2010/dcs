@@ -61,14 +61,16 @@ namespace DCS
             GlobalVars.dialPlateAngleWithDegree = 0;
             GlobalVars.dialPlateAngleClear = false;
 
-            this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree);
-            this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil);
+            //this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree);
+            //this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil);
             this.ammoLeftTextBox.Text = Convert.ToString(GlobalVars.ammoLeftNum);
             //初始化时间
             System.DateTime currentTime = DateTime.Now;
             string timeStr = currentTime.ToString("HH:mm");
             string timeShow = "时间: " + timeStr;
             this.timeRefreshLabel.Text = timeShow;
+            //初始化开始时间记录
+            GlobalVars.startTime = DateTime.Now;
             //初始化电量
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             int percent = (int)(powerStatus.BatteryLifePercent * 100);
@@ -76,6 +78,7 @@ namespace DCS
             Console.WriteLine("当前电池剩余百分比为：" + percent);
             this.batteryBar.Value = percent;
             this.batteryBar.Refresh();
+
             //读取并初始化20个焦距档位对应的瞄准分划大小和位置
             for (int i = 0; i < 20; i++)
             {
@@ -201,7 +204,7 @@ namespace DCS
             //更新距离数值显示值
             this.distanceValueLabel.Text = Convert.ToString(GlobalVars.distanceMeter) + "m";
             //更新俯仰角度显示值和水平数值显示值            
-            this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
+            //this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
             if (GlobalVars.degreeOrMil)//true表示用度数
             {
                 this.pitchValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithDegree) + "°";
@@ -213,11 +216,11 @@ namespace DCS
                 this.herizonValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithMil) + "mil";
             }
             //更新仪表盘角度显示值
-            this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree) + "°";
+            //this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree) + "°";
             //更新仪表盘指针图像
             this.dialPlatePictureBox.Invalidate();
             //更新俯仰角指针图像
-            this.pitchAngleRulerPictureBox.Invalidate();
+            //this.pitchAngleRulerPictureBox.Invalidate();
             //更新电量显示百分比
         }
 
@@ -532,15 +535,15 @@ namespace DCS
         //方位角度表盘的指针
         private Image dialPlatePointerImg = Properties.Resources.dialPointer;
 
-        private void PitchAngleRulerPictureBox_Paint(object sender, PaintEventArgs e)
-        {
-            DrawPitchAnglePointerImg(e.Graphics);
-        }
+        //private void PitchAngleRulerPictureBox_Paint(object sender, PaintEventArgs e)
+        //{
+        //    DrawPitchAnglePointerImg(e.Graphics);
+        //}
         /// <summary>
         /// 为俯仰角度标尺上画对应角度的指针
         /// </summary>
         /// <param name="gp"></param>
-        private void DrawPitchAnglePointerImg(Graphics gp)
+        /*private void DrawPitchAnglePointerImg(Graphics gp)
         {
             Bitmap bitmap = new Bitmap(this.pitchAngleRulerPictureBox.Width,this.pitchAngleRulerPictureBox.Height);
             Graphics g = Graphics.FromImage(bitmap);
@@ -558,7 +561,7 @@ namespace DCS
             //释放资源
             g.Dispose();
             bitmap.Dispose();
-        }
+        }*/
 
 
         private void DialPlatePictureBox_Paint(object sender, PaintEventArgs e)

@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="topBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="timeRefreshLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -156,9 +153,6 @@
   <data name="&gt;&gt;timeRefreshLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -187,10 +181,10 @@
     <value>NoControl</value>
   </data>
   <data name="logoButtonPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 15</value>
+    <value>33, 15</value>
   </data>
   <data name="logoButtonPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 50</value>
+    <value>72, 50</value>
   </data>
   <data name="logoButtonPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -210,20 +204,17 @@
   <data name="&gt;&gt;logoButtonPictureBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="laserControlPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="laserControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="laserControlPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>790, 36</value>
+    <value>741, 44</value>
   </data>
   <data name="laserControlPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="laserControlPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 16</value>
+    <value>85, 21</value>
   </data>
   <data name="laserControlPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -243,20 +234,17 @@
   <data name="&gt;&gt;laserControlPictureBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="servoControlPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="servoControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="servoControlPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 36</value>
+    <value>315, 44</value>
   </data>
   <data name="servoControlPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="servoControlPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 16</value>
+    <value>85, 21</value>
   </data>
   <data name="servoControlPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -276,9 +264,6 @@
   <data name="&gt;&gt;servoControlPictureBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="safeStatusLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="safeStatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -289,7 +274,7 @@
     <value>NoControl</value>
   </data>
   <data name="safeStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>574, 33</value>
+    <value>602, 15</value>
   </data>
   <data name="safeStatusLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -315,9 +300,6 @@
   <data name="&gt;&gt;safeStatusLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="ammoLoadLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="ammoLoadLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -328,16 +310,16 @@
     <value>NoControl</value>
   </data>
   <data name="ammoLoadLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 33</value>
+    <value>463, 15</value>
   </data>
   <data name="ammoLoadLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 22</value>
+    <value>74, 22</value>
   </data>
   <data name="ammoLoadLabel.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="ammoLoadLabel.Text" xml:space="preserve">
-    <value>装填</value>
+    <value>机枪装填</value>
   </data>
   <data name="&gt;&gt;ammoLoadLabel.Name" xml:space="preserve">
     <value>ammoLoadLabel</value>
@@ -351,9 +333,6 @@
   <data name="&gt;&gt;ammoLoadLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -378,9 +357,6 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -405,9 +381,6 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -432,9 +405,6 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -459,9 +429,6 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -486,9 +453,6 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -513,9 +477,6 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -540,9 +501,6 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="batteryLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="batteryLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -553,7 +511,7 @@
     <value>NoControl</value>
   </data>
   <data name="batteryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1000, 35</value>
+    <value>1031, 15</value>
   </data>
   <data name="batteryLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -579,14 +537,11 @@
   <data name="&gt;&gt;batteryLabel.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="batteryBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="batteryBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="batteryBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1074, 35</value>
+    <value>1037, 44</value>
   </data>
   <data name="batteryBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -609,20 +564,17 @@
   <data name="&gt;&gt;batteryBar.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <metadata name="safeStatePitureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="safeStatePitureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="safeStatePitureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 36</value>
+    <value>597, 44</value>
   </data>
   <data name="safeStatePitureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="safeStatePitureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 16</value>
+    <value>85, 21</value>
   </data>
   <data name="safeStatePitureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -642,14 +594,11 @@
   <data name="&gt;&gt;safeStatePitureBox.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <metadata name="ammoLoadPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="ammoLoadPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="ammoLoadPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 34</value>
+    <value>457, 44</value>
   </data>
   <data name="ammoLoadPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -678,9 +627,6 @@
   <data name="&gt;&gt;ammoLoadPictureBox.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="ammoLeftTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="ammoLeftTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 24pt, style=Bold</value>
   </data>
@@ -714,9 +660,6 @@
   <data name="&gt;&gt;ammoLeftTextBox.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="ammoLeftLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="ammoLeftLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -753,26 +696,23 @@
   <data name="&gt;&gt;ammoLeftLabel.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <metadata name="parameterConfigLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="parameterConfigLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="parameterConfigLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
+    <value>微软雅黑, 15.75pt, style=Bold</value>
   </data>
   <data name="parameterConfigLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="parameterConfigLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>891, 33</value>
+    <value>880, 29</value>
   </data>
   <data name="parameterConfigLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="parameterConfigLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 22</value>
+    <value>96, 28</value>
   </data>
   <data name="parameterConfigLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -792,9 +732,6 @@
   <data name="&gt;&gt;parameterConfigLabel.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <metadata name="laserControlLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="laserControlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -805,7 +742,7 @@
     <value>NoControl</value>
   </data>
   <data name="laserControlLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>716, 34</value>
+    <value>747, 15</value>
   </data>
   <data name="laserControlLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -831,9 +768,6 @@
   <data name="&gt;&gt;laserControlLabel.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <metadata name="servoControlLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="servoControlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -844,7 +778,7 @@
     <value>NoControl</value>
   </data>
   <data name="servoControlLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 33</value>
+    <value>322, 15</value>
   </data>
   <data name="servoControlLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -900,12 +834,6 @@
   <metadata name="dataSendTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 17</value>
   </metadata>
-  <metadata name="bottomPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="laserControlOnOffSwitchPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 0</value>
   </data>
@@ -957,11 +885,11 @@
   <metadata name="ammoLeftTextBoxBlinkTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
   </metadata>
-  <metadata name="cameraViewImageBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="batterryQueryTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>486, 17</value>
   </metadata>
-  <metadata name="aimingReticlePictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="timeRefreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>654, 17</value>
   </metadata>
   <data name="aimingReticlePictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1023,9 +951,6 @@
   <data name="&gt;&gt;logoPictureBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="dialPlatePictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="dialPlatePictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -1033,10 +958,10 @@
     <value>NoControl</value>
   </data>
   <data name="dialPlatePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 503</value>
+    <value>40, 560</value>
   </data>
   <data name="dialPlatePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 160</value>
+    <value>120, 120</value>
   </data>
   <data name="dialPlatePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1056,307 +981,6 @@
   <data name="&gt;&gt;dialPlatePictureBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="pitchAngleRulerPictureBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="pitchAngleRulerPictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAWIAAAfjCAYAAAB6YCA9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABu
-        ugAAbroB1t6xFwAAPMJJREFUeF7t3S+MZYeB5u2FhoaGgYaGhoEhozE0/GBgWAxGMgxZKTDSkIWBloYY
-        rQwNPSwaFC2KBnmZ4f3OqV47ceVNu99+na5zqx7wHJ16Z9xdlVv169vn/un/cbvdAHhCcQTg3YkjAO9O
-        HAF4d+IIwLsTRwDenTgC8O7EEYB3J44A78w339xuf/7zcRr+by9EHAH+Kc7ofv757fbRR8dHx5T86le3
-        2x/+8KLiHEeAn9WXX74+vv/IJ5/cbn/60/FLhF/zGYkjwM/iL3+53X75y+Ps+HDxm9/cbt99d/yS4fd4
-        BuIIMDsvQ/ziF8fZ8eHP4Qz6t98ev3T4ve5cHAEmX399u73//nF2fPhzOi9vPMMYxxHgrZ0Psn3wwXF2
-        fPjPcN4zfmaXKeII8FbOQH744XF2fPjP9P/9f8dvF37/OxVHgLfy+98fx+P0XTivQR9nz0EcAWrnMyTe
-        e+84Oz58F87rxcfZcxBH4ALOB7zOe5jnX8PP66JX93M+Q+JNnTFOn8vVfPbZ7fa//tc/fJHK3w3AEzuf
-        FfDpp8fZ8SHPy/k3ht/97riZf3yb/+gD4Im9qwe7eFrnC1SOs+/9cAJcwPlX2Mc/tDxPX3113OSvbveH
-        A3AB573hd/lgF0/rfHOj4+z0cAAu4Hw61uMfVp6v80Uvx9np4QBcwBdfHMfjlJfjOJ4eDsAFnE9tevyD
-        yvN1Pih7nJ0eDsBFPMVzcXkaf/My7YcDcBHnG6g//oHl+TmvD5+vRDw+Oj0cgAs5n2P6+AeX5+N8e9Dz
-        D9zjo+/9cAJcyPmD6oUdz8/5lLW/uSf8vR99AFzM+dzi84n/V3cG5nF03pXf/jZ/TlfyE+8UF0eAyvnA
-        0+NAvivnm+kcZ/csjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAV
-        IZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJH
-        gIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8
-        iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAV
-        IZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJH
-        gIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8
-        iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAV
-        IZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJH
-        gIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8
-        iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAV
-        IZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJH
-        gIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8
-        iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAV
-        IZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJH
-        gIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8
-        iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAV
-        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
-        FSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgS
-        R4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpC
-        PIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4A
-        FSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgS
-        R4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpC
-        PIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4A
-        FSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgS
-        R4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpC
-        PIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4A
-        FSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgS
-        R4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpC
-        PIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4A
-        FSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgS
-        R4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpC
-        PIkjQEWIJ3EEqAjxJI4AFSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EEqAjxJI4A
-        FSGexBGgIsSTOAJUhHgSR4CKEE/iCFAR4kkcASpCPIkjQEWIJ3EELuTPf77dvvrq2n71q+MzPT7dp/Db
-        3+bP6Uq+++64KcNt+//EEXhif/rT7fbJJ7fbBx8cHx0T9++jj263zz6LUf7RB8AF/OEPt9t77x1nx4c8
-        Px9+eLt9881xU//1Nv/hBLiA8wf08Q8uz88vfvGje8YPB+Aizr++Pv6h5Xk6L1McZ6eHA3AB3357HI9T
-        XobzD93j7PRwAC7giy+O43HKy3A+DnCcnR4OwAWcT3N6/MPK8/X++8fN/uq2fzgAF3A+ePP4h5Xn65e/
-        PG72V7f9wwG4iE8/PY7HKc/f+TTF4+z0cAAu4i9/8SKOl+B8JeJx9r0fToCLOF9V9/HHx9nxIc/P+b4c
-        5zNkjo++98MJcDHnm9n85jevriVe3VPeiz9fqZY+p6v5/PPb7euvj5v272/rvxsAat59bRJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAi
-        xJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+II
-        UBHiSRwBKkI8iSNARYgncQSoCPEkjgAVIZ7EEaAixJM4AlSEeBJHgIoQT+IIUBHiSRwBKkI8iSNARYgn
-        cQQu4Msvb7fPP7/dfvnL6/vgg+MzPj7tp/Dhh/lzupJPPrndfve72+1Pfzpu2r+/rf9uAJ7Y+cP68cfH
-        2fEhz89nn91u33133NR/vc1/OAEu4Ntvn/beJe/Gp58eN/dfb/cfToAL+PWvj+NxyvP3xz8eN/mr2/3h
-        AFzA+dfV9947zo4Pef5+9avjZn912z8cgAv45pvjeJzyMrz//nGzv7rtHw7ABXzxxXE8Tnk5juPp4QBc
-        wF/+chyPU16Gjz46bvZXt/3DAbiI8zmxj39geZ7OB2aPs9PDAbiIr746jscpz9v5FMXzqYrHR6eHA3Ah
-        5yuwHv/g8nycEf766+Om/utt/sMJcCHnD+r59CZPZ3s+zgCflyP+5p7w9370AXBB59PazksWV3b+ofE4
-        PO/Kb3+bP6crOR+IPT7bfySOABXvvjaJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        EeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdx
-        BKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLE
-        kzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        EeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdx
-        BKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLE
-        kzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        EeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdx
-        BKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLE
-        kzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        EeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdx
-        BKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLE
-        kzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        EeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdx
-        BKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLE
-        kzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        EeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdx
-        BKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLE
-        kzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQ
-        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
-        HAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI
-        8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgC
-        VIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJ
-        HAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI
-        8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgC
-        VIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJ
-        HAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI
-        8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgC
-        VIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJ
-        HAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI
-        8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgC
-        VIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJ
-        HAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI
-        8SSOABUhnsQRoCLEkzgCVIR4EkeAihBP4ghQEeJJHAEqQjyJI0BFiCdxBKgI8SSOABUhnsQRoCLEkzgC
-        VIR4EkeAihBP4gg8sW+/vd0+//x2++Uvb7f33z+WY+Z+/eIXt9snn9xuf/jDcfP+/e39dwPwxL766nb7
-        4IPj7PiQ5+f8w/Uvfzlu6r/e5j+cABfw5z/fbu+9d5wdH/J8ffzxcXP/9Xb/4QS4gF/96jgepzx/v/vd
-        cZO/ut0fDsAFnNeFH/+w8nz9zb3ihwNwAee14cc/rDxf5yWo4+z0cAAuQIhfFiGGC3Jp4mVxaQIuyoN1
-        L4cH6+CiPH3tZfD0Nbg4L+h43s6/9XhBB9yB83rx+VfX84fWS5zv34cf3m6ffnq7/fGPx83797f33w0A
-        b+Wbb47jcfqunH9r+O6747cOn8udiSPAWznf2OZxMP9Zfv/747cMn8MdiiPAWzmvfb6LBxs/+uj47cLv
-        f6fiCPDWvvjiOB6n/yznNfPz2SXHR89FHAEm52WDxwH9OZz3tr/++vgtwu95x+IIMDvfBP1xSBfnPeFn
-        GOFTHAF+Fl9++fNcMz6f/vXMLkf8rTgC/GzOB/B+/evj7Piwdd4LPp9P/UyepvaPxBHgZ3feo/3ss1fP
-        eHgc3MfOF7Kc15nPF7Ycy3MXR4B/qjPK50u5z1eanf9I6um8jHFuLyS+fyuOALw7cQTg3YkjAO9OHAF4
-        d+IIwLsTRwDenTgC8O7EEYB3J44AvCu3//H/A0cfppxWeaKbAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="pitchAngleRulerPictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="pitchAngleRulerPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pitchAngleRulerPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 503</value>
-  </data>
-  <data name="pitchAngleRulerPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 160</value>
-  </data>
-  <data name="pitchAngleRulerPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pitchAngleRulerPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleRulerPictureBox.Name" xml:space="preserve">
-    <value>pitchAngleRulerPictureBox</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleRulerPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleRulerPictureBox.Parent" xml:space="preserve">
-    <value>cameraViewImageBox</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleRulerPictureBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="distaneLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="distaneLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1367,7 +991,7 @@
     <value>NoControl</value>
   </data>
   <data name="distaneLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 520</value>
+    <value>180, 570</value>
   </data>
   <data name="distaneLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 22</value>
@@ -1388,11 +1012,8 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;distaneLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
-  <metadata name="distanceValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="distanceValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1403,7 +1024,7 @@
     <value>NoControl</value>
   </data>
   <data name="distanceValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 520</value>
+    <value>240, 570</value>
   </data>
   <data name="distanceValueLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 22</value>
@@ -1424,11 +1045,8 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;distanceValueLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
-  <metadata name="pitchLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="pitchLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1439,7 +1057,7 @@
     <value>NoControl</value>
   </data>
   <data name="pitchLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 560</value>
+    <value>180, 610</value>
   </data>
   <data name="pitchLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 22</value>
@@ -1460,11 +1078,8 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
-  <metadata name="pitchValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="pitchValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1475,7 +1090,7 @@
     <value>NoControl</value>
   </data>
   <data name="pitchValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 560</value>
+    <value>240, 610</value>
   </data>
   <data name="pitchValueLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 22</value>
@@ -1496,11 +1111,8 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchValueLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
-  <metadata name="herizonLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="herizonLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1511,7 +1123,7 @@
     <value>NoControl</value>
   </data>
   <data name="herizonLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 600</value>
+    <value>180, 650</value>
   </data>
   <data name="herizonLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 22</value>
@@ -1532,11 +1144,8 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;herizonLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
-  <metadata name="herizonValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="herizonValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1547,7 +1156,7 @@
     <value>NoControl</value>
   </data>
   <data name="herizonValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 600</value>
+    <value>240, 650</value>
   </data>
   <data name="herizonValueLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 22</value>
@@ -1568,85 +1177,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;herizonValueLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <metadata name="dialPlateValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dialPlateValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dialPlateValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="dialPlateValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="dialPlateValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 668</value>
-  </data>
-  <data name="dialPlateValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="dialPlateValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="dialPlateValueLabel.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dialPlateValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.Name" xml:space="preserve">
-    <value>dialPlateValueLabel</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.Parent" xml:space="preserve">
-    <value>cameraViewImageBox</value>
-  </data>
-  <data name="&gt;&gt;dialPlateValueLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <metadata name="pitchAngleValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="pitchAngleValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pitchAngleValueLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="pitchAngleValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pitchAngleValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 668</value>
-  </data>
-  <data name="pitchAngleValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="pitchAngleValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="pitchAngleValueLabel.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pitchAngleValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.Name" xml:space="preserve">
-    <value>pitchAngleValueLabel</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.Parent" xml:space="preserve">
-    <value>cameraViewImageBox</value>
-  </data>
-  <data name="&gt;&gt;pitchAngleValueLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>10</value>
   </data>
   <data name="cameraViewImageBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1678,16 +1209,7 @@
   <data name="&gt;&gt;cameraViewImageBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="batterryQueryTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>486, 17</value>
-  </metadata>
-  <metadata name="timeRefreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>654, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1698,6 +1220,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1280, 800</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>DCS</value>

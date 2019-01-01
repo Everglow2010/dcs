@@ -33,9 +33,6 @@
             this.topBar = new System.Windows.Forms.Panel();
             this.timeRefreshLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.logoButtonPictureBox = new System.Windows.Forms.PictureBox();
-            this.laserControlPictureBox = new System.Windows.Forms.PictureBox();
-            this.servoControlPictureBox = new System.Windows.Forms.PictureBox();
             this.safeStatusLabel = new System.Windows.Forms.Label();
             this.ammoLoadLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.batteryLabel = new System.Windows.Forms.Label();
             this.batteryBar = new System.Windows.Forms.ProgressBar();
-            this.safeStatePitureBox = new System.Windows.Forms.PictureBox();
-            this.ammoLoadPictureBox = new System.Windows.Forms.PictureBox();
             this.ammoLeftTextBox = new System.Windows.Forms.TextBox();
             this.ammoLeftLabel = new System.Windows.Forms.Label();
             this.parameterConfigLabel = new System.Windows.Forms.Label();
@@ -59,34 +54,35 @@
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.laserControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel();
             this.ammoLeftTextBoxBlinkTimer = new System.Windows.Forms.Timer(this.components);
+            this.batterryQueryTimer = new System.Windows.Forms.Timer(this.components);
+            this.timeRefreshTimer = new System.Windows.Forms.Timer(this.components);
+            this.logoButtonPictureBox = new System.Windows.Forms.PictureBox();
+            this.laserControlPictureBox = new System.Windows.Forms.PictureBox();
+            this.servoControlPictureBox = new System.Windows.Forms.PictureBox();
+            this.safeStatePitureBox = new System.Windows.Forms.PictureBox();
+            this.ammoLoadPictureBox = new System.Windows.Forms.PictureBox();
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
-            this.pitchAngleRulerPictureBox = new System.Windows.Forms.PictureBox();
             this.distaneLabel = new System.Windows.Forms.Label();
             this.distanceValueLabel = new System.Windows.Forms.Label();
             this.pitchLabel = new System.Windows.Forms.Label();
             this.pitchValueLabel = new System.Windows.Forms.Label();
             this.herizonLabel = new System.Windows.Forms.Label();
             this.herizonValueLabel = new System.Windows.Forms.Label();
-            this.dialPlateValueLabel = new System.Windows.Forms.Label();
-            this.pitchAngleValueLabel = new System.Windows.Forms.Label();
-            this.batterryQueryTimer = new System.Windows.Forms.Timer(this.components);
-            this.timeRefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.topBar.SuspendLayout();
+            this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoButtonPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servoControlPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).BeginInit();
-            this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).BeginInit();
             this.cameraViewImageBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // topBar
@@ -129,29 +125,6 @@
             this.label8.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            // 
-            // logoButtonPictureBox
-            // 
-            this.logoButtonPictureBox.Image = global::DCS.Properties.Resources.logoButton;
-            resources.ApplyResources(this.logoButtonPictureBox, "logoButtonPictureBox");
-            this.logoButtonPictureBox.Name = "logoButtonPictureBox";
-            this.logoButtonPictureBox.TabStop = false;
-            this.logoButtonPictureBox.Click += new System.EventHandler(this.LogoButtonPictureBox_Click);
-            // 
-            // laserControlPictureBox
-            // 
-            this.laserControlPictureBox.Image = global::DCS.Properties.Resources.LaserOff;
-            resources.ApplyResources(this.laserControlPictureBox, "laserControlPictureBox");
-            this.laserControlPictureBox.Name = "laserControlPictureBox";
-            this.laserControlPictureBox.TabStop = false;
-            this.laserControlPictureBox.Click += new System.EventHandler(this.LaserControlPictureBox_Click);
-            // 
-            // servoControlPictureBox
-            // 
-            this.servoControlPictureBox.Image = global::DCS.Properties.Resources.SafetyOn;
-            resources.ApplyResources(this.servoControlPictureBox, "servoControlPictureBox");
-            this.servoControlPictureBox.Name = "servoControlPictureBox";
-            this.servoControlPictureBox.TabStop = false;
             // 
             // safeStatusLabel
             // 
@@ -220,20 +193,6 @@
             this.batteryBar.Name = "batteryBar";
             this.batteryBar.Value = 50;
             // 
-            // safeStatePitureBox
-            // 
-            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.SafetyOff;
-            resources.ApplyResources(this.safeStatePitureBox, "safeStatePitureBox");
-            this.safeStatePitureBox.Name = "safeStatePitureBox";
-            this.safeStatePitureBox.TabStop = false;
-            // 
-            // ammoLoadPictureBox
-            // 
-            this.ammoLoadPictureBox.Image = global::DCS.Properties.Resources.AmmoLoadedNotLoaded;
-            resources.ApplyResources(this.ammoLoadPictureBox, "ammoLoadPictureBox");
-            this.ammoLoadPictureBox.Name = "ammoLoadPictureBox";
-            this.ammoLoadPictureBox.TabStop = false;
-            // 
             // ammoLeftTextBox
             // 
             this.ammoLeftTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -268,7 +227,7 @@
             // servoControlLabel
             // 
             resources.ApplyResources(this.servoControlLabel, "servoControlLabel");
-            this.servoControlLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.servoControlLabel.ForeColor = System.Drawing.Color.White;
             this.servoControlLabel.Name = "servoControlLabel";
             // 
             // serialPort
@@ -302,20 +261,64 @@
             this.ammoLeftTextBoxBlinkTimer.Interval = 1000;
             this.ammoLeftTextBoxBlinkTimer.Tick += new System.EventHandler(this.AmmoLeftTextBoxBlinkTimer_Tick);
             // 
+            // batterryQueryTimer
+            // 
+            this.batterryQueryTimer.Interval = 60000;
+            this.batterryQueryTimer.Tick += new System.EventHandler(this.BatterryQueryTimer_Tick);
+            // 
+            // timeRefreshTimer
+            // 
+            this.timeRefreshTimer.Interval = 30000;
+            this.timeRefreshTimer.Tick += new System.EventHandler(this.TimeRefreshTimer_Tick);
+            // 
+            // logoButtonPictureBox
+            // 
+            this.logoButtonPictureBox.Image = global::DCS.Properties.Resources.logoRound;
+            resources.ApplyResources(this.logoButtonPictureBox, "logoButtonPictureBox");
+            this.logoButtonPictureBox.Name = "logoButtonPictureBox";
+            this.logoButtonPictureBox.TabStop = false;
+            this.logoButtonPictureBox.Click += new System.EventHandler(this.LogoButtonPictureBox_Click);
+            // 
+            // laserControlPictureBox
+            // 
+            this.laserControlPictureBox.Image = global::DCS.Properties.Resources.LaserOff;
+            resources.ApplyResources(this.laserControlPictureBox, "laserControlPictureBox");
+            this.laserControlPictureBox.Name = "laserControlPictureBox";
+            this.laserControlPictureBox.TabStop = false;
+            this.laserControlPictureBox.Click += new System.EventHandler(this.LaserControlPictureBox_Click);
+            // 
+            // servoControlPictureBox
+            // 
+            this.servoControlPictureBox.Image = global::DCS.Properties.Resources.SafetyOn;
+            resources.ApplyResources(this.servoControlPictureBox, "servoControlPictureBox");
+            this.servoControlPictureBox.Name = "servoControlPictureBox";
+            this.servoControlPictureBox.TabStop = false;
+            // 
+            // safeStatePitureBox
+            // 
+            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.SafetyOff;
+            resources.ApplyResources(this.safeStatePitureBox, "safeStatePitureBox");
+            this.safeStatePitureBox.Name = "safeStatePitureBox";
+            this.safeStatePitureBox.TabStop = false;
+            // 
+            // ammoLoadPictureBox
+            // 
+            this.ammoLoadPictureBox.Image = global::DCS.Properties.Resources.AmmoLoadedNotLoaded;
+            resources.ApplyResources(this.ammoLoadPictureBox, "ammoLoadPictureBox");
+            this.ammoLoadPictureBox.Name = "ammoLoadPictureBox";
+            this.ammoLoadPictureBox.TabStop = false;
+            // 
             // cameraViewImageBox
             // 
             this.cameraViewImageBox.Controls.Add(this.aimingReticlePictureBox);
             this.cameraViewImageBox.Controls.Add(this.logoPictureBox);
             this.cameraViewImageBox.Controls.Add(this.dialPlatePictureBox);
-            this.cameraViewImageBox.Controls.Add(this.pitchAngleRulerPictureBox);
             this.cameraViewImageBox.Controls.Add(this.distaneLabel);
             this.cameraViewImageBox.Controls.Add(this.distanceValueLabel);
             this.cameraViewImageBox.Controls.Add(this.pitchLabel);
             this.cameraViewImageBox.Controls.Add(this.pitchValueLabel);
             this.cameraViewImageBox.Controls.Add(this.herizonLabel);
             this.cameraViewImageBox.Controls.Add(this.herizonValueLabel);
-            this.cameraViewImageBox.Controls.Add(this.dialPlateValueLabel);
-            this.cameraViewImageBox.Controls.Add(this.pitchAngleValueLabel);
             this.cameraViewImageBox.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
             resources.ApplyResources(this.cameraViewImageBox, "cameraViewImageBox");
             this.cameraViewImageBox.Name = "cameraViewImageBox";
@@ -344,14 +347,6 @@
             this.dialPlatePictureBox.Name = "dialPlatePictureBox";
             this.dialPlatePictureBox.TabStop = false;
             this.dialPlatePictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.DialPlatePictureBox_Paint);
-            // 
-            // pitchAngleRulerPictureBox
-            // 
-            this.pitchAngleRulerPictureBox.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pitchAngleRulerPictureBox, "pitchAngleRulerPictureBox");
-            this.pitchAngleRulerPictureBox.Name = "pitchAngleRulerPictureBox";
-            this.pitchAngleRulerPictureBox.TabStop = false;
-            this.pitchAngleRulerPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.PitchAngleRulerPictureBox_Paint);
             // 
             // distaneLabel
             // 
@@ -392,30 +387,6 @@
             this.herizonValueLabel.ForeColor = System.Drawing.Color.Red;
             this.herizonValueLabel.Name = "herizonValueLabel";
             // 
-            // dialPlateValueLabel
-            // 
-            resources.ApplyResources(this.dialPlateValueLabel, "dialPlateValueLabel");
-            this.dialPlateValueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.dialPlateValueLabel.ForeColor = System.Drawing.Color.Red;
-            this.dialPlateValueLabel.Name = "dialPlateValueLabel";
-            // 
-            // pitchAngleValueLabel
-            // 
-            resources.ApplyResources(this.pitchAngleValueLabel, "pitchAngleValueLabel");
-            this.pitchAngleValueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.pitchAngleValueLabel.ForeColor = System.Drawing.Color.Red;
-            this.pitchAngleValueLabel.Name = "pitchAngleValueLabel";
-            // 
-            // batterryQueryTimer
-            // 
-            this.batterryQueryTimer.Interval = 60000;
-            this.batterryQueryTimer.Tick += new System.EventHandler(this.BatterryQueryTimer_Tick);
-            // 
-            // timeRefreshTimer
-            // 
-            this.timeRefreshTimer.Interval = 30000;
-            this.timeRefreshTimer.Tick += new System.EventHandler(this.TimeRefreshTimer_Tick);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -431,19 +402,18 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topBar.ResumeLayout(false);
             this.topBar.PerformLayout();
+            this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoButtonPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servoControlPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).EndInit();
-            this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).EndInit();
             this.cameraViewImageBox.ResumeLayout(false);
             this.cameraViewImageBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pitchAngleRulerPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,10 +434,7 @@
         private System.Windows.Forms.PictureBox dialPlatePictureBox;
         private System.Windows.Forms.PictureBox aimingReticlePictureBox;
         private Emgu.CV.UI.ImageBox cameraViewImageBox;
-        private System.Windows.Forms.Label pitchAngleValueLabel;
-        private System.Windows.Forms.Label dialPlateValueLabel;
         private System.Windows.Forms.Timer dataSendTimer;
-        private System.Windows.Forms.PictureBox pitchAngleRulerPictureBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

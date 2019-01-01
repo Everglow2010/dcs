@@ -84,5 +84,9 @@ namespace DCS
         
         //电池电量百分比
         public static int batteryLifePercent = 100;
+        //开机时间
+        public static DateTime startTime;
+        //当前选择,0表示当前时间,1表示工作时长
+        public static int timeChosen = 0;
     }
 }
