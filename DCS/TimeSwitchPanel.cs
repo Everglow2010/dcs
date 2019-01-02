@@ -15,10 +15,35 @@ namespace DCS
         public TimeSwitchPanel()
         {
             InitializeComponent();
+            System.DateTime currentTime = DateTime.Now;
+            string nowTimeStr = currentTime.ToString("HH:mm");
+            this.nowTimeButton.Text = "当前时间 " + nowTimeStr;
+
+            TimeSpan ts = currentTime.Subtract(GlobalVars.startTime);
+            int minutes = (int)(ts.TotalMinutes + 1);
+            int HH = minutes / 60;
+            int mm = minutes % 60;
+            string workTimeStr = string.Format("{0:D2}:{1:D2}", HH, mm);
+            Console.WriteLine("面板初始化时的工作时间：" + workTimeStr);
+            this.workTimeButton.Text = "工作时间 " + workTimeStr;
         }
-        private int switchType;
-        public delegate void SwitchStateChangeHandler(Boolean state);
-        public event SwitchStateChangeHandler SwitchStateChange;
+        public delegate void SwitchStateChangeHandler(int type);
+        public event SwitchStateChangeHandler TimeTypeChange;
+
+        public void InitialTime()
+        {
+            System.DateTime currentTime = DateTime.Now;
+            string nowTimeStr = currentTime.ToString("HH:mm");
+            this.nowTimeButton.Text = "当前时间 " + nowTimeStr;
+
+            TimeSpan ts = currentTime.Subtract(GlobalVars.startTime);
+            int minutes = (int)(ts.TotalMinutes + 1);
+            int HH = minutes / 60;
+            int mm = minutes % 60;
+            string workTimeStr = string.Format("{0:D2}:{1:D2}", HH, mm);
+            Console.WriteLine("面板初始化时的工作时间：" + workTimeStr);
+            this.workTimeButton.Text = "工作时间 " + workTimeStr;
+        }
 
         private void NowTimeButton_MouseEnter(object sender, EventArgs e)
         {
@@ -46,32 +71,18 @@ namespace DCS
 
         private void NowTimeButton_Click(object sender, EventArgs e)
         {
-            if (switchType == GlobalVars.SERVO_CONTROL)
-            {
-                GlobalVars.servoControlSwitchState = true;
-                SwitchStateChange?.Invoke(GlobalVars.servoControlSwitchState);
-            }
-            else if (switchType == GlobalVars.LASER_CONTROL)
-            {
-                GlobalVars.laserControlSwitchState = true;
-                SwitchStateChange?.Invoke(GlobalVars.laserControlSwitchState);
-            }
+            //显示当前时间
+            GlobalVars.timeChosen = 0;
+            TimeTypeChange?.Invoke(GlobalVars.timeChosen);
             this.Enabled = false;
             this.Visible = false;
         }
 
         private void WorkTimeButton_Click(object sender, EventArgs e)
         {
-            if (switchType == GlobalVars.SERVO_CONTROL)
-            {
-                GlobalVars.servoControlSwitchState = false;
-                SwitchStateChange?.Invoke(GlobalVars.servoControlSwitchState);
-            }
-            else if (switchType == GlobalVars.LASER_CONTROL)
-            {
-                GlobalVars.laserControlSwitchState = false;
-                SwitchStateChange?.Invoke(GlobalVars.laserControlSwitchState);
-            }
+            //显示工作时间
+            GlobalVars.timeChosen = 1;
+            TimeTypeChange?.Invoke(GlobalVars.timeChosen);
             this.Enabled = false;
             this.Visible = false;
         }

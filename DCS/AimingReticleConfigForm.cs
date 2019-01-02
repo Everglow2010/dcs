@@ -49,13 +49,13 @@ namespace DCS
 
             if (GlobalVars.degreeOrMil)//用角度
             {
-                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithDegree.ToString("0.0");
-                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithDegree.ToString("0.0");
+                this.pitchAngleLabel.Text = string.Format("{0:0000.0}", GlobalVars.pitchAngleWithDegree);
+                this.horizontalLabel.Text = string.Format("{0:0000.0}", GlobalVars.dialPlateAngleWithDegree);
             }
             else//用密位
             {
-                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithMil.ToString("0.0");
-                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithMil.ToString("0.0");
+                this.pitchAngleLabel.Text = string.Format("{0:0000.0}", GlobalVars.pitchAngleWithMil);
+                this.horizontalLabel.Text = string.Format("{0:0000.0}", GlobalVars.dialPlateAngleWithMil);
             }
             this.UnitChange += new UnitChangeHandler(ChangeUnit);
         }
@@ -329,14 +329,30 @@ namespace DCS
 
         private void PitchZeroButton_Click(object sender, EventArgs e)
         {
-            pitchZero = true;
-            this.pitchZeroButton.FlatAppearance.BorderColor = Color.Yellow;
+            if (pitchZero)
+            {
+                pitchZero = false;
+                this.pitchZeroButton.FlatAppearance.BorderColor = Color.Black;
+            }
+            else
+            {
+                pitchZero = true;
+                this.pitchZeroButton.FlatAppearance.BorderColor = Color.Yellow;
+            }           
         }
 
         private void HorizontalZeroButton_Click(object sender, EventArgs e)
         {
-            horizontalZero = true;
-            this.horizontalZeroButton.FlatAppearance.BorderColor = Color.Yellow;        
+            if (horizontalZero)
+            {
+                horizontalZero = false;
+                this.horizontalZeroButton.FlatAppearance.BorderColor = Color.Black;
+            }
+            else
+            {
+                horizontalZero = true;
+                this.horizontalZeroButton.FlatAppearance.BorderColor = Color.Yellow;
+            }        
         }
 
         private void ZeroApplyButton_Click(object sender, EventArgs e)
@@ -395,13 +411,13 @@ namespace DCS
         {
             if (type)//用角度
             {
-                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithDegree.ToString("0.0");
-                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithDegree.ToString("0.0");
+                this.pitchAngleLabel.Text = string.Format("{0:0000.0}", GlobalVars.pitchAngleWithDegree);
+                this.horizontalLabel.Text = string.Format("{0:0000.0}", GlobalVars.dialPlateAngleWithDegree);
             }
             else//用密位
             {
-                this.pitchAngleLabel.Text = GlobalVars.pitchAngleWithMil.ToString("0.0");
-                this.horizontalLabel.Text = GlobalVars.dialPlateAngleWithMil.ToString("0.0");
+                this.pitchAngleLabel.Text = string.Format("{0:0000.0}", GlobalVars.pitchAngleWithMil);
+                this.horizontalLabel.Text = string.Format("{0:0000.0}", GlobalVars.dialPlateAngleWithMil);
             }
         }
     }

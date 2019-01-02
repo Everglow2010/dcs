@@ -51,7 +51,7 @@ namespace DCS
         public static int focalDistanceMultiple = 1;
 
         //系统单位标记,true表示用度，false表示用密位；
-        public static bool degreeOrMil = false;
+        public static bool degreeOrMil = true;
 
         //记录一个焦距挡位的瞄准分划的位置和大小信息
         public struct AimingReticleConfigParameter
@@ -87,6 +87,6 @@ namespace DCS
         //开机时间
         public static DateTime startTime;
         //当前选择,0表示当前时间,1表示工作时长
-        public static int timeChosen = 0;
+        public static int timeChosen = 1;
     }
 }

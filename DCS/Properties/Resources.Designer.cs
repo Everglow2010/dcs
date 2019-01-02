@@ -133,6 +133,16 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap DialPlate2 {
+            get {
+                object obj = ResourceManager.GetObject("DialPlate2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap dialPointer {
             get {
                 object obj = ResourceManager.GetObject("dialPointer", resourceCulture);
@@ -206,6 +216,16 @@ namespace DCS.Properties {
         internal static System.Drawing.Bitmap logoRound {
             get {
                 object obj = ResourceManager.GetObject("logoRound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGOroundsquare {
+            get {
+                object obj = ResourceManager.GetObject("LOGOroundsquare", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

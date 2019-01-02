@@ -230,12 +230,14 @@
     <Content Include="Resources\btncheckon5.png" />
     <Content Include="Resources\btncheckon6.png" />
     <None Include="Resources\pitchAngleRuler.bmp" />
+    <Content Include="Resources\UIV2\DialPlate2.png" />
     <Content Include="Resources\UIV2\LaserControlTurnOffButtonImage.png" />
     <Content Include="Resources\UIV2\LaserControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\LaserOff.png" />
     <Content Include="Resources\UIV2\LaserOn.png" />
     <None Include="Resources\UIV2\logoButton.png" />
     <Content Include="Resources\UIV2\logoPicture.png" />
+    <Content Include="Resources\UIV2\LOGOroundsquare.png" />
     <Content Include="Resources\UIV2\SafetyOff.png" />
     <None Include="Resources\UIV2\safetyoff1.png" />
     <Content Include="Resources\UIV2\SafetyOn.png" />

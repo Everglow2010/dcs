@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="timeRefreshLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt, style=Bold</value>
+    <value>微软雅黑, 14.25pt, style=Bold</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="timeRefreshLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -133,13 +133,13 @@
     <value>1163, 34</value>
   </data>
   <data name="timeRefreshLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 22</value>
+    <value>65, 26</value>
   </data>
   <data name="timeRefreshLabel.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
   <data name="timeRefreshLabel.Text" xml:space="preserve">
-    <value>时间: 12:00</value>
+    <value>12:00</value>
   </data>
   <data name="&gt;&gt;timeRefreshLabel.Name" xml:space="preserve">
     <value>timeRefreshLabel</value>
@@ -181,10 +181,13 @@
     <value>NoControl</value>
   </data>
   <data name="logoButtonPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 15</value>
+    <value>40, 15</value>
+  </data>
+  <data name="logoButtonPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="logoButtonPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 50</value>
+    <value>50, 50</value>
   </data>
   <data name="logoButtonPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -628,16 +631,19 @@
     <value>17</value>
   </data>
   <data name="ammoLeftTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 24pt, style=Bold</value>
+    <value>微软雅黑, 21.75pt, style=Bold</value>
   </data>
   <data name="ammoLeftTextBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
   </data>
   <data name="ammoLeftTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 22</value>
+    <value>184, 34</value>
+  </data>
+  <data name="ammoLeftTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="ammoLeftTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 43</value>
+    <value>65, 39</value>
   </data>
   <data name="ammoLeftTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -670,7 +676,7 @@
     <value>NoControl</value>
   </data>
   <data name="ammoLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 33</value>
+    <value>180, 15</value>
   </data>
   <data name="ammoLeftLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -834,6 +840,30 @@
   <metadata name="dataSendTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 17</value>
   </metadata>
+  <data name="timeSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1138, 0</value>
+  </data>
+  <data name="timeSwitchPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="timeSwitchPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 120</value>
+  </data>
+  <data name="timeSwitchPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.Name" xml:space="preserve">
+    <value>timeSwitchPanel</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.Type" xml:space="preserve">
+    <value>DCS.TimeSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="laserControlOnOffSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 0</value>
   </data>
@@ -856,7 +886,7 @@
     <value>bottomPanel</value>
   </data>
   <data name="&gt;&gt;laserControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -928,7 +958,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="logoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 250</value>
+    <value>284, 284</value>
   </data>
   <data name="logoPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1220,9 +1250,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1280, 800</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>DCS</value>

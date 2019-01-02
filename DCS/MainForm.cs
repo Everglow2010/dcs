@@ -61,13 +61,16 @@ namespace DCS
             GlobalVars.dialPlateAngleWithDegree = 0;
             GlobalVars.dialPlateAngleClear = false;
 
-            //this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree);
-            //this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil);
+            //初始化俯仰值，水平值，剩余弹量值
+            string pitchDegreeValueStr = string.Format("{0:0000.0}°", GlobalVars.pitchAngleWithDegree);
+            this.pitchValueLabel.Text = pitchDegreeValueStr;
+            string herizonDegreeValueStr = string.Format("{0:0000.0}°", GlobalVars.dialPlateAngleWithDegree);
+            this.herizonValueLabel.Text = herizonDegreeValueStr;
             this.ammoLeftTextBox.Text = Convert.ToString(GlobalVars.ammoLeftNum);
             //初始化时间
             System.DateTime currentTime = DateTime.Now;
             string timeStr = currentTime.ToString("HH:mm");
-            string timeShow = "时间: " + timeStr;
+            string timeShow = timeStr;
             this.timeRefreshLabel.Text = timeShow;
             //初始化开始时间记录
             GlobalVars.startTime = DateTime.Now;
@@ -89,13 +92,6 @@ namespace DCS
                 GlobalVars.aimingReticleConfigs[i].posY = y;
 
                 Console.WriteLine("第" + index + "级的瞄准分划位置为：(" + x + "," + y + ")");
-                //GlobalVars.aimingReticleConfigs[i].sizePercent = 0;
-                //GlobalVars.aimingReticleConfigs[i].size = 250 + (int)((GlobalVars.aimingReticleConfigs[i].sizePercent / 100.0) * 250);
-
-                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posX", "515");
-                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".posY", "235");
-                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".sizePercent", "0");
-                //AppConfigManager.SetValue("aimingReticleConfig" + (i + 1) + ".size", GlobalVars.aimingReticleConfigs[i].size.ToString());
             }
 
             //初始化各种弹出窗口面板和事件订阅
@@ -111,6 +107,11 @@ namespace DCS
             this.laserControlOnOffSwitchPanel.SwitchStateChange += new OnOffSwitchPanel.SwitchStateChangeHandler(ChangeLaserControlPictureBox);
             this.laserControlOnOffSwitchPanel.Enabled = false;
             this.laserControlOnOffSwitchPanel.Visible = false;
+            //初始化时间显示切换开关面板控件
+            this.timeSwitchPanel.Parent = this.cameraViewImageBox;
+            this.timeSwitchPanel.TimeTypeChange += new TimeSwitchPanel.SwitchStateChangeHandler(RefreshTimeShow);
+            this.timeSwitchPanel.Enabled = false;
+            this.timeSwitchPanel.Visible = false;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -154,6 +155,8 @@ namespace DCS
             dataSendTimer.Start();
             batterryQueryTimer.Start();
             timeRefreshTimer.Start();
+
+            //this.Invoke(flushAllUI);
         }
 
         public delegate void FreshUIDisplay();
@@ -202,26 +205,30 @@ namespace DCS
                 this.ammoLeftTextBoxBlinkTimer.Start();
             }
             //更新距离数值显示值
-            this.distanceValueLabel.Text = Convert.ToString(GlobalVars.distanceMeter) + "m";
+            string distanceStr = string.Format("{0:D4}m", GlobalVars.distanceMeter);
+            this.distanceValueLabel.Text = distanceStr;
             //更新俯仰角度显示值和水平数值显示值            
             //this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
             if (GlobalVars.degreeOrMil)//true表示用度数
             {
-                this.pitchValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithDegree) + "°";
-                this.herizonValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree) + "°";
+                string pitchDegreeValueStr = string.Format("{0:0000.0}°", GlobalVars.pitchAngleWithDegree);
+                this.pitchValueLabel.Text = pitchDegreeValueStr;
+                string herizonDegreeValueStr = string.Format("{0:0000.0}°", GlobalVars.dialPlateAngleWithDegree);
+                this.herizonValueLabel.Text = herizonDegreeValueStr;
             }
             else//false表示用密位单位
             {
-                this.pitchValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
-                this.herizonValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithMil) + "mil";
+                string pitchMilValueStr = string.Format("{0:0000.0}mil", GlobalVars.pitchAngleWithMil);
+                this.pitchValueLabel.Text = pitchMilValueStr;
+                string herizonMilValueStr = string.Format("{0:0000.0}mil", GlobalVars.dialPlateAngleWithMil);
+                this.herizonValueLabel.Text = herizonMilValueStr;
             }
-            //更新仪表盘角度显示值
+            //更新仪表盘角度显示值(已弃用)
             //this.dialPlateValueLabel.Text = Convert.ToString(GlobalVars.dialPlateAngleWithDegree) + "°";
             //更新仪表盘指针图像
             this.dialPlatePictureBox.Invalidate();
-            //更新俯仰角指针图像
+            //更新俯仰角指针图像(已弃用)
             //this.pitchAngleRulerPictureBox.Invalidate();
-            //更新电量显示百分比
         }
 
 
@@ -588,7 +595,7 @@ namespace DCS
             g.RotateTransform(angle + 90);
             //将graphics恢复在水平和垂直方向上的平移（沿当前原点）
             g.TranslateTransform(-dialPlateWidth / 2, -dialPlateHeight / 2);
-            g.DrawImage(dialPlatePointerImg, new Rectangle(0, dialPlateHeight / 2, dialPlateWidth / 2, 5));
+            g.DrawImage(dialPlatePointerImg, new Rectangle(0, dialPlateHeight / 2 - 1, dialPlateWidth / 2, 5));
 
             //将bitmap上的指针画在方位表盘的picturebox上
             gp.DrawImage(bitmap, new Point(0, 0));
@@ -719,6 +726,7 @@ namespace DCS
                     TopMost = true
                 };
                 aimingReticleConfigForm.AimingReticlePositionChange += new AimingReticleConfigForm.AimingReticlePositionChangeHandler(MoveAimingReticlePictureBox);
+                aimingReticleConfigForm.UnitChange += new AimingReticleConfigForm.UnitChangeHandler(ChangeUnitDisplay);
                 aimingReticleConfigForm.Show();
             }
         }
@@ -768,18 +776,97 @@ namespace DCS
         }
 
         /// <summary>
-        /// 更新时间显示的定时
+        /// 更新时间显示的定时任务
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TimeRefreshTimer_Tick(object sender, EventArgs e)
         {
-            System.DateTime currentTime = DateTime.Now;
-            string timeStr = currentTime.ToString("HH:mm");
-            Console.WriteLine("当前时间时分：" + timeStr);
-            string timeShow = "时间: " + timeStr;
-            this.timeRefreshLabel.Text = timeShow;
-            this.Refresh();
+            //若当前显示的是当前时间
+            if (GlobalVars.timeChosen == 0)
+            {
+                System.DateTime currentTime = DateTime.Now;
+                string timeStr = currentTime.ToString("HH:mm");
+                Console.WriteLine("当前时间时分：" + timeStr);
+                //string timeShow = "时间: " + timeStr;
+                this.timeRefreshLabel.Text = timeStr;
+                this.timeRefreshLabel.Refresh();
+            }
+            else if(GlobalVars.timeChosen == 1)
+            {
+                System.DateTime currentTime = DateTime.Now;
+                TimeSpan ts = currentTime.Subtract(GlobalVars.startTime);
+                int minutes = (int)(ts.TotalMinutes + 1);
+                int HH = minutes / 60;
+                int mm = minutes % 60;
+                string timeShow = string.Format("{0:D2}:{1:D2}", HH, mm);
+                Console.WriteLine("工作总时长：" + timeShow);
+                this.timeRefreshLabel.Text = timeShow;
+                this.timeRefreshLabel.Refresh();
+            }
+        }
+        /// <summary>
+        /// 即时更新时间显示的委托执行方法
+        /// </summary>
+        /// <param name="type"></param>
+        private void RefreshTimeShow(int type)
+        {
+            //若当前显示的是当前时间
+            if (type == 0)
+            {
+                System.DateTime currentTime = DateTime.Now;
+                string timeStr = currentTime.ToString("HH:mm");
+                Console.WriteLine("当前时间时分：" + timeStr);
+                //string timeShow = "时间: " + timeStr;
+                this.timeRefreshLabel.Text = timeStr;
+                this.timeRefreshLabel.Refresh();
+            }
+            else if (type == 1)
+            {
+                System.DateTime currentTime = DateTime.Now;
+                TimeSpan ts = currentTime.Subtract(GlobalVars.startTime);
+                int minutes = (int)(ts.TotalMinutes + 1);
+                int HH = minutes / 60;
+                int mm = minutes % 60;
+                string timeShow = string.Format("{0:D2}:{1:D2}", HH, mm);
+                Console.WriteLine("工作总时长：" + timeShow);
+                this.timeRefreshLabel.Text = timeShow;
+                this.timeRefreshLabel.Refresh();
+            }
+        }
+
+        /// <summary>
+        /// 即时切换界面数值显示的单位的委托执行方法
+        /// </summary>
+        /// <param name="degreeOrMil"></param>
+        private void ChangeUnitDisplay(bool degreeOrMil)
+        {
+            if (degreeOrMil)//true表示用度数
+            {
+                string pitchDegreeValueStr = string.Format("{0:0000.0}°", GlobalVars.pitchAngleWithDegree);
+                this.pitchValueLabel.Text = pitchDegreeValueStr;
+                string herizonDegreeValueStr = string.Format("{0:0000.0}°", GlobalVars.dialPlateAngleWithDegree);
+                this.herizonValueLabel.Text = herizonDegreeValueStr;
+            }
+            else//false表示用密位单位
+            {
+                string pitchMilValueStr = string.Format("{0:0000.0}mil", GlobalVars.pitchAngleWithMil);
+                this.pitchValueLabel.Text = pitchMilValueStr;
+                string herizonMilValueStr = string.Format("{0:0000.0}mil", GlobalVars.dialPlateAngleWithMil);
+                this.herizonValueLabel.Text = herizonMilValueStr;
+            }
+        }
+        /// <summary>
+        /// 时间显示标签点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TimeRefreshLabel_Click(object sender, EventArgs e)
+        {
+            this.timeSwitchPanel.Enabled = true;
+            this.timeSwitchPanel.InitialTime();
+            this.timeSwitchPanel.BringToFront();
+            this.timeSwitchPanel.Show();
         }
     }
 }
