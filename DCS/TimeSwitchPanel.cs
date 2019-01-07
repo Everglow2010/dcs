@@ -25,7 +25,7 @@ namespace DCS
             int mm = minutes % 60;
             string workTimeStr = string.Format("{0:D2}:{1:D2}", HH, mm);
             Console.WriteLine("面板初始化时的工作时间：" + workTimeStr);
-            this.workTimeButton.Text = "工作时间 " + workTimeStr;
+            this.workTimeButton.Text = "工作时长 " + workTimeStr;
         }
         public delegate void SwitchStateChangeHandler(int type);
         public event SwitchStateChangeHandler TimeTypeChange;
@@ -42,7 +42,7 @@ namespace DCS
             int mm = minutes % 60;
             string workTimeStr = string.Format("{0:D2}:{1:D2}", HH, mm);
             Console.WriteLine("面板初始化时的工作时间：" + workTimeStr);
-            this.workTimeButton.Text = "工作时间 " + workTimeStr;
+            this.workTimeButton.Text = "工作时长 " + workTimeStr;
         }
 
         private void NowTimeButton_MouseEnter(object sender, EventArgs e)

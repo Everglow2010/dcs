@@ -66,7 +66,7 @@
             this.workTimeButton.Name = "workTimeButton";
             this.workTimeButton.Size = new System.Drawing.Size(142, 60);
             this.workTimeButton.TabIndex = 1;
-            this.workTimeButton.Text = "工作时间 00:00";
+            this.workTimeButton.Text = "工作时长 00:00";
             this.workTimeButton.UseVisualStyleBackColor = false;
             this.workTimeButton.Click += new System.EventHandler(this.WorkTimeButton_Click);
             this.workTimeButton.MouseEnter += new System.EventHandler(this.WorkTimeButton_MouseEnter);

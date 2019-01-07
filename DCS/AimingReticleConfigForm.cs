@@ -38,6 +38,11 @@ namespace DCS
             buttonList.Add(this.button19);
             buttonList.Add(this.button20);
 
+
+        }
+
+        private void AimingRecticleConfigForm_Load(object sender, EventArgs e)
+        {
             if (GlobalVars.degreeOrMil)
             {
                 this.buttonSetUnitToDegree.FlatAppearance.BorderColor = Color.Yellow;
@@ -58,11 +63,6 @@ namespace DCS
                 this.horizontalLabel.Text = string.Format("{0:0000.0}", GlobalVars.dialPlateAngleWithMil);
             }
             this.UnitChange += new UnitChangeHandler(ChangeUnit);
-        }
-
-        private void AimingRecticleConfigForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         //当前选中的要调整的焦距级别的瞄准分划
@@ -272,7 +272,9 @@ namespace DCS
             int focalLevelNow = GlobalVars.focalDistanceMultiple;
             Point recoverPoint = new Point(GlobalVars.aimingReticleConfigs[focalLevelNow - 1].posX, GlobalVars.aimingReticleConfigs[focalLevelNow - 1].posY);
             this.AimingReticlePositionChange?.Invoke(recoverPoint);
-            this.Close();
+            //this.Close();
+            this.Hide();
+            //this.Enabled = false;
         }
 
         private void ButtonUP_Click(object sender, EventArgs e)
@@ -373,7 +375,7 @@ namespace DCS
 
         private void ZeroQuitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void ButtonSetUnitToDegree_Click(object sender, EventArgs e)
@@ -404,7 +406,7 @@ namespace DCS
 
         private void UnitQuitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void ChangeUnit(bool type)

@@ -214,6 +214,7 @@
     <None Include="Resources\aimingDivision.png" />
     <None Include="Resources\logoRound.jpg" />
     <Content Include="Resources\UIV2\AimingReticle.png" />
+    <Content Include="Resources\UIV2\AimingReticleLow.png" />
     <Content Include="Resources\UIV2\AmmoLoadedNotLoaded.png" />
     <Content Include="Resources\UIV2\AmmoLoadedOpen.png" />
     <Content Include="Resources\UIV2\AmmoLoadedReady.png" />
@@ -231,6 +232,7 @@
     <Content Include="Resources\btncheckon6.png" />
     <None Include="Resources\pitchAngleRuler.bmp" />
     <Content Include="Resources\UIV2\DialPlate2.png" />
+    <None Include="Resources\UIV2\DialPlateLow.png" />
     <Content Include="Resources\UIV2\LaserControlTurnOffButtonImage.png" />
     <Content Include="Resources\UIV2\LaserControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\LaserOff.png" />

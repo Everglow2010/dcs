@@ -26,6 +26,13 @@ namespace DCS
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
 
+
+        }
+
+        private AimingReticleConfigForm aimingReticleConfigForm;
+        private AmmoLoadConfigForm ammoLoadConfigForm;
+        private void MainForm_Load(object sender, EventArgs e)
+        {
             //初始化全局变量，从配置文件中读取
             GlobalVars.cameraIP = AppConfigManager.GetValue("cameraIP");
             GlobalVars.cameraPort = AppConfigManager.GetValue("cameraPort");
@@ -112,13 +119,24 @@ namespace DCS
             this.timeSwitchPanel.TimeTypeChange += new TimeSwitchPanel.SwitchStateChangeHandler(RefreshTimeShow);
             this.timeSwitchPanel.Enabled = false;
             this.timeSwitchPanel.Visible = false;
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            Console.WriteLine(GlobalVars.cameraRTSPPath);
+            //初始化生成好参数配置面板
+            aimingReticleConfigForm = new AimingReticleConfigForm
+            {
+                MdiParent = this,
+                Parent = this.cameraViewImageBox
+            };
+            aimingReticleConfigForm.AimingReticlePositionChange += new AimingReticleConfigForm.AimingReticlePositionChangeHandler(MoveAimingReticlePictureBox);
+            aimingReticleConfigForm.UnitChange += new AimingReticleConfigForm.UnitChangeHandler(ChangeUnitDisplay);
+            //初始化生产好剩余弹量配置面板
+            ammoLoadConfigForm = new AmmoLoadConfigForm
+            {
+                MdiParent = this,
+                Parent = this.cameraViewImageBox
+            };
+            ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
 
             //启动emgucv视频捕捉显示
+            Console.WriteLine(GlobalVars.cameraRTSPPath);
             if (GlobalVars.withCamera)
             {
                 Console.WriteLine("根据配置项，准备连接捕捉摄像机画面。");
@@ -155,7 +173,6 @@ namespace DCS
             dataSendTimer.Start();
             batterryQueryTimer.Start();
             timeRefreshTimer.Start();
-
             //this.Invoke(flushAllUI);
         }
 
@@ -605,7 +622,7 @@ namespace DCS
             bitmap.Dispose();
         }
 
-        private AmmoLoadConfigForm ammoLoadConfigForm = null;
+        
         /// <summary>
         /// 弹药剩余量文本显示框点击事件函数
         /// </summary>
@@ -624,9 +641,12 @@ namespace DCS
                 ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
                 ammoLoadConfigForm.Show();
             }
-            else
+            else if (ammoLoadConfigForm.Visible == true)
             {
-                ammoLoadConfigForm.Close();
+                ammoLoadConfigForm.Hide();
+            }else if (ammoLoadConfigForm.Visible == false)
+            {
+                ammoLoadConfigForm.Show();
             }
         }
         /// <summary>
@@ -714,11 +734,12 @@ namespace DCS
             }
         }
 
-        AimingReticleConfigForm aimingReticleConfigForm = null;
+
         private void ParameterConfigLabel_Click(object sender, EventArgs e)
         {
             if (aimingReticleConfigForm == null || aimingReticleConfigForm.IsDisposed)
             {
+                Console.WriteLine("重新创建并打开参数配置面板。");
                 aimingReticleConfigForm = new AimingReticleConfigForm
                 {
                     MdiParent = this,
@@ -727,6 +748,11 @@ namespace DCS
                 };
                 aimingReticleConfigForm.AimingReticlePositionChange += new AimingReticleConfigForm.AimingReticlePositionChangeHandler(MoveAimingReticlePictureBox);
                 aimingReticleConfigForm.UnitChange += new AimingReticleConfigForm.UnitChangeHandler(ChangeUnitDisplay);
+                aimingReticleConfigForm.Show();
+            }
+            else
+            {
+                Console.WriteLine("直接打开了参数配置面板。");
                 aimingReticleConfigForm.Show();
             }
         }
@@ -819,6 +845,7 @@ namespace DCS
                 Console.WriteLine("当前时间时分：" + timeStr);
                 //string timeShow = "时间: " + timeStr;
                 this.timeRefreshLabel.Text = timeStr;
+                this.timeLabel.Text = "当前时间";
                 this.timeRefreshLabel.Refresh();
             }
             else if (type == 1)
@@ -831,6 +858,7 @@ namespace DCS
                 string timeShow = string.Format("{0:D2}:{1:D2}", HH, mm);
                 Console.WriteLine("工作总时长：" + timeShow);
                 this.timeRefreshLabel.Text = timeShow;
+                this.timeLabel.Text = "工作时长";
                 this.timeRefreshLabel.Refresh();
             }
         }

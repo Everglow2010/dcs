@@ -97,7 +97,7 @@ namespace DCS
                 ChangeProjectileCount?.Invoke(GlobalVars.ammoLeftNum);
                 MessageBox.Show("装弹数量已成功设置为：" + ammoLoadNumInt);
                 ammoLoadNumStr = "";
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {

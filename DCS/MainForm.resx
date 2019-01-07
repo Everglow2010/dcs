@@ -118,22 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="timeRefreshLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="timeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="timeRefreshLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 14.25pt, style=Bold</value>
+  <data name="timeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt, style=Bold</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="timeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="timeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1174, 16</value>
+  </data>
+  <data name="timeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="timeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 22</value>
+  </data>
+  <data name="timeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="timeLabel.Text" xml:space="preserve">
+    <value>当前时间</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.Name" xml:space="preserve">
+    <value>timeLabel</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timeRefreshLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="timeRefreshLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 15pt, style=Bold</value>
+  </data>
   <data name="timeRefreshLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="timeRefreshLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1163, 34</value>
+    <value>1180, 38</value>
   </data>
   <data name="timeRefreshLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 26</value>
+    <value>66, 27</value>
   </data>
   <data name="timeRefreshLabel.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -151,13 +187,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;timeRefreshLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>1138, 0</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -175,7 +214,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="logoButtonPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -205,7 +244,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;logoButtonPictureBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="laserControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -235,7 +274,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;laserControlPictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="servoControlPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -265,7 +304,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;servoControlPictureBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="safeStatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -301,7 +340,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;safeStatusLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="ammoLoadLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -334,13 +373,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLoadLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>992, 0</value>
+  </data>
+  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -358,13 +400,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>852, 0</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -382,13 +427,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>710, 0</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -406,13 +454,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>568, 0</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -430,13 +481,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>426, 0</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -454,13 +508,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>284, 0</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -478,13 +535,16 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 0</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 80</value>
@@ -502,7 +562,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="batteryLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -538,7 +598,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;batteryLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="batteryBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -565,7 +625,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;batteryBar.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="safeStatePitureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -595,7 +655,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;safeStatePitureBox.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="ammoLoadPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -628,7 +688,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLoadPictureBox.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="ammoLeftTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 21.75pt, style=Bold</value>
@@ -664,7 +724,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLeftTextBox.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="ammoLeftLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -700,7 +760,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;ammoLeftLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="parameterConfigLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -736,7 +796,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;parameterConfigLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="laserControlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -772,7 +832,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;laserControlLabel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="servoControlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -808,7 +868,7 @@
     <value>topBar</value>
   </data>
   <data name="&gt;&gt;servoControlLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="topBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -930,9 +990,6 @@
   <data name="aimingReticlePictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 177</value>
   </data>
-  <data name="aimingReticlePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
   <data name="aimingReticlePictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -982,7 +1039,7 @@
     <value>3</value>
   </data>
   <data name="dialPlatePictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+    <value>None</value>
   </data>
   <data name="dialPlatePictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -992,9 +1049,6 @@
   </data>
   <data name="dialPlatePictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 120</value>
-  </data>
-  <data name="dialPlatePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
   </data>
   <data name="dialPlatePictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

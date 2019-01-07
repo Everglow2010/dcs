@@ -83,6 +83,16 @@ namespace DCS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap AimingReticleLow {
+            get {
+                object obj = ResourceManager.GetObject("AimingReticleLow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap AmmoLoadedNotLoaded {
             get {
                 object obj = ResourceManager.GetObject("AmmoLoadedNotLoaded", resourceCulture);
@@ -136,6 +146,16 @@ namespace DCS.Properties {
         internal static System.Drawing.Bitmap DialPlate2 {
             get {
                 object obj = ResourceManager.GetObject("DialPlate2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap DialPlateLow {
+            get {
+                object obj = ResourceManager.GetObject("DialPlateLow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

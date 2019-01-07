@@ -31,8 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.topBar = new System.Windows.Forms.Panel();
+            this.timeLabel = new System.Windows.Forms.Label();
             this.timeRefreshLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.logoButtonPictureBox = new System.Windows.Forms.PictureBox();
+            this.laserControlPictureBox = new System.Windows.Forms.PictureBox();
+            this.servoControlPictureBox = new System.Windows.Forms.PictureBox();
             this.safeStatusLabel = new System.Windows.Forms.Label();
             this.ammoLoadLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.batteryLabel = new System.Windows.Forms.Label();
             this.batteryBar = new System.Windows.Forms.ProgressBar();
+            this.safeStatePitureBox = new System.Windows.Forms.PictureBox();
+            this.ammoLoadPictureBox = new System.Windows.Forms.PictureBox();
             this.ammoLeftTextBox = new System.Windows.Forms.TextBox();
             this.ammoLeftLabel = new System.Windows.Forms.Label();
             this.parameterConfigLabel = new System.Windows.Forms.Label();
@@ -52,14 +58,11 @@
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
             this.bottomPanel = new System.Windows.Forms.Panel();
+            this.timeSwitchPanel = new DCS.TimeSwitchPanel();
+            this.laserControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel();
             this.ammoLeftTextBoxBlinkTimer = new System.Windows.Forms.Timer(this.components);
             this.batterryQueryTimer = new System.Windows.Forms.Timer(this.components);
             this.timeRefreshTimer = new System.Windows.Forms.Timer(this.components);
-            this.logoButtonPictureBox = new System.Windows.Forms.PictureBox();
-            this.laserControlPictureBox = new System.Windows.Forms.PictureBox();
-            this.servoControlPictureBox = new System.Windows.Forms.PictureBox();
-            this.safeStatePitureBox = new System.Windows.Forms.PictureBox();
-            this.ammoLoadPictureBox = new System.Windows.Forms.PictureBox();
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
             this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -70,15 +73,13 @@
             this.pitchValueLabel = new System.Windows.Forms.Label();
             this.herizonLabel = new System.Windows.Forms.Label();
             this.herizonValueLabel = new System.Windows.Forms.Label();
-            this.timeSwitchPanel = new DCS.TimeSwitchPanel();
-            this.laserControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel();
             this.topBar.SuspendLayout();
-            this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoButtonPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servoControlPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).BeginInit();
+            this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).BeginInit();
             this.cameraViewImageBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).BeginInit();
@@ -89,6 +90,7 @@
             // topBar
             // 
             this.topBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.topBar.Controls.Add(this.timeLabel);
             this.topBar.Controls.Add(this.timeRefreshLabel);
             this.topBar.Controls.Add(this.label8);
             this.topBar.Controls.Add(this.logoButtonPictureBox);
@@ -115,6 +117,12 @@
             resources.ApplyResources(this.topBar, "topBar");
             this.topBar.Name = "topBar";
             // 
+            // timeLabel
+            // 
+            resources.ApplyResources(this.timeLabel, "timeLabel");
+            this.timeLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.timeLabel.Name = "timeLabel";
+            // 
             // timeRefreshLabel
             // 
             resources.ApplyResources(this.timeRefreshLabel, "timeRefreshLabel");
@@ -127,6 +135,29 @@
             this.label8.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
+            // 
+            // logoButtonPictureBox
+            // 
+            this.logoButtonPictureBox.Image = global::DCS.Properties.Resources.LOGOroundsquare;
+            resources.ApplyResources(this.logoButtonPictureBox, "logoButtonPictureBox");
+            this.logoButtonPictureBox.Name = "logoButtonPictureBox";
+            this.logoButtonPictureBox.TabStop = false;
+            this.logoButtonPictureBox.Click += new System.EventHandler(this.LogoButtonPictureBox_Click);
+            // 
+            // laserControlPictureBox
+            // 
+            this.laserControlPictureBox.Image = global::DCS.Properties.Resources.LaserOff;
+            resources.ApplyResources(this.laserControlPictureBox, "laserControlPictureBox");
+            this.laserControlPictureBox.Name = "laserControlPictureBox";
+            this.laserControlPictureBox.TabStop = false;
+            this.laserControlPictureBox.Click += new System.EventHandler(this.LaserControlPictureBox_Click);
+            // 
+            // servoControlPictureBox
+            // 
+            this.servoControlPictureBox.Image = global::DCS.Properties.Resources.SafetyOn;
+            resources.ApplyResources(this.servoControlPictureBox, "servoControlPictureBox");
+            this.servoControlPictureBox.Name = "servoControlPictureBox";
+            this.servoControlPictureBox.TabStop = false;
             // 
             // safeStatusLabel
             // 
@@ -195,6 +226,20 @@
             this.batteryBar.Name = "batteryBar";
             this.batteryBar.Value = 50;
             // 
+            // safeStatePitureBox
+            // 
+            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.SafetyOff;
+            resources.ApplyResources(this.safeStatePitureBox, "safeStatePitureBox");
+            this.safeStatePitureBox.Name = "safeStatePitureBox";
+            this.safeStatePitureBox.TabStop = false;
+            // 
+            // ammoLoadPictureBox
+            // 
+            this.ammoLoadPictureBox.Image = global::DCS.Properties.Resources.AmmoLoadedNotLoaded;
+            resources.ApplyResources(this.ammoLoadPictureBox, "ammoLoadPictureBox");
+            this.ammoLoadPictureBox.Name = "ammoLoadPictureBox";
+            this.ammoLoadPictureBox.TabStop = false;
+            // 
             // ammoLeftTextBox
             // 
             this.ammoLeftTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -252,6 +297,20 @@
             resources.ApplyResources(this.bottomPanel, "bottomPanel");
             this.bottomPanel.Name = "bottomPanel";
             // 
+            // timeSwitchPanel
+            // 
+            this.timeSwitchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.timeSwitchPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            resources.ApplyResources(this.timeSwitchPanel, "timeSwitchPanel");
+            this.timeSwitchPanel.Name = "timeSwitchPanel";
+            // 
+            // laserControlOnOffSwitchPanel
+            // 
+            this.laserControlOnOffSwitchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.laserControlOnOffSwitchPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            resources.ApplyResources(this.laserControlOnOffSwitchPanel, "laserControlOnOffSwitchPanel");
+            this.laserControlOnOffSwitchPanel.Name = "laserControlOnOffSwitchPanel";
+            // 
             // ammoLeftTextBoxBlinkTimer
             // 
             this.ammoLeftTextBoxBlinkTimer.Interval = 1000;
@@ -266,43 +325,6 @@
             // 
             this.timeRefreshTimer.Interval = 30000;
             this.timeRefreshTimer.Tick += new System.EventHandler(this.TimeRefreshTimer_Tick);
-            // 
-            // logoButtonPictureBox
-            // 
-            this.logoButtonPictureBox.Image = global::DCS.Properties.Resources.LOGOroundsquare;
-            resources.ApplyResources(this.logoButtonPictureBox, "logoButtonPictureBox");
-            this.logoButtonPictureBox.Name = "logoButtonPictureBox";
-            this.logoButtonPictureBox.TabStop = false;
-            this.logoButtonPictureBox.Click += new System.EventHandler(this.LogoButtonPictureBox_Click);
-            // 
-            // laserControlPictureBox
-            // 
-            this.laserControlPictureBox.Image = global::DCS.Properties.Resources.LaserOff;
-            resources.ApplyResources(this.laserControlPictureBox, "laserControlPictureBox");
-            this.laserControlPictureBox.Name = "laserControlPictureBox";
-            this.laserControlPictureBox.TabStop = false;
-            this.laserControlPictureBox.Click += new System.EventHandler(this.LaserControlPictureBox_Click);
-            // 
-            // servoControlPictureBox
-            // 
-            this.servoControlPictureBox.Image = global::DCS.Properties.Resources.SafetyOn;
-            resources.ApplyResources(this.servoControlPictureBox, "servoControlPictureBox");
-            this.servoControlPictureBox.Name = "servoControlPictureBox";
-            this.servoControlPictureBox.TabStop = false;
-            // 
-            // safeStatePitureBox
-            // 
-            this.safeStatePitureBox.Image = global::DCS.Properties.Resources.SafetyOff;
-            resources.ApplyResources(this.safeStatePitureBox, "safeStatePitureBox");
-            this.safeStatePitureBox.Name = "safeStatePitureBox";
-            this.safeStatePitureBox.TabStop = false;
-            // 
-            // ammoLoadPictureBox
-            // 
-            this.ammoLoadPictureBox.Image = global::DCS.Properties.Resources.AmmoLoadedNotLoaded;
-            resources.ApplyResources(this.ammoLoadPictureBox, "ammoLoadPictureBox");
-            this.ammoLoadPictureBox.Name = "ammoLoadPictureBox";
-            this.ammoLoadPictureBox.TabStop = false;
             // 
             // cameraViewImageBox
             // 
@@ -323,7 +345,7 @@
             // aimingReticlePictureBox
             // 
             this.aimingReticlePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.aimingReticlePictureBox.Image = global::DCS.Properties.Resources.AimingReticle;
+            this.aimingReticlePictureBox.Image = global::DCS.Properties.Resources.AimingReticleLow;
             resources.ApplyResources(this.aimingReticlePictureBox, "aimingReticlePictureBox");
             this.aimingReticlePictureBox.Name = "aimingReticlePictureBox";
             this.aimingReticlePictureBox.TabStop = false;
@@ -338,7 +360,7 @@
             // dialPlatePictureBox
             // 
             this.dialPlatePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.dialPlatePictureBox.BackgroundImage = global::DCS.Properties.Resources.DialPlate2;
+            this.dialPlatePictureBox.BackgroundImage = global::DCS.Properties.Resources.DialPlateLow;
             resources.ApplyResources(this.dialPlatePictureBox, "dialPlatePictureBox");
             this.dialPlatePictureBox.Name = "dialPlatePictureBox";
             this.dialPlatePictureBox.TabStop = false;
@@ -347,6 +369,7 @@
             // distaneLabel
             // 
             resources.ApplyResources(this.distaneLabel, "distaneLabel");
+            this.distaneLabel.BackColor = System.Drawing.Color.Transparent;
             this.distaneLabel.ForeColor = System.Drawing.Color.Red;
             this.distaneLabel.Name = "distaneLabel";
             // 
@@ -360,6 +383,7 @@
             // pitchLabel
             // 
             resources.ApplyResources(this.pitchLabel, "pitchLabel");
+            this.pitchLabel.BackColor = System.Drawing.Color.Transparent;
             this.pitchLabel.ForeColor = System.Drawing.Color.Red;
             this.pitchLabel.Name = "pitchLabel";
             // 
@@ -373,6 +397,7 @@
             // herizonLabel
             // 
             resources.ApplyResources(this.herizonLabel, "herizonLabel");
+            this.herizonLabel.BackColor = System.Drawing.Color.Transparent;
             this.herizonLabel.ForeColor = System.Drawing.Color.Red;
             this.herizonLabel.Name = "herizonLabel";
             // 
@@ -382,20 +407,6 @@
             this.herizonValueLabel.BackColor = System.Drawing.Color.Transparent;
             this.herizonValueLabel.ForeColor = System.Drawing.Color.Red;
             this.herizonValueLabel.Name = "herizonValueLabel";
-            // 
-            // timeSwitchPanel
-            // 
-            this.timeSwitchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.timeSwitchPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            resources.ApplyResources(this.timeSwitchPanel, "timeSwitchPanel");
-            this.timeSwitchPanel.Name = "timeSwitchPanel";
-            // 
-            // laserControlOnOffSwitchPanel
-            // 
-            this.laserControlOnOffSwitchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.laserControlOnOffSwitchPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            resources.ApplyResources(this.laserControlOnOffSwitchPanel, "laserControlOnOffSwitchPanel");
-            this.laserControlOnOffSwitchPanel.Name = "laserControlOnOffSwitchPanel";
             // 
             // MainForm
             // 
@@ -412,12 +423,12 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topBar.ResumeLayout(false);
             this.topBar.PerformLayout();
-            this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoButtonPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserControlPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servoControlPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.safeStatePitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammoLoadPictureBox)).EndInit();
+            this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).EndInit();
             this.cameraViewImageBox.ResumeLayout(false);
             this.cameraViewImageBox.PerformLayout();
@@ -472,6 +483,7 @@
         private System.Windows.Forms.Label timeRefreshLabel;
         private System.Windows.Forms.Timer timeRefreshTimer;
         private TimeSwitchPanel timeSwitchPanel;
+        private System.Windows.Forms.Label timeLabel;
     }
 }
 

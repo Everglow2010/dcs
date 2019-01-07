@@ -727,7 +727,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(420, 680);
+            this.ClientSize = new System.Drawing.Size(425, 680);
             this.ControlBox = false;
             this.Controls.Add(this.unitQuitButton);
             this.Controls.Add(this.unitApplyButton);
@@ -774,7 +774,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(860, 0);
+            this.Location = new System.Drawing.Point(855, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AimingReticleConfigForm";
