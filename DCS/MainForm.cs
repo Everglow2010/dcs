@@ -246,6 +246,9 @@ namespace DCS
             this.dialPlatePictureBox.Invalidate();
             //更新俯仰角指针图像(已弃用)
             //this.pitchAngleRulerPictureBox.Invalidate();
+            //更新瞄准分划位置
+            int focalIndex = GlobalVars.focalDistanceMultiple - 1;
+            this.aimingReticlePictureBox.Location = new Point(GlobalVars.aimingReticleConfigs[focalIndex].posX, GlobalVars.aimingReticleConfigs[focalIndex].posY);
         }
 
 
@@ -404,8 +407,17 @@ namespace DCS
                                     Console.WriteLine("射弹计数：" + GlobalVars.projectileCount);
 
                                     //将Byte9转为当前焦距状态
-                                    GlobalVars.focalDistanceMultiple = receivedBytes[8];
-                                    Console.WriteLine("当前焦距状态：" + GlobalVars.focalDistanceMultiple);
+                                    if (receivedBytes[8] >=1 && receivedBytes[8] <= 20)
+                                    {
+                                        GlobalVars.focalDistanceMultiple = receivedBytes[8];
+                                        Console.WriteLine("当前焦距状态：" + GlobalVars.focalDistanceMultiple);
+                                    }
+                                    else
+                                    {
+                                        GlobalVars.focalDistanceMultiple = 10;
+                                        Console.WriteLine("焦距状态数值出错!默认为第10级！");
+                                    }
+
 
                                     //将Byte10与Byte11转为距离数值
                                     GlobalVars.distanceMeter = BitConverter.ToUInt16(receivedBytes, 9)/10.0;
