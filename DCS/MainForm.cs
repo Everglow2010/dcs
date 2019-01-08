@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections;
-using System.Reflection;
-using System.ComponentModel;
 using System.IO.Ports;
 using Emgu.CV;
 using System.Collections.Generic;
 using System.Drawing;
-using static DCS.AmmoLoadConfigForm;
 
 namespace DCS
 {
@@ -17,18 +13,20 @@ namespace DCS
         public const int RECEIVE_DATA_PACKAGE_SIZE = 12;
         //协议发送的数据包的字节大小
         public const int SEND_DATA_PACKAGE_SIZE = 7;
-
+        //发送数据的间隔毫秒数
+        public const int SEND_DATA_INTERVAL = 10;
         public MainForm()
         {
             InitializeComponent();
+            dataSendTimerNew = new System.Timers.Timer(SEND_DATA_INTERVAL);
+            dataSendTimerNew.Elapsed += new System.Timers.ElapsedEventHandler(DataSendTimer_Tick);
+
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-
-
         }
-
+        private System.Timers.Timer dataSendTimerNew;
         private AimingReticleConfigForm aimingReticleConfigForm;
         private AmmoLoadConfigForm ammoLoadConfigForm;
         private void MainForm_Load(object sender, EventArgs e)
@@ -88,7 +86,11 @@ namespace DCS
             Console.WriteLine("当前电池剩余百分比为：" + percent);
             this.batteryBar.Value = percent;
             this.batteryBar.Refresh();
-
+            //初始化瞄准分划位置
+            this.aimingReticleHorizontalPictureBox.Location = new Point(576,358);
+            int aimingVerticalX = this.aimingReticleHorizontalPictureBox.Location.X + this.aimingReticleHorizontalPictureBox.Width / 2 - 2;
+            int aimingVerticalY = this.aimingReticleHorizontalPictureBox.Location.Y + this.aimingReticleHorizontalPictureBox.Height;
+            this.aimingReticleVerticalPictureBox.Location = new Point(aimingVerticalX, aimingVerticalY);
             //读取并初始化20个焦距档位对应的瞄准分划大小和位置
             for (int i = 0; i < 20; i++)
             {
@@ -133,7 +135,7 @@ namespace DCS
                 MdiParent = this,
                 Parent = this.cameraViewImageBox
             };
-            ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
+            ammoLoadConfigForm.ChangeProjectileCount += new AmmoLoadConfigForm.ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
 
             //启动emgucv视频捕捉显示
             Console.WriteLine(GlobalVars.cameraRTSPPath);
@@ -170,7 +172,7 @@ namespace DCS
                 Console.WriteLine("serialPort is opened.");
             }
             //启动数据发送定时器
-            dataSendTimer.Start();
+            dataSendTimerNew.Start();
             batterryQueryTimer.Start();
             timeRefreshTimer.Start();
             //this.Invoke(flushAllUI);
@@ -248,7 +250,12 @@ namespace DCS
             //this.pitchAngleRulerPictureBox.Invalidate();
             //更新瞄准分划位置
             int focalIndex = GlobalVars.focalDistanceMultiple - 1;
-            this.aimingReticlePictureBox.Location = new Point(GlobalVars.aimingReticleConfigs[focalIndex].posX, GlobalVars.aimingReticleConfigs[focalIndex].posY);
+            int posX = GlobalVars.aimingReticleConfigs[focalIndex].posX;
+            int posY = GlobalVars.aimingReticleConfigs[focalIndex].posY;
+            this.aimingReticleHorizontalPictureBox.Location = new Point(posX, posY);
+            int aimingVerticalX = posX + this.aimingReticleHorizontalPictureBox.Width / 2 - 2;
+            int aimingVerticalY = posY + this.aimingReticleHorizontalPictureBox.Height;
+            this.aimingReticleVerticalPictureBox.Location = new Point(aimingVerticalX, aimingVerticalY);
         }
 
 
@@ -427,13 +434,6 @@ namespace DCS
                                     this.Invoke(flushAllUI);
                                 }
                             }
-                            //else
-                            //{//数据包帧头第一字节正确而第二字节不正确
-                            //    buffer.RemoveAt(0);
-                            //    buffer.RemoveAt(1);
-                            //    Console.WriteLine("数据帧头第一字节正确而第二字节不正确，丢弃前两字节");
-                            //    continue;
-                            //}
                         }
                         else
                         {//帧头不正确时
@@ -560,12 +560,6 @@ namespace DCS
             this.camCapter.Stop();
         }
 
-        private void ParameterConfigButton_Click(object sender, EventArgs e)
-        {
-            AimingReticleConfigForm0 aimingReticleConfigForm = new AimingReticleConfigForm0();
-            aimingReticleConfigForm.ShowDialog();
-        }
-
         //俯仰角度标尺的指针
         private Image pitchAnglePointerImg = Properties.Resources.pitchAnglePointer;
         //方位角度表盘的指针
@@ -650,7 +644,7 @@ namespace DCS
                     Parent = this.cameraViewImageBox,
                     TopMost = true
                 };
-                ammoLoadConfigForm.ChangeProjectileCount += new ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
+                ammoLoadConfigForm.ChangeProjectileCount += new AmmoLoadConfigForm.ChangeProjectileCountHandler(ChangeAmmoLeftTextBox);
                 ammoLoadConfigForm.Show();
             }
             else if (ammoLoadConfigForm.Visible == true)
@@ -747,6 +741,11 @@ namespace DCS
         }
 
 
+        /// <summary>
+        /// 系统设置标签按钮点击时间函数，显示系统设置面板
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ParameterConfigLabel_Click(object sender, EventArgs e)
         {
             if (aimingReticleConfigForm == null || aimingReticleConfigForm.IsDisposed)
@@ -774,8 +773,10 @@ namespace DCS
         /// <param name="pos"></param>
         public void MoveAimingReticlePictureBox(Point pos)
         {
-            this.aimingReticlePictureBox.Location = pos;
-            this.aimingReticlePictureBox.Refresh();
+            this.aimingReticleHorizontalPictureBox.Location = pos;
+            int aimingVerticalX = pos.X + this.aimingReticleHorizontalPictureBox.Width / 2 - 2;
+            int aimingVerticalY = pos.Y + this.aimingReticleHorizontalPictureBox.Height;
+            this.aimingReticleVerticalPictureBox.Location = new Point(aimingVerticalX, aimingVerticalY);
         }
 
         /// <summary>

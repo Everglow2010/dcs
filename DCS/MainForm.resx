@@ -117,15 +117,327 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;timeLabel.Name" xml:space="preserve">
+    <value>timeLabel</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;timeLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.Name" xml:space="preserve">
+    <value>timeRefreshLabel</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;timeRefreshLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.Name" xml:space="preserve">
+    <value>logoButtonPictureBox</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;logoButtonPictureBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.Name" xml:space="preserve">
+    <value>laserControlPictureBox</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;laserControlPictureBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.Name" xml:space="preserve">
+    <value>servoControlPictureBox</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;servoControlPictureBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.Name" xml:space="preserve">
+    <value>safeStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;safeStatusLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.Name" xml:space="preserve">
+    <value>ammoLoadLabel</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.Name" xml:space="preserve">
+    <value>batteryLabel</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;batteryLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.Name" xml:space="preserve">
+    <value>batteryBar</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;batteryBar.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.Name" xml:space="preserve">
+    <value>safeStatePitureBox</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;safeStatePitureBox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.Name" xml:space="preserve">
+    <value>ammoLoadPictureBox</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLoadPictureBox.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.Name" xml:space="preserve">
+    <value>ammoLeftTextBox</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftTextBox.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.Name" xml:space="preserve">
+    <value>ammoLeftLabel</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;ammoLeftLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.Name" xml:space="preserve">
+    <value>parameterConfigLabel</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;parameterConfigLabel.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.Name" xml:space="preserve">
+    <value>laserControlLabel</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;laserControlLabel.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.Name" xml:space="preserve">
+    <value>servoControlLabel</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.Parent" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;servoControlLabel.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="topBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="topBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="topBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 80</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="topBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;topBar.Name" xml:space="preserve">
+    <value>topBar</value>
+  </data>
+  <data name="&gt;&gt;topBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;topBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;topBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="timeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="timeLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 12pt, style=Bold</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="timeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -870,36 +1182,57 @@
   <data name="&gt;&gt;servoControlLabel.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="topBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="topBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="topBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 80</value>
-  </data>
-  <data name="topBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;topBar.Name" xml:space="preserve">
-    <value>topBar</value>
-  </data>
-  <data name="&gt;&gt;topBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;topBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;topBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="serialPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="dataSendTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>124, 17</value>
-  </metadata>
+  <data name="&gt;&gt;timeSwitchPanel.Name" xml:space="preserve">
+    <value>timeSwitchPanel</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.Type" xml:space="preserve">
+    <value>DCS.TimeSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;timeSwitchPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Name" xml:space="preserve">
+    <value>laserControlOnOffSwitchPanel</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Type" xml:space="preserve">
+    <value>DCS.OnOffSwitchPanel, DCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;laserControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="bottomPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="bottomPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 720</value>
+  </data>
+  <data name="bottomPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Name" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="timeSwitchPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1138, 0</value>
   </data>
@@ -948,30 +1281,6 @@
   <data name="&gt;&gt;laserControlOnOffSwitchPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="bottomPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="bottomPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 720</value>
-  </data>
-  <data name="bottomPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Name" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="ammoLeftTextBoxBlinkTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
   </metadata>
@@ -981,29 +1290,65 @@
   <metadata name="timeRefreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>654, 17</value>
   </metadata>
-  <data name="aimingReticlePictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="aimingReticleHorizontalPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="aimingReticlePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 235</value>
+  <data name="aimingReticleHorizontalPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>576, 358</value>
   </data>
-  <data name="aimingReticlePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 177</value>
+  <data name="aimingReticleHorizontalPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="aimingReticlePictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="aimingReticleHorizontalPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 4</value>
   </data>
-  <data name="&gt;&gt;aimingReticlePictureBox.Name" xml:space="preserve">
-    <value>aimingReticlePictureBox</value>
+  <data name="aimingReticleHorizontalPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="&gt;&gt;aimingReticlePictureBox.Type" xml:space="preserve">
+  <data name="aimingReticleHorizontalPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;aimingReticleHorizontalPictureBox.Name" xml:space="preserve">
+    <value>aimingReticleHorizontalPictureBox</value>
+  </data>
+  <data name="&gt;&gt;aimingReticleHorizontalPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;aimingReticlePictureBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;aimingReticleHorizontalPictureBox.Parent" xml:space="preserve">
     <value>cameraViewImageBox</value>
   </data>
-  <data name="&gt;&gt;aimingReticlePictureBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;aimingReticleHorizontalPictureBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="aimingReticleVerticalPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="aimingReticleVerticalPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>638, 362</value>
+  </data>
+  <data name="aimingReticleVerticalPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="aimingReticleVerticalPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 64</value>
+  </data>
+  <data name="aimingReticleVerticalPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="aimingReticleVerticalPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;aimingReticleVerticalPictureBox.Name" xml:space="preserve">
+    <value>aimingReticleVerticalPictureBox</value>
+  </data>
+  <data name="&gt;&gt;aimingReticleVerticalPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aimingReticleVerticalPictureBox.Parent" xml:space="preserve">
+    <value>cameraViewImageBox</value>
+  </data>
+  <data name="&gt;&gt;aimingReticleVerticalPictureBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="logoPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1036,7 +1381,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;logoPictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="dialPlatePictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -1063,7 +1408,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;dialPlatePictureBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="distaneLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1096,7 +1441,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;distaneLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="distanceValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1129,7 +1474,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;distanceValueLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pitchLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1162,7 +1507,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="pitchValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1195,7 +1540,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;pitchValueLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="herizonLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1228,7 +1573,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;herizonLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="herizonValueLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1261,7 +1606,7 @@
     <value>cameraViewImageBox</value>
   </data>
   <data name="&gt;&gt;herizonValueLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="cameraViewImageBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1313,12 +1658,6 @@
   </data>
   <data name="&gt;&gt;serialPort.Type" xml:space="preserve">
     <value>System.IO.Ports.SerialPort, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataSendTimer.Name" xml:space="preserve">
-    <value>dataSendTimer</value>
-  </data>
-  <data name="&gt;&gt;dataSendTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ammoLeftTextBoxBlinkTimer.Name" xml:space="preserve">
     <value>ammoLeftTextBoxBlinkTimer</value>

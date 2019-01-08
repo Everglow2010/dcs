@@ -248,6 +248,8 @@
     <Content Include="Resources\UIV2\ServoControlTurnOnButtonImage.png" />
     <Content Include="Resources\UIV2\YellowCornor.png" />
     <None Include="Resources\YellowCornor.bmp" />
+    <Content Include="Resources\UIV2\aimingReticleHorizontal1.png" />
+    <Content Include="Resources\UIV2\aimingReticleVertical1.png" />
     <Content Include="Resources\仪表盘指针.png" />
     <Content Include="Resources\仪表盘表盘.png" />
     <Content Include="Resources\保险关.png" />
@@ -258,6 +260,8 @@
     <Content Include="Resources\开.png" />
     <Content Include="Resources\未装.png" />
     <Content Include="Resources\监控背景画面.jpg" />
+    <Content Include="Resources\瞄准分划横向4.png" />
+    <Content Include="Resources\瞄准分划纵向.png" />
     <Content Include="Resources\瞄准划分.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

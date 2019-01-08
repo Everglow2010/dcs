@@ -56,7 +56,6 @@
             this.laserControlLabel = new System.Windows.Forms.Label();
             this.servoControlLabel = new System.Windows.Forms.Label();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
-            this.dataSendTimer = new System.Windows.Forms.Timer(this.components);
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.timeSwitchPanel = new DCS.TimeSwitchPanel();
             this.laserControlOnOffSwitchPanel = new DCS.OnOffSwitchPanel();
@@ -64,7 +63,8 @@
             this.batterryQueryTimer = new System.Windows.Forms.Timer(this.components);
             this.timeRefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.cameraViewImageBox = new Emgu.CV.UI.ImageBox();
-            this.aimingReticlePictureBox = new System.Windows.Forms.PictureBox();
+            this.aimingReticleHorizontalPictureBox = new System.Windows.Forms.PictureBox();
+            this.aimingReticleVerticalPictureBox = new System.Windows.Forms.PictureBox();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.dialPlatePictureBox = new System.Windows.Forms.PictureBox();
             this.distaneLabel = new System.Windows.Forms.Label();
@@ -82,7 +82,8 @@
             this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).BeginInit();
             this.cameraViewImageBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aimingReticleHorizontalPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aimingReticleVerticalPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -285,11 +286,6 @@
             this.serialPort.ReceivedBytesThreshold = 12;
             this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort_DataReceived);
             // 
-            // dataSendTimer
-            // 
-            this.dataSendTimer.Interval = 10;
-            this.dataSendTimer.Tick += new System.EventHandler(this.DataSendTimer_Tick);
-            // 
             // bottomPanel
             // 
             this.bottomPanel.Controls.Add(this.timeSwitchPanel);
@@ -328,7 +324,8 @@
             // 
             // cameraViewImageBox
             // 
-            this.cameraViewImageBox.Controls.Add(this.aimingReticlePictureBox);
+            this.cameraViewImageBox.Controls.Add(this.aimingReticleHorizontalPictureBox);
+            this.cameraViewImageBox.Controls.Add(this.aimingReticleVerticalPictureBox);
             this.cameraViewImageBox.Controls.Add(this.logoPictureBox);
             this.cameraViewImageBox.Controls.Add(this.dialPlatePictureBox);
             this.cameraViewImageBox.Controls.Add(this.distaneLabel);
@@ -342,13 +339,21 @@
             this.cameraViewImageBox.Name = "cameraViewImageBox";
             this.cameraViewImageBox.TabStop = false;
             // 
-            // aimingReticlePictureBox
+            // aimingReticleHorizontalPictureBox
             // 
-            this.aimingReticlePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.aimingReticlePictureBox.Image = global::DCS.Properties.Resources.AimingReticleLow;
-            resources.ApplyResources(this.aimingReticlePictureBox, "aimingReticlePictureBox");
-            this.aimingReticlePictureBox.Name = "aimingReticlePictureBox";
-            this.aimingReticlePictureBox.TabStop = false;
+            this.aimingReticleHorizontalPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.aimingReticleHorizontalPictureBox.Image = global::DCS.Properties.Resources.aimingReticleHorizontal1;
+            resources.ApplyResources(this.aimingReticleHorizontalPictureBox, "aimingReticleHorizontalPictureBox");
+            this.aimingReticleHorizontalPictureBox.Name = "aimingReticleHorizontalPictureBox";
+            this.aimingReticleHorizontalPictureBox.TabStop = false;
+            // 
+            // aimingReticleVerticalPictureBox
+            // 
+            this.aimingReticleVerticalPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.aimingReticleVerticalPictureBox.Image = global::DCS.Properties.Resources.aimingReticleVertical1;
+            resources.ApplyResources(this.aimingReticleVerticalPictureBox, "aimingReticleVerticalPictureBox");
+            this.aimingReticleVerticalPictureBox.Name = "aimingReticleVerticalPictureBox";
+            this.aimingReticleVerticalPictureBox.TabStop = false;
             // 
             // logoPictureBox
             // 
@@ -432,7 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cameraViewImageBox)).EndInit();
             this.cameraViewImageBox.ResumeLayout(false);
             this.cameraViewImageBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aimingReticlePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aimingReticleHorizontalPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aimingReticleVerticalPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dialPlatePictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -453,9 +459,7 @@
         private System.Windows.Forms.Label batteryLabel;
         private System.IO.Ports.SerialPort serialPort;
         private System.Windows.Forms.PictureBox dialPlatePictureBox;
-        private System.Windows.Forms.PictureBox aimingReticlePictureBox;
         private Emgu.CV.UI.ImageBox cameraViewImageBox;
-        private System.Windows.Forms.Timer dataSendTimer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -484,6 +488,8 @@
         private System.Windows.Forms.Timer timeRefreshTimer;
         private TimeSwitchPanel timeSwitchPanel;
         private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.PictureBox aimingReticleHorizontalPictureBox;
+        private System.Windows.Forms.PictureBox aimingReticleVerticalPictureBox;
     }
 }
 
