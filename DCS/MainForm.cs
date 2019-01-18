@@ -224,7 +224,7 @@ namespace DCS
                 this.ammoLeftTextBoxBlinkTimer.Start();
             }
             //更新距离数值显示值
-            string distanceStr = string.Format("{0:D4}m", GlobalVars.distanceMeter);
+            string distanceStr = string.Format("{0:0000.0}m", GlobalVars.distanceMeter);
             this.distanceValueLabel.Text = distanceStr;
             //更新俯仰角度显示值和水平数值显示值            
             //this.pitchAngleValueLabel.Text = Convert.ToString(GlobalVars.pitchAngleWithMil) + "mil";
@@ -327,112 +327,109 @@ namespace DCS
 
                     while (buffer.Count >= RECEIVE_DATA_PACKAGE_SIZE)
                     {
-                        Byte[] receivedBytes = new Byte[RECEIVE_DATA_PACKAGE_SIZE];//暂存一次接收的一个完整数据包
                         if ((buffer[0] == 0xFF) && (buffer[1] == 0xC3))//数据帧头检测是否出错
                         {
-                            //if (buffer[1] == 0xC3)//数据帧头第二字节标志位检查
+                            Byte[] receivedBytes = new Byte[RECEIVE_DATA_PACKAGE_SIZE];//暂存一次接收的一个完整数据包
+                            Console.WriteLine("数据帧头正确，准备解析数据包");
+                            buffer.CopyTo(0, receivedBytes, 0, RECEIVE_DATA_PACKAGE_SIZE);//取出数据包
+                            string strReceived = BitConverter.ToString(receivedBytes);
+                            Console.WriteLine("取出的数据包原始数据为：" + strReceived);
+                            bool checkSumIsRight = CalculateChecksumForReceivedData(receivedBytes);
+                            if (!checkSumIsRight)//校验不正确
                             {
-                                Console.WriteLine("数据帧头正确，准备解析数据包");
-                                buffer.CopyTo(0, receivedBytes, 0, RECEIVE_DATA_PACKAGE_SIZE);//取出数据包
-                                string strReceived = BitConverter.ToString(receivedBytes);
-                                Console.WriteLine("取出的数据包原始数据为：" + strReceived);
-                                bool checkSumIsRight = CalculateChecksumForReceivedData(receivedBytes);
-                                if (!checkSumIsRight)//校验不正确
+                                buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
+                                Console.WriteLine("数据包校验和出错！丢弃整个数据包");
+                                continue;
+                            }
+                            else
+                            {
+                                //读取完一个包，删除缓存中这个包数据
+                                buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
+                                //解析数据并更新界面控件显示参数
+                                //第三字节，控制各种指示灯
+                                byte byte3 = receivedBytes[2];
+
+                                //辅助瞄准Bit7、Bit6：00灰色，11绿色
+                                if ((byte3 & 192) == 192) GlobalVars.laserControlSwitchState = true;
+                                else if ((byte3 & 192) == 0) GlobalVars.laserControlSwitchState = false;
+                                else
                                 {
-                                    buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
-                                    Console.WriteLine("数据包校验和出错！丢弃整个数据包");
-                                    continue;
+                                    Console.WriteLine("辅助瞄准指示位出错");
+                                }
+
+                                //伺服使能Bit5、Bit4：00红色，11绿色
+                                if ((byte3 & 48) == 48) GlobalVars.servoControlSwitchState = true;
+                                else if ((byte3 & 48) == 0) GlobalVars.servoControlSwitchState = false;
+                                else
+                                {
+                                    Console.WriteLine("伺服使能指示位出错");
+                                }
+
+                                //射击保险Bit3、Bit2：00红，11绿
+                                if ((byte3 & 12) == 12) GlobalVars.safeState = true;
+                                else if ((byte3 & 12) == 0) GlobalVars.safeState = false;
+                                else
+                                {
+                                    Console.WriteLine("射击保险指示位出错");
+                                }
+
+                                //装填状态Bit1、Bit0：00红/红，10绿/红，11绿/绿
+                                switch (byte3 & 3)
+                                {
+                                    case 3:
+                                        GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_LOADED;
+                                        break;
+                                    case 2:
+                                        GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_OPEN;
+                                        break;
+                                    case 0:
+                                        GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
+                                        break;
+
+                                    default:
+                                        Console.WriteLine("装填状态指示位出错");
+                                        GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
+                                        break;
+                                }
+                                //通信协议中的Byte4与Byte5：方位位置值L和方位位置值H
+                                byte[] bytes45 = new byte[2] { receivedBytes[3], receivedBytes[4] };
+
+                                //将Byte4与Byte5转为方位位置数值(同时记录mil值和对应的degree值)
+                                GlobalVars.dialPlateAngleWithMil = BitConverter.ToUInt16(receivedBytes, 3)/10.0;
+                                Console.WriteLine("方位位置值mil:" + GlobalVars.dialPlateAngleWithMil);
+                                GlobalVars.dialPlateAngleWithDegree = (GlobalVars.dialPlateAngleWithMil / 6000.0) * 360.0;
+                                Console.WriteLine("方位位置值degree：" + GlobalVars.dialPlateAngleWithDegree);
+
+                                //将Byte6与Byte7转为俯仰位置值的数值(同时记录mil值和对应的degree值)
+                                GlobalVars.pitchAngleWithMil = (BitConverter.ToUInt16(receivedBytes, 5) - 32768)/10.0;
+                                GlobalVars.pitchAngleWithDegree = ((GlobalVars.pitchAngleWithMil + 166.7) / 1166.7 * 70.0 - 10);
+                                Console.WriteLine("俯仰位置值mil：" + GlobalVars.pitchAngleWithMil);
+                                Console.WriteLine("俯仰位置值degree：" + GlobalVars.pitchAngleWithDegree);
+
+                                //将Byte8转为射弹计数，同时计算剩余弹量
+                                GlobalVars.projectileCount = receivedBytes[7];
+                                GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
+                                Console.WriteLine("射弹计数：" + GlobalVars.projectileCount);
+
+                                //将Byte9转为当前焦距状态
+                                if (receivedBytes[8] >=1 && receivedBytes[8] <= 20)
+                                {
+                                    GlobalVars.focalDistanceMultiple = receivedBytes[8];
+                                    Console.WriteLine("当前焦距状态：" + GlobalVars.focalDistanceMultiple);
                                 }
                                 else
                                 {
-                                    //读取完一个包，删除缓存中这个包数据
-                                    buffer.RemoveRange(0, RECEIVE_DATA_PACKAGE_SIZE);
-                                    //解析数据并更新界面控件显示参数
-                                    //第三字节，控制各种指示灯
-                                    byte byte3 = receivedBytes[2];
-
-                                    //辅助瞄准Bit7、Bit6：00灰色，11绿色
-                                    if ((byte3 & 192) == 192) GlobalVars.laserControlSwitchState = true;
-                                    else if ((byte3 & 192) == 0) GlobalVars.laserControlSwitchState = false;
-                                    else
-                                    {
-                                        Console.WriteLine("辅助瞄准指示位出错");
-                                    }
-
-                                    //伺服使能Bit5、Bit4：00红色，11绿色
-                                    if ((byte3 & 48) == 48) GlobalVars.servoControlSwitchState = true;
-                                    else if ((byte3 & 48) == 0) GlobalVars.servoControlSwitchState = false;
-                                    else
-                                    {
-                                        Console.WriteLine("伺服使能指示位出错");
-                                    }
-
-                                    //射击保险Bit3、Bit2：00红，11绿
-                                    if ((byte3 & 12) == 12) GlobalVars.safeState = true;
-                                    else if ((byte3 & 12) == 0) GlobalVars.safeState = false;
-                                    else
-                                    {
-                                        Console.WriteLine("射击保险指示位出错");
-                                    }
-
-                                    //装填状态Bit1、Bit0：00红/红，10绿/红，11绿/绿
-                                    switch (byte3 & 3)
-                                    {
-                                        case 3:
-                                            GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_LOADED;
-                                            break;
-                                        case 2:
-                                            GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_OPEN;
-                                            break;
-                                        case 0:
-                                            GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
-                                            break;
-
-                                        default:
-                                            Console.WriteLine("装填状态指示位出错");
-                                            GlobalVars.ammoLoadState = GlobalVars.AMMOLOAD_NOT_LOADED;
-                                            break;
-                                    }
-                                    //通信协议中的Byte4与Byte5：方位位置值L和方位位置值H
-                                    byte[] bytes45 = new byte[2] { receivedBytes[3], receivedBytes[4] };
-
-                                    //将Byte4与Byte5转为方位位置数值(同时记录mil值和对应的degree值)
-                                    GlobalVars.dialPlateAngleWithMil = BitConverter.ToUInt16(receivedBytes, 3)/10.0;
-                                    Console.WriteLine("方位位置值mil:" + GlobalVars.dialPlateAngleWithMil);
-                                    GlobalVars.dialPlateAngleWithDegree = (GlobalVars.dialPlateAngleWithMil / 6000.0) * 360.0;
-                                    Console.WriteLine("方位位置值degree：" + GlobalVars.dialPlateAngleWithDegree);
-
-                                    //将Byte6与Byte7转为俯仰位置值的数值(同时记录mil值和对应的degree值)
-                                    GlobalVars.pitchAngleWithMil = (BitConverter.ToUInt16(receivedBytes, 5) - 32768)/10.0;
-                                    GlobalVars.pitchAngleWithDegree = ((GlobalVars.pitchAngleWithMil + 166.7) / 1166.7 * 70.0 - 10);
-                                    Console.WriteLine("俯仰位置值mil：" + GlobalVars.pitchAngleWithMil);
-                                    Console.WriteLine("俯仰位置值degree：" + GlobalVars.pitchAngleWithDegree);
-
-                                    //将Byte8转为射弹计数，同时计算剩余弹量
-                                    GlobalVars.projectileCount = receivedBytes[7];
-                                    GlobalVars.ammoLeftNum = GlobalVars.ammoLoadNum - GlobalVars.projectileCount;
-                                    Console.WriteLine("射弹计数：" + GlobalVars.projectileCount);
-
-                                    //将Byte9转为当前焦距状态
-                                    if (receivedBytes[8] >=1 && receivedBytes[8] <= 20)
-                                    {
-                                        GlobalVars.focalDistanceMultiple = receivedBytes[8];
-                                        Console.WriteLine("当前焦距状态：" + GlobalVars.focalDistanceMultiple);
-                                    }
-                                    else
-                                    {
-                                        GlobalVars.focalDistanceMultiple = 10;
-                                        Console.WriteLine("焦距状态数值出错!默认为第10级！");
-                                    }
-
-
-                                    //将Byte10与Byte11转为距离数值
-                                    GlobalVars.distanceMeter = BitConverter.ToUInt16(receivedBytes, 9)/10.0;
-                                    Console.WriteLine("距离数值(米)：" + GlobalVars.distanceMeter);
-
-                                    //调用委托更新UI界面显示                                    
-                                    this.Invoke(flushAllUI);
+                                    GlobalVars.focalDistanceMultiple = 10;
+                                    Console.WriteLine("焦距状态数值出错!默认为第10级！");
                                 }
+
+
+                                //将Byte10与Byte11转为距离数值
+                                GlobalVars.distanceMeter = BitConverter.ToUInt16(receivedBytes, 9)/10.0;
+                                Console.WriteLine("距离数值(米)：" + GlobalVars.distanceMeter);
+
+                                //调用委托更新UI界面显示                                    
+                                this.Invoke(flushAllUI);
                             }
                         }
                         else
