@@ -26,6 +26,7 @@ namespace DCS
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
         }
+        //数据发送计时器
         private System.Timers.Timer dataSendTimerNew;
         private AimingReticleConfigForm aimingReticleConfigForm;
         private AmmoLoadConfigForm ammoLoadConfigForm;
@@ -46,7 +47,8 @@ namespace DCS
             //GlobalVars.userName = "admin";
             //GlobalVars.userPassword = "abcd1234";
             //GlobalVars.cameraRTSPPath = "rtsp://" + GlobalVars.userName + ":" + GlobalVars.userPassword + "@" + GlobalVars.cameraIP + ":" + GlobalVars.cameraPort + "/mpeg4/ch33/main/av_stream";
-
+            //GlobalVars.cameraRTSPPath = "E:\\The_beech_forest_hd_stock_video.mp4";
+            //GlobalVars.cameraRTSPPath = "rtsp://admin:abcd1234@10.108.14.130:554/mpeg4/ch33/main/av_stream";
             GlobalVars.servoControlSwitchState = true;//伺服使能开关默认为开
             GlobalVars.laserControlSwitchState = false;//辅助瞄准开关默认为关闭
 
@@ -266,10 +268,12 @@ namespace DCS
         {
             string videoPath = GlobalVars.cameraRTSPPath;
             Console.WriteLine(videoPath);
+            Console.WriteLine("初始化构造新的camCapter...");
             camCapter = new VideoCapture(videoPath);
             camCapter.ImageGrabbed += Cam_ImageGrabbed;
             camCapter.Start();
         }
+
         /// <summary>
         /// Emgcv捕捉视频流每一帧显示在窗口上
         /// </summary>
@@ -280,17 +284,21 @@ namespace DCS
         {
             try
             {
-                camCapter.Retrieve(frame);
                 if (camCapter != null)
                 {
+                    //camCapter.Retrieve(frame),获取出抓取到地一帧图像
                     if (!camCapter.Retrieve(frame))
                     {
                         frame.Dispose();
                         return;
                     }
-                    if (frame.IsEmpty) return;
-                    //Image<Bgr, Byte> image = frame.ToImage<Bgr,Byte>();
-                    this.cameraViewImageBox.Image = frame;
+                    else
+                    {
+                        if (frame == null) return;
+                        if (frame.IsEmpty) return;
+                        //将图片显示到视频播放框中
+                        this.cameraViewImageBox.Image = frame;
+                    }
                 }
             }
             catch (Exception)
@@ -299,7 +307,6 @@ namespace DCS
                 throw;
             }
         }
-
 
         /// <summary>
         /// 串口接收数据的处理过程
