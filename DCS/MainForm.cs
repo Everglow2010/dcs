@@ -15,12 +15,16 @@ namespace DCS
         public const int SEND_DATA_PACKAGE_SIZE = 7;
         //发送数据的间隔毫秒数
         public const int SEND_DATA_INTERVAL = 10;
+        /// <summary>
+        /// 主窗体构造函数
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
+            //初始化数据发送计时器
             dataSendTimerNew = new System.Timers.Timer(SEND_DATA_INTERVAL);
             dataSendTimerNew.Elapsed += new System.Timers.ElapsedEventHandler(DataSendTimer_Tick);
-
+            //开启双缓冲等，防止闪烁
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
@@ -30,6 +34,11 @@ namespace DCS
         private System.Timers.Timer dataSendTimerNew;
         private AimingReticleConfigForm aimingReticleConfigForm;
         private AmmoLoadConfigForm ammoLoadConfigForm;
+        /// <summary>
+        /// 主窗体载入时间触发函数，执行界面数据初始化等操作。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
             //初始化全局变量，从配置文件中读取
@@ -175,12 +184,16 @@ namespace DCS
             }
             //启动数据发送定时器
             dataSendTimerNew.Start();
+            //启动电池电量刷新定时器
             batterryQueryTimer.Start();
+            //启动时间展示刷新定时器
             timeRefreshTimer.Start();
-            //this.Invoke(flushAllUI);
         }
 
         public delegate void FreshUIDisplay();
+        /// <summary>
+        /// 将信息展示更新到UI界面的委托方法
+        /// </summary>
         public void DisplayToUI()
         {
             //更新UI状态
@@ -208,7 +221,7 @@ namespace DCS
                 default:
                     break;
             }
-            //更新剩余弹量文本框
+            //更新剩余弹量文本框，根据剩余弹量数量更新显示效果及颜色
             this.ammoLeftTextBox.Text = GlobalVars.ammoLeftNum.ToString();
             if (GlobalVars.ammoLeftNum >= 100)
             {
@@ -223,6 +236,7 @@ namespace DCS
             else if (GlobalVars.ammoLeftNum < 30)
             {
                 this.ammoLeftTextBox.ForeColor = Color.Red;
+                //剩余弹量闪烁启动
                 this.ammoLeftTextBoxBlinkTimer.Start();
             }
             //更新距离数值显示值
@@ -264,6 +278,9 @@ namespace DCS
         VideoCapture camCapter = null;
         Mat frame = new Mat();
         //private string videoPath = "rtsp://admin:abcd1234@178.178.1.131:554/mpeg4/ch33/main/av_stream";
+        /// <summary>
+        /// 启动视频画面捕捉方法
+        /// </summary>
         private void PlayVideo()
         {
             string videoPath = GlobalVars.cameraRTSPPath;
@@ -275,7 +292,7 @@ namespace DCS
         }
 
         /// <summary>
-        /// Emgcv捕捉视频流每一帧显示在窗口上
+        /// Emgcv捕捉视频流每一帧显示在窗口背景上
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -308,14 +325,14 @@ namespace DCS
             }
         }
 
-        /// <summary>
-        /// 串口接收数据的处理过程
-        /// </summary>
         //刷新界面显示的委托
         FreshUIDisplay flushAllUI = null;
         //接收字节的缓存队列
         private List<byte> buffer = new List<byte>(4096);
         //串口接收数据以后的委托方法
+        /// <summary>
+        /// 串口接收到数据后的处理过程
+        /// </summary>
         private void SerialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             if (!serialPort.IsOpen)
@@ -541,7 +558,7 @@ namespace DCS
                 dataToSend[5] = 0x55;
             }
 
-            //伺服开关
+            //伺服开关（弃用）
             //if (GlobalVars.servoControlSwitchState)
             //{
             //    dataToSend[2] = 0xAA;
@@ -574,7 +591,7 @@ namespace DCS
         //    DrawPitchAnglePointerImg(e.Graphics);
         //}
         /// <summary>
-        /// 为俯仰角度标尺上画对应角度的指针
+        /// 为俯仰角度标尺上画对应角度的指针（弃用）
         /// </summary>
         /// <param name="gp"></param>
         /*private void DrawPitchAnglePointerImg(Graphics gp)
@@ -597,7 +614,9 @@ namespace DCS
             bitmap.Dispose();
         }*/
 
-
+        /// <summary>
+        /// 重载水平位置显示表盘的绘制方法
+        /// </summary>
         private void DialPlatePictureBox_Paint(object sender, PaintEventArgs e)
         {
             DrawDialPlatePointerImg(e.Graphics);
@@ -722,6 +741,11 @@ namespace DCS
             }
         }
 
+        /// <summary>
+        /// 辅助瞄准装填指示灯点击事件方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LaserControlPictureBox_Click(object sender, EventArgs e)
         {
             this.laserControlOnOffSwitchPanel.Enabled = true;
