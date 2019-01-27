@@ -20,6 +20,7 @@ namespace DCS
         /// </summary>
         public MainForm()
         {
+            //初始化所有控件
             InitializeComponent();
             //初始化数据发送计时器
             dataSendTimerNew = new System.Timers.Timer(SEND_DATA_INTERVAL);
@@ -286,7 +287,15 @@ namespace DCS
             string videoPath = GlobalVars.cameraRTSPPath;
             Console.WriteLine(videoPath);
             Console.WriteLine("初始化构造新的camCapter...");
-            camCapter = new VideoCapture(videoPath);
+            try
+            {
+                camCapter = new VideoCapture(videoPath);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("构造视频捕捉器对象出错！");
+                throw;
+            }
             camCapter.ImageGrabbed += Cam_ImageGrabbed;
             camCapter.Start();
         }

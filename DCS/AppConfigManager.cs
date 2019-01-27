@@ -2,6 +2,9 @@
 
 namespace DCS
 {
+    /// <summary>
+    /// 从配置文件DCS.exe.Config文件读写配置项的静态方法类
+    /// </summary>
     class AppConfigManager
     {
         /// <summary>  
